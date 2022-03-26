@@ -1,0 +1,10 @@
+server:
+  servlet:
+    context-path: /mcs-indicadores/
+
+spring:
+  aop:
+    proxy-target-class: true
+    
+logging:  
+  config: /opt/data/mcs-minsa/log/config/log4j2-mcs-indicadores.xml
