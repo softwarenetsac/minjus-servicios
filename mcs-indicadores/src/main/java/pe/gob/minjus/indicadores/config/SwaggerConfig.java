@@ -2,9 +2,10 @@ package pe.gob.minjus.indicadores.config;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
+import java.awt.print.Pageable;
 import java.util.Date;
 
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
+//import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;

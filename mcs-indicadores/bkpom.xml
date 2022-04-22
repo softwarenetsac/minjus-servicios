@@ -58,11 +58,13 @@
 			</exclusions>
 		</dependency>
 		
-		<dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.20</version>
+</dependency>
+
 <!-- 		<dependency> -->
 <!-- 			<groupId>org.postgresql</groupId> -->
 <!-- 			<artifactId>postgresql</artifactId> -->
@@ -160,23 +162,23 @@
 					</resources>
 				</configuration>
 				<executions>
-					<execution>
-						<id>build-image</id>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>push-image</id>
-						<phase>install</phase>
-						<goals>
-							<goal>push</goal>
-						</goals>
-						<configuration>
-							<imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
-						</configuration>
-					</execution>
+<!-- 					<execution> -->
+<!-- 						<id>build-image</id> -->
+<!-- 						<phase>package</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>build</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 					<execution> -->
+<!-- 						<id>push-image</id> -->
+<!-- 						<phase>install</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>push</goal> -->
+<!-- 						</goals> -->
+<!-- 						<configuration> -->
+<!-- 							<imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName> -->
+<!-- 						</configuration> -->
+<!-- 					</execution> -->
 				</executions>
 			</plugin>
  		</plugins> 

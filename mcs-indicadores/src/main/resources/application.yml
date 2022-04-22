@@ -1,5 +1,5 @@
 server:
-  servlet:
+  #servlet:
     context-path: /mcs-indicadores/
 
 spring:

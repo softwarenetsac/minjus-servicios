@@ -8,7 +8,7 @@
 
 El archivo de configuración se encuentra en opt/data/mcs-minjus/properties/mcs-indicadores.properties. Este archivo contiene variables de conexión que deben reemplazarse antes del despliegue del contenedor (configurar según los valores de calidad/producción).
 
-Conexión al srevicio y BD POSTGRESQL de calidad/producción de la base de datos de **BD_VIGILANCIA_SALUD_TRABAJO**
+Conexión al srevicio y BD mysql de calidad/producción de la base de datos de **BD_INDICADORES**
 ```
 ### Datasource Odoo
 ip_db = IP de la base de datos.
@@ -16,9 +16,11 @@ puerto_db = Puerto de la base de datos.
 nombre_db = Nombre de la base de datos.
 id_usuario = Usuario de la base de datos.
 contrasenia_db = Contraseña de la base de datos
+
+name.db=Nombre de la base datos
 ```
 
-El archivo de configuración se encuentra en opt/data/mcs-minjus/log/mcs-indicadores/config/log4j2-mcs-indicadores.xml. Este archivo contiene variables de configuracion para el log del servicio.
+El archivo de configuración se encuentra en opt/Filesystem/dgdpaj/mcs-servicio/log/mcs-indicadores/config/log4j2-mcs-indicadores.xml. Este archivo contiene variables de configuracion para el log del servicio.
 
 ## Instrucciones específicas para esta versión
 

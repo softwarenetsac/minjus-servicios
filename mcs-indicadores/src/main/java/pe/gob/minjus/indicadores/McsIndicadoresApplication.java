@@ -1,5 +1,6 @@
 package pe.gob.minjus.indicadores;
 
+//import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -23,8 +24,8 @@ public class McsIndicadoresApplication extends SpringBootServletInitializer{
 		return builder.sources(McsIndicadoresApplication.class);
 	}
 
-//	public static void main(String[] args) {
-//		SpringApplication.run(McsActualizaIndicadoresApplication.class, args);
-//	}
+//	/public static void main(String[] args) {
+//	/	SpringApplication.run(McsActualizaIndicadoresApplication.class, args);
+//	/}
 
 }

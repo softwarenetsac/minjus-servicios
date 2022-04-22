@@ -2,6 +2,7 @@ package pe.gob.minjus.indicadores.config;
 
 import java.io.Serializable;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
@@ -12,11 +13,7 @@ public class PropertiesBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-//	@Value("${url.servicio.mpi}")
-//	private String urlServicioMpi;
-//
-//	@Value("${upload.folder}")
-//	private String uploadFolder;
-	
+	@Value("${name.db}")
+	private String nameDb;
 
 }
