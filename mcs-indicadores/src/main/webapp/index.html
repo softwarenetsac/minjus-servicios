@@ -1,0 +1,2316 @@
+<html>
+<head>
+<META content="text/html;charset=Cp1252">
+</head>
+<body>
+<table border>
+<tr><th>name</th><th>name</th><th>name</th><th>length</th><th>script</th></tr>
+<tr><td>GEN_CONFIG</td><td>configId</td><td>varchar</td><td>25</td><td>alter table GEN_CONFIG add configId varchar(25) NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>concepto</td><td>varchar</td><td>150</td><td>alter table GEN_CONFIG add concepto varchar(150) NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>systemId</td><td>int</td><td>4</td><td>alter table GEN_CONFIG add systemId int  NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>systemVersion</td><td>varchar</td><td>20</td><td>alter table GEN_CONFIG add systemVersion varchar(20) NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>systemDate</td><td>date</td><td>4</td><td>alter table GEN_CONFIG add systemDate date  NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>systemDateCreated</td><td>date</td><td>4</td><td>alter table GEN_CONFIG add systemDateCreated date  NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>repository</td><td>varchar</td><td>250</td><td>alter table GEN_CONFIG add repository varchar(250) NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>typeDocument</td><td>varchar</td><td>150</td><td>alter table GEN_CONFIG add typeDocument varchar(150) NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>typeImage</td><td>varchar</td><td>150</td><td>alter table GEN_CONFIG add typeImage varchar(150) NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>sizeDocument</td><td>int</td><td>4</td><td>alter table GEN_CONFIG add sizeDocument int  NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>sizeImage</td><td>int</td><td>4</td><td>alter table GEN_CONFIG add sizeImage int  NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>webServiceSecurity</td><td>varchar</td><td>250</td><td>alter table GEN_CONFIG add webServiceSecurity varchar(250) NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>webServicePide</td><td>varchar</td><td>250</td><td>alter table GEN_CONFIG add webServicePide varchar(250) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>typeDocumentLabel</td><td>varchar</td><td>150</td><td>alter table GEN_CONFIG add typeDocumentLabel varchar(150) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>typeImageLabel</td><td>varchar</td><td>150</td><td>alter table GEN_CONFIG add typeImageLabel varchar(150) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>ldapUrl</td><td>varchar</td><td>150</td><td>alter table GEN_CONFIG add ldapUrl varchar(150) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>ldapDomain</td><td>varchar</td><td>80</td><td>alter table GEN_CONFIG add ldapDomain varchar(80) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>smtpHost</td><td>varchar</td><td>16</td><td>alter table GEN_CONFIG add smtpHost varchar(16) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>activo</td><td>bit</td><td>1</td><td>alter table GEN_CONFIG add activo bit  NOT NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>limitDocument</td><td>int</td><td>4</td><td>alter table GEN_CONFIG add limitDocument int  NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>limitImage</td><td>int</td><td>4</td><td>alter table GEN_CONFIG add limitImage int  NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>limitRow</td><td>int</td><td>4</td><td>alter table GEN_CONFIG add limitRow int  NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>secretKey</td><td>varchar</td><td>60</td><td>alter table GEN_CONFIG add secretKey varchar(60) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>secretKeySpec</td><td>varchar</td><td>30</td><td>alter table GEN_CONFIG add secretKeySpec varchar(30) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>logoPath</td><td>varchar</td><td>150</td><td>alter table GEN_CONFIG add logoPath varchar(150) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>logoPathRelative</td><td>bit</td><td>1</td><td>alter table GEN_CONFIG add logoPathRelative bit  NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>urlSistemaRemoto</td><td>varchar</td><td>100</td><td>alter table GEN_CONFIG add urlSistemaRemoto varchar(100) NULL</td></tr>
+
+<tr><td>GEN_CONFIG</td><td>flagReporteRelative</td><td>bit</td><td>1</td><td>alter table GEN_CONFIG add flagReporteRelative bit  NULL</td></tr>
+
+<tr><td>MACTIVIDAD</td><td>ACTIVIDAD_ID</td><td>varchar</td><td>5</td><td>alter table MACTIVIDAD add ACTIVIDAD_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MACTIVIDAD</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MACTIVIDAD add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MCLASECLIENTE</td><td>CLASECLIENTE_ID</td><td>varchar</td><td>5</td><td>alter table MCLASECLIENTE add CLASECLIENTE_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MCLASECLIENTE</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MCLASECLIENTE add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MCLASESUSCRIPCION</td><td>CLASESUSCRIPCION_ID</td><td>varchar</td><td>5</td><td>alter table MCLASESUSCRIPCION add CLASESUSCRIPCION_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MCLASESUSCRIPCION</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MCLASESUSCRIPCION add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>CLIENTE_ID</td><td>varchar</td><td>10</td><td>alter table MCLIENTE add CLIENTE_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>ESTADOCLIENTE_ID</td><td>varchar</td><td>5</td><td>alter table MCLIENTE add ESTADOCLIENTE_ID varchar(5) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>TIPOCLIENTE_ID</td><td>varchar</td><td>5</td><td>alter table MCLIENTE add TIPOCLIENTE_ID varchar(5) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>CLASECLIENTE_ID</td><td>varchar</td><td>5</td><td>alter table MCLIENTE add CLASECLIENTE_ID varchar(5) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>PAIS_ID</td><td>varchar</td><td>5</td><td>alter table MCLIENTE add PAIS_ID varchar(5) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table MCLIENTE add UBIGEO_ID varchar(5) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>RUC</td><td>varchar</td><td>20</td><td>alter table MCLIENTE add RUC varchar(20) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>RAZON_SOCIAL</td><td>varchar</td><td>100</td><td>alter table MCLIENTE add RAZON_SOCIAL varchar(100) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>DIRECCION</td><td>varchar</td><td>100</td><td>alter table MCLIENTE add DIRECCION varchar(100) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>TELEFONO</td><td>varchar</td><td>50</td><td>alter table MCLIENTE add TELEFONO varchar(50) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>FAX</td><td>varchar</td><td>50</td><td>alter table MCLIENTE add FAX varchar(50) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>EMAIL</td><td>varchar</td><td>50</td><td>alter table MCLIENTE add EMAIL varchar(50) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>OBSERVACION</td><td>varchar</td><td>250</td><td>alter table MCLIENTE add OBSERVACION varchar(250) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>FECHAREGISTRO</td><td>datetime</td><td>8</td><td>alter table MCLIENTE add FECHAREGISTRO datetime  NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>CONTACTO</td><td>varchar</td><td>250</td><td>alter table MCLIENTE add CONTACTO varchar(250) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>DEPENDENCIA</td><td>varchar</td><td>250</td><td>alter table MCLIENTE add DEPENDENCIA varchar(250) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>MAPA</td><td>varchar</td><td>250</td><td>alter table MCLIENTE add MAPA varchar(250) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>MAPA_X</td><td>int</td><td>4</td><td>alter table MCLIENTE add MAPA_X int  NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>MAPA_Y</td><td>int</td><td>4</td><td>alter table MCLIENTE add MAPA_Y int  NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>REFERENCIA</td><td>varchar</td><td>250</td><td>alter table MCLIENTE add REFERENCIA varchar(250) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>RAIZUSUARIO</td><td>varchar</td><td>6</td><td>alter table MCLIENTE add RAIZUSUARIO varchar(6) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>SECTOR_ID</td><td>varchar</td><td>5</td><td>alter table MCLIENTE add SECTOR_ID varchar(5) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>CONTACTO_ID</td><td>varchar</td><td>10</td><td>alter table MCLIENTE add CONTACTO_ID varchar(10) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>UBIGEO_DPTO</td><td>varchar</td><td>5</td><td>alter table MCLIENTE add UBIGEO_DPTO varchar(5) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>ENTIDAD</td><td>varchar</td><td>5</td><td>alter table MCLIENTE add ENTIDAD varchar(5) NULL</td></tr>
+
+<tr><td>MCLIENTE</td><td>cliente_id_int</td><td>int</td><td>4</td><td>alter table MCLIENTE add cliente_id_int int  NULL</td></tr>
+
+<tr><td>MCLIENTESISTEMAOPERATIVO</td><td>CLIENTE_ID</td><td>varchar</td><td>10</td><td>alter table MCLIENTESISTEMAOPERATIVO add CLIENTE_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>MCLIENTESISTEMAOPERATIVO</td><td>SISTEMAOPERATIVO_ID</td><td>varchar</td><td>5</td><td>alter table MCLIENTESISTEMAOPERATIVO add SISTEMAOPERATIVO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MCLIENTESISTEMAOPERATIVO</td><td>TIPO</td><td>char</td><td>1</td><td>alter table MCLIENTESISTEMAOPERATIVO add TIPO char(1) NOT NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>CONCEPTO_ID</td><td>varchar</td><td>5</td><td>alter table MCONCEPTO add CONCEPTO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>PRODUCTO_ID</td><td>varchar</td><td>5</td><td>alter table MCONCEPTO add PRODUCTO_ID varchar(5) NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MCONCEPTO add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>PORCENTAJE_UIT</td><td>float</td><td>8</td><td>alter table MCONCEPTO add PORCENTAJE_UIT float  NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>PU_CALCULADO</td><td>float</td><td>8</td><td>alter table MCONCEPTO add PU_CALCULADO float  NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>PU_VENTA</td><td>float</td><td>8</td><td>alter table MCONCEPTO add PU_VENTA float  NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>CANTIDADLOTES</td><td>int</td><td>4</td><td>alter table MCONCEPTO add CANTIDADLOTES int  NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>CANTIDADUSUARIOS</td><td>int</td><td>4</td><td>alter table MCONCEPTO add CANTIDADUSUARIOS int  NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MCONCEPTO add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>OBSERVACION</td><td>varchar</td><td>250</td><td>alter table MCONCEPTO add OBSERVACION varchar(250) NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>DESABREVIADA</td><td>varchar</td><td>10</td><td>alter table MCONCEPTO add DESABREVIADA varchar(10) NULL</td></tr>
+
+<tr><td>MCONCEPTO</td><td>tipoconcepto_id</td><td>int</td><td>4</td><td>alter table MCONCEPTO add tipoconcepto_id int  NULL</td></tr>
+
+<tr><td>MEDICION</td><td>EDICION_ID</td><td>varchar</td><td>10</td><td>alter table MEDICION add EDICION_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>MEDICION</td><td>TIPOEDICION_ID</td><td>char</td><td>8</td><td>alter table MEDICION add TIPOEDICION_ID char(8) NULL</td></tr>
+
+<tr><td>MEDICION</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MEDICION add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MEDICION</td><td>FECHA_EDICION</td><td>datetime</td><td>8</td><td>alter table MEDICION add FECHA_EDICION datetime  NULL</td></tr>
+
+<tr><td>MEDICION</td><td>CANTIDADPAGINAS</td><td>int</td><td>4</td><td>alter table MEDICION add CANTIDADPAGINAS int  NULL</td></tr>
+
+<tr><td>MEDICION</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MEDICION add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MEDICION</td><td>PAG_ELECTRONICAS</td><td>int</td><td>4</td><td>alter table MEDICION add PAG_ELECTRONICAS int  NULL</td></tr>
+
+<tr><td>MEDICION</td><td>PAG_SUMILLAS</td><td>int</td><td>4</td><td>alter table MEDICION add PAG_SUMILLAS int  NULL</td></tr>
+
+<tr><td>MESTADOCLIENTE</td><td>ESTADOCLIENTE_ID</td><td>varchar</td><td>5</td><td>alter table MESTADOCLIENTE add ESTADOCLIENTE_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MESTADOCLIENTE</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MESTADOCLIENTE add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MESTADOPAGO</td><td>ESTADOPAGO_ID</td><td>varchar</td><td>5</td><td>alter table MESTADOPAGO add ESTADOPAGO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MESTADOPAGO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MESTADOPAGO add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MESTADOSUSCRIPCION</td><td>ESTADOSUSCRIPCION_ID</td><td>varchar</td><td>5</td><td>alter table MESTADOSUSCRIPCION add ESTADOSUSCRIPCION_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MESTADOSUSCRIPCION</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MESTADOSUSCRIPCION add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>METIQUETA</td><td>ETIQUETA_ID</td><td>varchar</td><td>5</td><td>alter table METIQUETA add ETIQUETA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>METIQUETA</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table METIQUETA add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>METIQUETA</td><td>TEXTO</td><td>varchar</td><td>250</td><td>alter table METIQUETA add TEXTO varchar(250) NULL</td></tr>
+
+<tr><td>MGRUPOTIPONORMA</td><td>GRUPOTIPONORMA_ID</td><td>char</td><td>5</td><td>alter table MGRUPOTIPONORMA add GRUPOTIPONORMA_ID char(5) NOT NULL</td></tr>
+
+<tr><td>MGRUPOTIPONORMA</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MGRUPOTIPONORMA add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MGRUPOTIPONORMA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MGRUPOTIPONORMA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MHISTORICOINTERNET</td><td>HISTORICOINTERNET_ID</td><td>varchar</td><td>10</td><td>alter table MHISTORICOINTERNET add HISTORICOINTERNET_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>MHISTORICOINTERNET</td><td>USUARIOINTERNET_ID</td><td>varchar</td><td>10</td><td>alter table MHISTORICOINTERNET add USUARIOINTERNET_ID varchar(10) NULL</td></tr>
+
+<tr><td>MHISTORICOINTERNET</td><td>FECHA_INGRESO</td><td>datetime</td><td>8</td><td>alter table MHISTORICOINTERNET add FECHA_INGRESO datetime  NULL</td></tr>
+
+<tr><td>MHISTORICOINTERNET</td><td>FECHA_SALIDA</td><td>datetime</td><td>8</td><td>alter table MHISTORICOINTERNET add FECHA_SALIDA datetime  NULL</td></tr>
+
+<tr><td>MHISTORICOINTERNET</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MHISTORICOINTERNET add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MHISTORICOINTERNET</td><td>IP</td><td>varchar</td><td>15</td><td>alter table MHISTORICOINTERNET add IP varchar(15) NULL</td></tr>
+
+<tr><td>MHISTORICOINTERNET</td><td>SITE</td><td>char</td><td>1</td><td>alter table MHISTORICOINTERNET add SITE char(1) NULL</td></tr>
+
+<tr><td>MINFOBASE</td><td>INFOBASE_ID</td><td>varchar</td><td>5</td><td>alter table MINFOBASE add INFOBASE_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MINFOBASE</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MINFOBASE add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MITEM</td><td>ITEM_ID</td><td>varchar</td><td>10</td><td>alter table MITEM add ITEM_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>MITEM</td><td>PRODUCTO_ID</td><td>varchar</td><td>5</td><td>alter table MITEM add PRODUCTO_ID varchar(5) NULL</td></tr>
+
+<tr><td>MITEM</td><td>PRECIOUNITARIO</td><td>float</td><td>8</td><td>alter table MITEM add PRECIOUNITARIO float  NULL</td></tr>
+
+<tr><td>MITEM</td><td>FECHAPRODUCCION</td><td>datetime</td><td>8</td><td>alter table MITEM add FECHAPRODUCCION datetime  NULL</td></tr>
+
+<tr><td>MITEM</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MITEM add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MITEM</td><td>CANTIDADITEMPRODUCCION</td><td>int</td><td>4</td><td>alter table MITEM add CANTIDADITEMPRODUCCION int  NULL</td></tr>
+
+<tr><td>MITEM</td><td>CANTIDADITEMENTREGADA</td><td>int</td><td>4</td><td>alter table MITEM add CANTIDADITEMENTREGADA int  NULL</td></tr>
+
+<tr><td>MITEM</td><td>CANTIDADITEMDEVUELTA</td><td>int</td><td>4</td><td>alter table MITEM add CANTIDADITEMDEVUELTA int  NULL</td></tr>
+
+<tr><td>MITEM</td><td>CANTIDADITEMSXLOTE</td><td>int</td><td>4</td><td>alter table MITEM add CANTIDADITEMSXLOTE int  NULL</td></tr>
+
+<tr><td>MITEM</td><td>CANTIDADLOTEPRODUCCION</td><td>int</td><td>4</td><td>alter table MITEM add CANTIDADLOTEPRODUCCION int  NULL</td></tr>
+
+<tr><td>MITEM</td><td>CANTIDADLOTEDEVUELTA</td><td>int</td><td>4</td><td>alter table MITEM add CANTIDADLOTEDEVUELTA int  NULL</td></tr>
+
+<tr><td>MITEM</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MITEM add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MITEM</td><td>CANTIDADLOTEENTREGADA</td><td>int</td><td>4</td><td>alter table MITEM add CANTIDADLOTEENTREGADA int  NULL</td></tr>
+
+<tr><td>MITEM</td><td>producto_id</td><td>int</td><td>4</td><td>alter table MITEM add producto_id int  NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>KARDEX_ID</td><td>varchar</td><td>8</td><td>alter table MKARDEX add KARDEX_ID varchar(8) NOT NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>ITEM_ID</td><td>varchar</td><td>10</td><td>alter table MKARDEX add ITEM_ID varchar(10) NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>SUSCRIPCION_ID</td><td>varchar</td><td>10</td><td>alter table MKARDEX add SUSCRIPCION_ID varchar(10) NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>ENTREGA_ID</td><td>varchar</td><td>10</td><td>alter table MKARDEX add ENTREGA_ID varchar(10) NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>TIPO_MOVIMIENTO</td><td>char</td><td>3</td><td>alter table MKARDEX add TIPO_MOVIMIENTO char(3) NOT NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>FECHA_MOVIMIENTO</td><td>datetime</td><td>8</td><td>alter table MKARDEX add FECHA_MOVIMIENTO datetime  NOT NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>CANTIDAD_ENTRADA</td><td>numeric</td><td>4</td><td>alter table MKARDEX add CANTIDAD_ENTRADA numeric  NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>CANTIDAD_SALIDA</td><td>numeric</td><td>4</td><td>alter table MKARDEX add CANTIDAD_SALIDA numeric  NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>OBSERVACION</td><td>text</td><td>16</td><td>alter table MKARDEX add OBSERVACION text  NULL</td></tr>
+
+<tr><td>MKARDEX</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MKARDEX add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MMENUOPCIONES_PERFILPERSONAL</td><td>MENUOPCIONES_PERFILPERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table MMENUOPCIONES_PERFILPERSONAL add MENUOPCIONES_PERFILPERSONAL_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MMENUOPCIONES_PERFILPERSONAL</td><td>MENUOPCIONES_ID</td><td>varchar</td><td>5</td><td>alter table MMENUOPCIONES_PERFILPERSONAL add MENUOPCIONES_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MMENUOPCIONES_PERFILPERSONAL</td><td>PERFIPERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table MMENUOPCIONES_PERFILPERSONAL add PERFIPERSONAL_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MMENUOPCIONES_PERFILPERSONAL</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MMENUOPCIONES_PERFILPERSONAL add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MMES</td><td>MES_ID</td><td>varchar</td><td>5</td><td>alter table MMES add MES_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MMES</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MMES add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MPAGINA</td><td>PAGINA_ID</td><td>varchar</td><td>5</td><td>alter table MPAGINA add PAGINA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MPAGINA</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MPAGINA add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MPAGINA</td><td>IMAGEN</td><td>varchar</td><td>100</td><td>alter table MPAGINA add IMAGEN varchar(100) NULL</td></tr>
+
+<tr><td>MPAGINA</td><td>TIPO</td><td>char</td><td>1</td><td>alter table MPAGINA add TIPO char(1) NULL</td></tr>
+
+<tr><td>MPAGINA_movil</td><td>PAGINA_ID</td><td>varchar</td><td>5</td><td>alter table MPAGINA_movil add PAGINA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MPAGINA_movil</td><td>DESCRIPCION</td><td>text</td><td>16</td><td>alter table MPAGINA_movil add DESCRIPCION text  NOT NULL</td></tr>
+
+<tr><td>MPAGINA_movil</td><td>TIPO</td><td>char</td><td>1</td><td>alter table MPAGINA_movil add TIPO char(1) NOT NULL</td></tr>
+
+<tr><td>MPERFILPERSONAL</td><td>PERFILPERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table MPERFILPERSONAL add PERFILPERSONAL_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MPERFILPERSONAL</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MPERFILPERSONAL add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MPERFILPERSONAL</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MPERFILPERSONAL add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>PERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table MPERSONAL add PERSONAL_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>PERFILPERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table MPERSONAL add PERFILPERSONAL_ID varchar(5) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>NOMBRE</td><td>varchar</td><td>100</td><td>alter table MPERSONAL add NOMBRE varchar(100) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>APELLIDOPATERNO</td><td>varchar</td><td>100</td><td>alter table MPERSONAL add APELLIDOPATERNO varchar(100) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>APELLIDOMATERNO</td><td>varchar</td><td>100</td><td>alter table MPERSONAL add APELLIDOMATERNO varchar(100) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>USUARIO</td><td>varchar</td><td>15</td><td>alter table MPERSONAL add USUARIO varchar(15) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>CLAVE</td><td>varchar</td><td>15</td><td>alter table MPERSONAL add CLAVE varchar(15) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>SALARIO</td><td>numeric</td><td>7</td><td>alter table MPERSONAL add SALARIO numeric  NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>DIRECCION</td><td>varchar</td><td>100</td><td>alter table MPERSONAL add DIRECCION varchar(100) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>TELEFONO</td><td>varchar</td><td>15</td><td>alter table MPERSONAL add TELEFONO varchar(15) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>CELULAR</td><td>varchar</td><td>15</td><td>alter table MPERSONAL add CELULAR varchar(15) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>FECHA_NACIMIENTO</td><td>datetime</td><td>8</td><td>alter table MPERSONAL add FECHA_NACIMIENTO datetime  NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MPERSONAL add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>EMAIL</td><td>varchar</td><td>100</td><td>alter table MPERSONAL add EMAIL varchar(100) NULL</td></tr>
+
+<tr><td>MPERSONAL</td><td>ES_RESPONSABLE</td><td>char</td><td>1</td><td>alter table MPERSONAL add ES_RESPONSABLE char(1) NULL</td></tr>
+
+<tr><td>MPREGUNTARECORDATORIA</td><td>PREGUNTARECORDATORIA_ID</td><td>varchar</td><td>5</td><td>alter table MPREGUNTARECORDATORIA add PREGUNTARECORDATORIA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MPREGUNTARECORDATORIA</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MPREGUNTARECORDATORIA add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MPRODUCTO</td><td>PRODUCTO_ID</td><td>varchar</td><td>5</td><td>alter table MPRODUCTO add PRODUCTO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MPRODUCTO</td><td>DESCRIPCION</td><td>char</td><td>250</td><td>alter table MPRODUCTO add DESCRIPCION char(250) NULL</td></tr>
+
+<tr><td>MPRODUCTO</td><td>OBSERVACION</td><td>varchar</td><td>5</td><td>alter table MPRODUCTO add OBSERVACION varchar(5) NULL</td></tr>
+
+<tr><td>MPRODUCTO</td><td>tipoproducto_id_int</td><td>int</td><td>4</td><td>alter table MPRODUCTO add tipoproducto_id_int int  NULL</td></tr>
+
+<tr><td>MSECTOR</td><td>SECTOR_ID</td><td>varchar</td><td>5</td><td>alter table MSECTOR add SECTOR_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MSECTOR</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MSECTOR add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MSECTOR</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MSECTOR add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MSECTOR</td><td>SECTORPADRE_ID</td><td>varchar</td><td>5</td><td>alter table MSECTOR add SECTORPADRE_ID varchar(5) NULL</td></tr>
+
+<tr><td>MSECTORCLIENTE</td><td>SECTOR_ID</td><td>varchar</td><td>5</td><td>alter table MSECTORCLIENTE add SECTOR_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MSECTORCLIENTE</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table MSECTORCLIENTE add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>MSECTOR_PADRE</td><td>SECTORPADRE_ID</td><td>varchar</td><td>5</td><td>alter table MSECTOR_PADRE add SECTORPADRE_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MSECTOR_PADRE</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MSECTOR_PADRE add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MSECTOR_PADRE</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MSECTOR_PADRE add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MSISTEMAOPERATIVO</td><td>SISTEMAOPERATIVO_ID</td><td>varchar</td><td>5</td><td>alter table MSISTEMAOPERATIVO add SISTEMAOPERATIVO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MSISTEMAOPERATIVO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MSISTEMAOPERATIVO add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>SUSCRIPCION_ID</td><td>varchar</td><td>10</td><td>alter table MSUSCRIPCION add SUSCRIPCION_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>ESTADOSUSCRIPCION_ID</td><td>varchar</td><td>5</td><td>alter table MSUSCRIPCION add ESTADOSUSCRIPCION_ID varchar(5) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>ESTADOPAGO_ID</td><td>varchar</td><td>5</td><td>alter table MSUSCRIPCION add ESTADOPAGO_ID varchar(5) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>TIPOSUSCRIPCION_ID</td><td>varchar</td><td>5</td><td>alter table MSUSCRIPCION add TIPOSUSCRIPCION_ID varchar(5) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>FECHASUSCRIPCION</td><td>datetime</td><td>8</td><td>alter table MSUSCRIPCION add FECHASUSCRIPCION datetime  NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>FECHAFIN</td><td>datetime</td><td>8</td><td>alter table MSUSCRIPCION add FECHAFIN datetime  NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>IMPORTETOTAL</td><td>float</td><td>8</td><td>alter table MSUSCRIPCION add IMPORTETOTAL float  NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>FECHAPAGO</td><td>datetime</td><td>8</td><td>alter table MSUSCRIPCION add FECHAPAGO datetime  NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>FORMAPAGO</td><td>char</td><td>18</td><td>alter table MSUSCRIPCION add FORMAPAGO char(18) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>CLIENTE_ID</td><td>varchar</td><td>10</td><td>alter table MSUSCRIPCION add CLIENTE_ID varchar(10) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>CLASESUSCRIPCION_ID</td><td>varchar</td><td>5</td><td>alter table MSUSCRIPCION add CLASESUSCRIPCION_ID varchar(5) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>CANTIDADUSUARIOS</td><td>int</td><td>4</td><td>alter table MSUSCRIPCION add CANTIDADUSUARIOS int  NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>OBSERVACION</td><td>varchar</td><td>250</td><td>alter table MSUSCRIPCION add OBSERVACION varchar(250) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>RESUMEN</td><td>varchar</td><td>250</td><td>alter table MSUSCRIPCION add RESUMEN varchar(250) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>DEPENDENCIA</td><td>varchar</td><td>250</td><td>alter table MSUSCRIPCION add DEPENDENCIA varchar(250) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>CDINICIO</td><td>varchar</td><td>10</td><td>alter table MSUSCRIPCION add CDINICIO varchar(10) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>CDFIN</td><td>varchar</td><td>10</td><td>alter table MSUSCRIPCION add CDFIN varchar(10) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>NUMEROENTREGAS</td><td>int</td><td>4</td><td>alter table MSUSCRIPCION add NUMEROENTREGAS int  NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>RAIZUSUARIO</td><td>varchar</td><td>6</td><td>alter table MSUSCRIPCION add RAIZUSUARIO varchar(6) NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>CANTIDADLOTES</td><td>int</td><td>4</td><td>alter table MSUSCRIPCION add CANTIDADLOTES int  NULL</td></tr>
+
+<tr><td>MSUSCRIPCION</td><td>suscripcion_id_char10</td><td>char</td><td>10</td><td>alter table MSUSCRIPCION add suscripcion_id_char10 char(10) NULL</td></tr>
+
+<tr><td>MTAREA</td><td>TAREA_ID</td><td>varchar</td><td>5</td><td>alter table MTAREA add TAREA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTAREA</td><td>ACTIVIDAD_ID</td><td>varchar</td><td>5</td><td>alter table MTAREA add ACTIVIDAD_ID varchar(5) NULL</td></tr>
+
+<tr><td>MTAREA</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MTAREA add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MTAREA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MTAREA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MTIPOCLIENTE</td><td>TIPOCLIENTE_ID</td><td>varchar</td><td>5</td><td>alter table MTIPOCLIENTE add TIPOCLIENTE_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTIPOCLIENTE</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MTIPOCLIENTE add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MTIPOCONTACTO</td><td>TIPOCONTACTO_ID</td><td>varchar</td><td>5</td><td>alter table MTIPOCONTACTO add TIPOCONTACTO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTIPOCONTACTO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MTIPOCONTACTO add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MTIPODOCUMENTO</td><td>TIPODOCUMENTO_ID</td><td>varchar</td><td>5</td><td>alter table MTIPODOCUMENTO add TIPODOCUMENTO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTIPODOCUMENTO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MTIPODOCUMENTO add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MTIPOEDICION</td><td>TIPOEDICION_ID</td><td>char</td><td>8</td><td>alter table MTIPOEDICION add TIPOEDICION_ID char(8) NOT NULL</td></tr>
+
+<tr><td>MTIPOEDICION</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table MTIPOEDICION add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>MTIPOINCIDENCIA</td><td>TIPOINCIDENCIA_ID</td><td>varchar</td><td>5</td><td>alter table MTIPOINCIDENCIA add TIPOINCIDENCIA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTIPOINCIDENCIA</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MTIPOINCIDENCIA add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MTIPOINCIDENCIA</td><td>tipoatencion_id_int</td><td>int</td><td>4</td><td>alter table MTIPOINCIDENCIA add tipoatencion_id_int int  NULL</td></tr>
+
+<tr><td>MTIPONORMA</td><td>TIPONORMA_ID</td><td>varchar</td><td>5</td><td>alter table MTIPONORMA add TIPONORMA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTIPONORMA</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MTIPONORMA add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MTIPONORMA</td><td>GRUPOTIPONORMA_ID</td><td>char</td><td>5</td><td>alter table MTIPONORMA add GRUPOTIPONORMA_ID char(5) NULL</td></tr>
+
+<tr><td>MTIPONORMA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MTIPONORMA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MTIPONORMA</td><td>USADOS</td><td>char</td><td>1</td><td>alter table MTIPONORMA add USADOS char(1) NULL</td></tr>
+
+<tr><td>MTIPOSUSCRIPCION</td><td>TIPOSUSCRIPCION_ID</td><td>varchar</td><td>5</td><td>alter table MTIPOSUSCRIPCION add TIPOSUSCRIPCION_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTIPOSUSCRIPCION</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MTIPOSUSCRIPCION add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MTIPOSUSCRIPCION</td><td>tiposuscripcion_id_int</td><td>int</td><td>4</td><td>alter table MTIPOSUSCRIPCION add tiposuscripcion_id_int int  NULL</td></tr>
+
+<tr><td>MTIPOTAREA</td><td>TIPOTAREA_ID</td><td>varchar</td><td>5</td><td>alter table MTIPOTAREA add TIPOTAREA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTIPOTAREA</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table MTIPOTAREA add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>MTIPOTRANSFERENCIA</td><td>TIPOTRANSFERENCIA_ID</td><td>varchar</td><td>5</td><td>alter table MTIPOTRANSFERENCIA add TIPOTRANSFERENCIA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MTIPOTRANSFERENCIA</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table MTIPOTRANSFERENCIA add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>MTIPOTRANSFERENCIA</td><td>FLAG_TIPO</td><td>char</td><td>1</td><td>alter table MTIPOTRANSFERENCIA add FLAG_TIPO char(1) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>VISITANTE_ID</td><td>varchar</td><td>5</td><td>alter table MVISITANTE add VISITANTE_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>PAIS_ID</td><td>varchar</td><td>5</td><td>alter table MVISITANTE add PAIS_ID varchar(5) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table MVISITANTE add UBIGEO_ID varchar(5) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>NOMBRE</td><td>varchar</td><td>100</td><td>alter table MVISITANTE add NOMBRE varchar(100) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>EMPRESA</td><td>varchar</td><td>100</td><td>alter table MVISITANTE add EMPRESA varchar(100) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>FECHA_REGISTRO</td><td>datetime</td><td>8</td><td>alter table MVISITANTE add FECHA_REGISTRO datetime  NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>IP</td><td>varchar</td><td>15</td><td>alter table MVISITANTE add IP varchar(15) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>EMAIL</td><td>varchar</td><td>100</td><td>alter table MVISITANTE add EMAIL varchar(100) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>TELEFONO</td><td>varchar</td><td>15</td><td>alter table MVISITANTE add TELEFONO varchar(15) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>RECIBESUMILLAS</td><td>char</td><td>1</td><td>alter table MVISITANTE add RECIBESUMILLAS char(1) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>SERVICIOSDESEADOS</td><td>varchar</td><td>250</td><td>alter table MVISITANTE add SERVICIOSDESEADOS varchar(250) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MVISITANTE add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>PROCEDENCIA</td><td>char</td><td>1</td><td>alter table MVISITANTE add PROCEDENCIA char(1) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>OCUPACION_ID</td><td>char</td><td>3</td><td>alter table MVISITANTE add OCUPACION_ID char(3) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>TIPO_REGISTRO</td><td>char</td><td>1</td><td>alter table MVISITANTE add TIPO_REGISTRO char(1) NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>FECHA_INSCRIPCION</td><td>datetime</td><td>8</td><td>alter table MVISITANTE add FECHA_INSCRIPCION datetime  NULL</td></tr>
+
+<tr><td>MVISITANTE</td><td>DIRECCION</td><td>varchar</td><td>100</td><td>alter table MVISITANTE add DIRECCION varchar(100) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>VISITANTETEMP_ID</td><td>varchar</td><td>30</td><td>alter table MVISITANTETEMP add VISITANTETEMP_ID varchar(30) NOT NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>PAIS_ID</td><td>varchar</td><td>5</td><td>alter table MVISITANTETEMP add PAIS_ID varchar(5) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table MVISITANTETEMP add UBIGEO_ID varchar(5) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>NOMBRE</td><td>varchar</td><td>100</td><td>alter table MVISITANTETEMP add NOMBRE varchar(100) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>EMPRESA</td><td>varchar</td><td>100</td><td>alter table MVISITANTETEMP add EMPRESA varchar(100) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>FECHA_REGISTRO</td><td>datetime</td><td>8</td><td>alter table MVISITANTETEMP add FECHA_REGISTRO datetime  NOT NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>IP</td><td>varchar</td><td>15</td><td>alter table MVISITANTETEMP add IP varchar(15) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>EMAIL</td><td>varchar</td><td>100</td><td>alter table MVISITANTETEMP add EMAIL varchar(100) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>TELEFONO</td><td>varchar</td><td>15</td><td>alter table MVISITANTETEMP add TELEFONO varchar(15) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>RECIBESUMILLAS</td><td>char</td><td>1</td><td>alter table MVISITANTETEMP add RECIBESUMILLAS char(1) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>SERVICIOSDESEADOS</td><td>varchar</td><td>250</td><td>alter table MVISITANTETEMP add SERVICIOSDESEADOS varchar(250) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table MVISITANTETEMP add ESTADO char(1) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>PROCEDENCIA</td><td>char</td><td>1</td><td>alter table MVISITANTETEMP add PROCEDENCIA char(1) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>OCUPACION_ID</td><td>char</td><td>3</td><td>alter table MVISITANTETEMP add OCUPACION_ID char(3) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>TIPO_REGISTRO</td><td>char</td><td>1</td><td>alter table MVISITANTETEMP add TIPO_REGISTRO char(1) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>FECHA_INSCRIPCION</td><td>datetime</td><td>8</td><td>alter table MVISITANTETEMP add FECHA_INSCRIPCION datetime  NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>DIRECCION</td><td>varchar</td><td>100</td><td>alter table MVISITANTETEMP add DIRECCION varchar(100) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>DNI</td><td>varchar</td><td>8</td><td>alter table MVISITANTETEMP add DNI varchar(8) NULL</td></tr>
+
+<tr><td>MVISITANTETEMP</td><td>indSatisfaccion</td><td>int</td><td>4</td><td>alter table MVISITANTETEMP add indSatisfaccion int  NULL</td></tr>
+
+<tr><td>MVTOTALFLUJO</td><td>TOTALFLUJO_ANO</td><td>varchar</td><td>5</td><td>alter table MVTOTALFLUJO add TOTALFLUJO_ANO varchar(5) NOT NULL</td></tr>
+
+<tr><td>MVTOTALFLUJO</td><td>TOTALFLUJO_MES</td><td>varchar</td><td>5</td><td>alter table MVTOTALFLUJO add TOTALFLUJO_MES varchar(5) NOT NULL</td></tr>
+
+<tr><td>MVTOTALFLUJO</td><td>TIPO_CAMBIO</td><td>numeric</td><td>5</td><td>alter table MVTOTALFLUJO add TIPO_CAMBIO numeric  NULL</td></tr>
+
+<tr><td>MVTOTALFLUJO</td><td>PNUD_MONTOTRANSFERIDO</td><td>numeric</td><td>7</td><td>alter table MVTOTALFLUJO add PNUD_MONTOTRANSFERIDO numeric  NULL</td></tr>
+
+<tr><td>MVTOTALFLUJO</td><td>PNUD_SALDO</td><td>numeric</td><td>7</td><td>alter table MVTOTALFLUJO add PNUD_SALDO numeric  NULL</td></tr>
+
+<tr><td>MVTOTALFLUJO</td><td>OGA_RM_GASTO</td><td>varchar</td><td>50</td><td>alter table MVTOTALFLUJO add OGA_RM_GASTO varchar(50) NULL</td></tr>
+
+<tr><td>MVTOTALFLUJO</td><td>OGA_SALDO</td><td>numeric</td><td>7</td><td>alter table MVTOTALFLUJO add OGA_SALDO numeric  NULL</td></tr>
+
+<tr><td>TABONOSXPERSONAL</td><td>ANHO</td><td>char</td><td>4</td><td>alter table TABONOSXPERSONAL add ANHO char(4) NOT NULL</td></tr>
+
+<tr><td>TABONOSXPERSONAL</td><td>MES</td><td>char</td><td>2</td><td>alter table TABONOSXPERSONAL add MES char(2) NOT NULL</td></tr>
+
+<tr><td>TABONOSXPERSONAL</td><td>PERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table TABONOSXPERSONAL add PERSONAL_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TABONOSXPERSONAL</td><td>MONTO_ABONADO</td><td>numeric</td><td>6</td><td>alter table TABONOSXPERSONAL add MONTO_ABONADO numeric  NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>ALERTANORMA_ID</td><td>char</td><td>8</td><td>alter table TALERTANORMA add ALERTANORMA_ID char(8) NOT NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>NORMA_ACTIVA</td><td>varchar</td><td>100</td><td>alter table TALERTANORMA add NORMA_ACTIVA varchar(100) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>NORMA_PASIVA</td><td>varchar</td><td>100</td><td>alter table TALERTANORMA add NORMA_PASIVA varchar(100) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>FECHA_VIGENCIA</td><td>datetime</td><td>8</td><td>alter table TALERTANORMA add FECHA_VIGENCIA datetime  NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>ARTICULO</td><td>char</td><td>4</td><td>alter table TALERTANORMA add ARTICULO char(4) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>INCISO</td><td>char</td><td>2</td><td>alter table TALERTANORMA add INCISO char(2) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>USUARIO_CREACION</td><td>varchar</td><td>15</td><td>alter table TALERTANORMA add USUARIO_CREACION varchar(15) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>FECHA_CREACION</td><td>datetime</td><td>8</td><td>alter table TALERTANORMA add FECHA_CREACION datetime  NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>USUARIO_MODIF</td><td>varchar</td><td>15</td><td>alter table TALERTANORMA add USUARIO_MODIF varchar(15) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>FECHA_MODIF</td><td>datetime</td><td>8</td><td>alter table TALERTANORMA add FECHA_MODIF datetime  NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TALERTANORMA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>FLAG_TODOS</td><td>char</td><td>1</td><td>alter table TALERTANORMA add FLAG_TODOS char(1) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>OBSERVACION</td><td>varchar</td><td>250</td><td>alter table TALERTANORMA add OBSERVACION varchar(250) NULL</td></tr>
+
+<tr><td>TALERTANORMA</td><td>TIPO_ACCION</td><td>char</td><td>1</td><td>alter table TALERTANORMA add TIPO_ACCION char(1) NULL</td></tr>
+
+<tr><td>TCARACTERISTICAEGRESO</td><td>CARACTERISTICAEGRESO_ID</td><td>varchar</td><td>5</td><td>alter table TCARACTERISTICAEGRESO add CARACTERISTICAEGRESO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TCARACTERISTICAEGRESO</td><td>TIPOEGRESO_ID</td><td>varchar</td><td>5</td><td>alter table TCARACTERISTICAEGRESO add TIPOEGRESO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TCARACTERISTICAEGRESO</td><td>SIGLA</td><td>varchar</td><td>15</td><td>alter table TCARACTERISTICAEGRESO add SIGLA varchar(15) NOT NULL</td></tr>
+
+<tr><td>TCARACTERISTICAEGRESO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table TCARACTERISTICAEGRESO add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>CLIENTE_ID</td><td>varchar</td><td>10</td><td>alter table TCLIENTEDEPENDENCIA add CLIENTE_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>DEPENDENCIA_ID</td><td>varchar</td><td>10</td><td>alter table TCLIENTEDEPENDENCIA add DEPENDENCIA_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table TCLIENTEDEPENDENCIA add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>DIRECCION</td><td>varchar</td><td>200</td><td>alter table TCLIENTEDEPENDENCIA add DIRECCION varchar(200) NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>PAIS_ID</td><td>varchar</td><td>5</td><td>alter table TCLIENTEDEPENDENCIA add PAIS_ID varchar(5) NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table TCLIENTEDEPENDENCIA add UBIGEO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>CONTACTO_ID</td><td>varchar</td><td>10</td><td>alter table TCLIENTEDEPENDENCIA add CONTACTO_ID varchar(10) NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>TELEFONO</td><td>varchar</td><td>50</td><td>alter table TCLIENTEDEPENDENCIA add TELEFONO varchar(50) NULL</td></tr>
+
+<tr><td>TCLIENTEDEPENDENCIA</td><td>EMAIL</td><td>varchar</td><td>100</td><td>alter table TCLIENTEDEPENDENCIA add EMAIL varchar(100) NULL</td></tr>
+
+<tr><td>TCLIENTEDOCUMENTO</td><td>CLIENTE_ID</td><td>varchar</td><td>10</td><td>alter table TCLIENTEDOCUMENTO add CLIENTE_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TCLIENTEDOCUMENTO</td><td>DOCUMENTO_ID</td><td>varchar</td><td>10</td><td>alter table TCLIENTEDOCUMENTO add DOCUMENTO_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TCLIENTEDOCUMENTO</td><td>TIPODOCUMENTO_ID</td><td>varchar</td><td>5</td><td>alter table TCLIENTEDOCUMENTO add TIPODOCUMENTO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TCLIENTEDOCUMENTO</td><td>DOCUMENTO</td><td>varchar</td><td>20</td><td>alter table TCLIENTEDOCUMENTO add DOCUMENTO varchar(20) NULL</td></tr>
+
+<tr><td>TCLIENTEDOCUMENTO</td><td>ESTADODOCUMENTO</td><td>varchar</td><td>5</td><td>alter table TCLIENTEDOCUMENTO add ESTADODOCUMENTO varchar(5) NULL</td></tr>
+
+<tr><td>TCLIENTEDOCUMENTO</td><td>FECHAESTADO</td><td>datetime</td><td>8</td><td>alter table TCLIENTEDOCUMENTO add FECHAESTADO datetime  NULL</td></tr>
+
+<tr><td>TCLIENTEDOCUMENTO</td><td>OBSERVACION</td><td>varchar</td><td>250</td><td>alter table TCLIENTEDOCUMENTO add OBSERVACION varchar(250) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>CONTACTO_ID</td><td>varchar</td><td>10</td><td>alter table TCONTACTO add CONTACTO_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>CLIENTE_ID</td><td>varchar</td><td>10</td><td>alter table TCONTACTO add CLIENTE_ID varchar(10) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>NOMBRES</td><td>varchar</td><td>100</td><td>alter table TCONTACTO add NOMBRES varchar(100) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>APELLIDOPATERNO</td><td>varchar</td><td>100</td><td>alter table TCONTACTO add APELLIDOPATERNO varchar(100) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>APELLIDOMATERNO</td><td>varchar</td><td>100</td><td>alter table TCONTACTO add APELLIDOMATERNO varchar(100) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>FECHANACIMIENTO</td><td>datetime</td><td>8</td><td>alter table TCONTACTO add FECHANACIMIENTO datetime  NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>CARGO</td><td>varchar</td><td>50</td><td>alter table TCONTACTO add CARGO varchar(50) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>TELEFONO</td><td>varchar</td><td>50</td><td>alter table TCONTACTO add TELEFONO varchar(50) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>EMAIL</td><td>varchar</td><td>100</td><td>alter table TCONTACTO add EMAIL varchar(100) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>SUMILLA_FLAG</td><td>char</td><td>1</td><td>alter table TCONTACTO add SUMILLA_FLAG char(1) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>TITULO</td><td>varchar</td><td>10</td><td>alter table TCONTACTO add TITULO varchar(10) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>TIPOCONTACTO_ID</td><td>varchar</td><td>5</td><td>alter table TCONTACTO add TIPOCONTACTO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TCONTACTO</td><td>contacto_id_int</td><td>int</td><td>4</td><td>alter table TCONTACTO add contacto_id_int int  NULL</td></tr>
+
+<tr><td>TCONTADORWEB</td><td>CONTADOR_ID</td><td>varchar</td><td>10</td><td>alter table TCONTADORWEB add CONTADOR_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB</td><td>PAGINA_ID</td><td>varchar</td><td>5</td><td>alter table TCONTADORWEB add PAGINA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TCONTADORWEB</td><td>FECHA</td><td>datetime</td><td>8</td><td>alter table TCONTADORWEB add FECHA datetime  NULL</td></tr>
+
+<tr><td>TCONTADORWEB</td><td>IP</td><td>varchar</td><td>15</td><td>alter table TCONTADORWEB add IP varchar(15) NULL</td></tr>
+
+<tr><td>TCONTADORWEB_HIST</td><td>CONTADOR_ID</td><td>varchar</td><td>10</td><td>alter table TCONTADORWEB_HIST add CONTADOR_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB_HIST</td><td>PAGINA_ID</td><td>varchar</td><td>5</td><td>alter table TCONTADORWEB_HIST add PAGINA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TCONTADORWEB_HIST</td><td>FECHA</td><td>datetime</td><td>8</td><td>alter table TCONTADORWEB_HIST add FECHA datetime  NULL</td></tr>
+
+<tr><td>TCONTADORWEB_HIST</td><td>IP</td><td>varchar</td><td>15</td><td>alter table TCONTADORWEB_HIST add IP varchar(15) NULL</td></tr>
+
+<tr><td>TCONTADORWEB_MES</td><td>ANO</td><td>char</td><td>4</td><td>alter table TCONTADORWEB_MES add ANO char(4) NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB_MES</td><td>MES</td><td>char</td><td>2</td><td>alter table TCONTADORWEB_MES add MES char(2) NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB_MES</td><td>PAGINA_ID</td><td>char</td><td>5</td><td>alter table TCONTADORWEB_MES add PAGINA_ID char(5) NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB_MES</td><td>CANTIDAD</td><td>int</td><td>4</td><td>alter table TCONTADORWEB_MES add CANTIDAD int  NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB_movil</td><td>CONTADOR_ID</td><td>numeric</td><td>6</td><td>alter table TCONTADORWEB_movil add CONTADOR_ID numeric  NULL</td></tr>
+
+<tr><td>TCONTADORWEB_movil</td><td>CODUSUARIO</td><td>numeric</td><td>6</td><td>alter table TCONTADORWEB_movil add CODUSUARIO numeric  NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB_movil</td><td>CODPAGINA</td><td>char</td><td>5</td><td>alter table TCONTADORWEB_movil add CODPAGINA char(5) NULL</td></tr>
+
+<tr><td>TCONTADORWEB_movil</td><td>CODMOVIL</td><td>varchar</td><td>100</td><td>alter table TCONTADORWEB_movil add CODMOVIL varchar(100) NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB_movil</td><td>FECHAREGISTRO</td><td>datetime</td><td>8</td><td>alter table TCONTADORWEB_movil add FECHAREGISTRO datetime  NOT NULL</td></tr>
+
+<tr><td>TCONTADORWEB_movil</td><td>TIPODISPOSITIVO</td><td>char</td><td>1</td><td>alter table TCONTADORWEB_movil add TIPODISPOSITIVO char(1) NULL</td></tr>
+
+<tr><td>TDETALLELICENCIA</td><td>SUSCRIPCION_ID</td><td>varchar</td><td>10</td><td>alter table TDETALLELICENCIA add SUSCRIPCION_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TDETALLELICENCIA</td><td>DETALLE_ID</td><td>varchar</td><td>10</td><td>alter table TDETALLELICENCIA add DETALLE_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TDETALLELICENCIA</td><td>CORRELATIVO_ID</td><td>varchar</td><td>5</td><td>alter table TDETALLELICENCIA add CORRELATIVO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TDETALLELICENCIA</td><td>CONCEPTO_ID</td><td>varchar</td><td>5</td><td>alter table TDETALLELICENCIA add CONCEPTO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TDETALLELICENCIA</td><td>DEPENDENCIA_ID</td><td>varchar</td><td>10</td><td>alter table TDETALLELICENCIA add DEPENDENCIA_ID varchar(10) NULL</td></tr>
+
+<tr><td>TDETALLELICENCIA</td><td>CANTIDADLOTES</td><td>int</td><td>4</td><td>alter table TDETALLELICENCIA add CANTIDADLOTES int  NULL</td></tr>
+
+<tr><td>TDETALLELICENCIA</td><td>UBICACION</td><td>varchar</td><td>100</td><td>alter table TDETALLELICENCIA add UBICACION varchar(100) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>DETALLESUBLINEA_ID</td><td>varchar</td><td>10</td><td>alter table TDETALLESUBLINEA add DETALLESUBLINEA_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>SUBLINEA_ID</td><td>varchar</td><td>5</td><td>alter table TDETALLESUBLINEA add SUBLINEA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table TDETALLESUBLINEA add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>ANHO</td><td>char</td><td>4</td><td>alter table TDETALLESUBLINEA add ANHO char(4) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>MES</td><td>char</td><td>2</td><td>alter table TDETALLESUBLINEA add MES char(2) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>NRO_DOCUMENTO</td><td>varchar</td><td>50</td><td>alter table TDETALLESUBLINEA add NRO_DOCUMENTO varchar(50) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>TIPO_CAMBIO</td><td>numeric</td><td>6</td><td>alter table TDETALLESUBLINEA add TIPO_CAMBIO numeric  NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>TIPODOCUMENTO_ID</td><td>varchar</td><td>5</td><td>alter table TDETALLESUBLINEA add TIPODOCUMENTO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>MONTO_SOLES</td><td>numeric</td><td>6</td><td>alter table TDETALLESUBLINEA add MONTO_SOLES numeric  NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>MONTO_DOLARES</td><td>numeric</td><td>6</td><td>alter table TDETALLESUBLINEA add MONTO_DOLARES numeric  NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>USUARIO_CREACION</td><td>varchar</td><td>15</td><td>alter table TDETALLESUBLINEA add USUARIO_CREACION varchar(15) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>USUARIO_MODIF</td><td>varchar</td><td>15</td><td>alter table TDETALLESUBLINEA add USUARIO_MODIF varchar(15) NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>FECHA_CREACION</td><td>datetime</td><td>8</td><td>alter table TDETALLESUBLINEA add FECHA_CREACION datetime  NULL</td></tr>
+
+<tr><td>TDETALLESUBLINEA</td><td>FECHA_MODIF</td><td>datetime</td><td>8</td><td>alter table TDETALLESUBLINEA add FECHA_MODIF datetime  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>ENTREGA_ID</td><td>varchar</td><td>10</td><td>alter table TENTREGA add ENTREGA_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>SUSCRIPCION_ID</td><td>varchar</td><td>10</td><td>alter table TENTREGA add SUSCRIPCION_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>ITEM_ID</td><td>varchar</td><td>10</td><td>alter table TENTREGA add ITEM_ID varchar(10) NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>CANTIDADITEMPRODUCCION</td><td>int</td><td>4</td><td>alter table TENTREGA add CANTIDADITEMPRODUCCION int  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>CANTIDADITEMENTREGADA</td><td>int</td><td>4</td><td>alter table TENTREGA add CANTIDADITEMENTREGADA int  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>CANTIDADITEMDEVUELTA</td><td>int</td><td>4</td><td>alter table TENTREGA add CANTIDADITEMDEVUELTA int  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>CANTIDADITEMSXLOTE</td><td>int</td><td>4</td><td>alter table TENTREGA add CANTIDADITEMSXLOTE int  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>CANTIDADLOTEPRODUCCION</td><td>int</td><td>4</td><td>alter table TENTREGA add CANTIDADLOTEPRODUCCION int  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>CANTIDADLOTEENTREGADA</td><td>int</td><td>4</td><td>alter table TENTREGA add CANTIDADLOTEENTREGADA int  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>CANTIDADLOTEDEVUELTA</td><td>int</td><td>4</td><td>alter table TENTREGA add CANTIDADLOTEDEVUELTA int  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>FECHAENVIO</td><td>datetime</td><td>8</td><td>alter table TENTREGA add FECHAENVIO datetime  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>FECHARECEPCION</td><td>datetime</td><td>8</td><td>alter table TENTREGA add FECHARECEPCION datetime  NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>ESTADOENTREGA</td><td>char</td><td>1</td><td>alter table TENTREGA add ESTADOENTREGA char(1) NULL</td></tr>
+
+<tr><td>TENTREGA</td><td>suscripcionentrega_id</td><td>int</td><td>4</td><td>alter table TENTREGA add suscripcionentrega_id int  NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>INCIDENCIA_ID</td><td>varchar</td><td>5</td><td>alter table TINCIDENCIA add INCIDENCIA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>TIPOINCIDENCIA_ID</td><td>varchar</td><td>5</td><td>alter table TINCIDENCIA add TIPOINCIDENCIA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>ITEM_ID</td><td>varchar</td><td>10</td><td>alter table TINCIDENCIA add ITEM_ID varchar(10) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>PERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table TINCIDENCIA add PERSONAL_ID varchar(5) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>CLIENTE_ID</td><td>varchar</td><td>10</td><td>alter table TINCIDENCIA add CLIENTE_ID varchar(10) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>SUSCRIPCION_ID</td><td>varchar</td><td>10</td><td>alter table TINCIDENCIA add SUSCRIPCION_ID varchar(10) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>FECHA_INCIDENCIA</td><td>datetime</td><td>8</td><td>alter table TINCIDENCIA add FECHA_INCIDENCIA datetime  NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>OBSERVACION</td><td>varchar</td><td>250</td><td>alter table TINCIDENCIA add OBSERVACION varchar(250) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>CONTACTO</td><td>varchar</td><td>100</td><td>alter table TINCIDENCIA add CONTACTO varchar(100) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TINCIDENCIA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>DEPENDENCIA</td><td>varchar</td><td>250</td><td>alter table TINCIDENCIA add DEPENDENCIA varchar(250) NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>GASTO</td><td>float</td><td>8</td><td>alter table TINCIDENCIA add GASTO float  NULL</td></tr>
+
+<tr><td>TINCIDENCIA</td><td>DURACION</td><td>int</td><td>4</td><td>alter table TINCIDENCIA add DURACION int  NULL</td></tr>
+
+<tr><td>TLINEA</td><td>LINEA_ID</td><td>varchar</td><td>5</td><td>alter table TLINEA add LINEA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TLINEA</td><td>SIGLA</td><td>varchar</td><td>5</td><td>alter table TLINEA add SIGLA varchar(5) NULL</td></tr>
+
+<tr><td>TLINEA</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table TLINEA add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>TLINEA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TLINEA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TMENUOPCIONES</td><td>MENUOPCIONES_ID</td><td>varchar</td><td>5</td><td>alter table TMENUOPCIONES add MENUOPCIONES_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TMENUOPCIONES</td><td>TME_MENUOPCIONES_ID</td><td>varchar</td><td>5</td><td>alter table TMENUOPCIONES add TME_MENUOPCIONES_ID varchar(5) NULL</td></tr>
+
+<tr><td>TMENUOPCIONES</td><td>PAGINA_ID</td><td>varchar</td><td>5</td><td>alter table TMENUOPCIONES add PAGINA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TMENUOPCIONES</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table TMENUOPCIONES add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>TMENUOPCIONES</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TMENUOPCIONES add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TMENUOPCIONES</td><td>TIPO</td><td>char</td><td>1</td><td>alter table TMENUOPCIONES add TIPO char(1) NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>MUNICIPALIDAD_ID</td><td>varchar</td><td>10</td><td>alter table TMUNICIPALIDADES add MUNICIPALIDAD_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>DESCRIPCION</td><td>varchar</td><td>50</td><td>alter table TMUNICIPALIDADES add DESCRIPCION varchar(50) NOT NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>ALCALDE</td><td>varchar</td><td>100</td><td>alter table TMUNICIPALIDADES add ALCALDE varchar(100) NOT NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>DIRECCION</td><td>varchar</td><td>100</td><td>alter table TMUNICIPALIDADES add DIRECCION varchar(100) NOT NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>TELEFONO1</td><td>char</td><td>50</td><td>alter table TMUNICIPALIDADES add TELEFONO1 char(50) NOT NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>TELEFONO2</td><td>char</td><td>50</td><td>alter table TMUNICIPALIDADES add TELEFONO2 char(50) NOT NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>WEB</td><td>varchar</td><td>100</td><td>alter table TMUNICIPALIDADES add WEB varchar(100) NOT NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table TMUNICIPALIDADES add UBIGEO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TMUNICIPALIDADES</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TMUNICIPALIDADES add ESTADO char(1) NOT NULL</td></tr>
+
+<tr><td>TNORMA</td><td>NORMA_ID</td><td>varchar</td><td>20</td><td>alter table TNORMA add NORMA_ID varchar(20) NOT NULL</td></tr>
+
+<tr><td>TNORMA</td><td>SECTOR_ID</td><td>varchar</td><td>5</td><td>alter table TNORMA add SECTOR_ID varchar(5) NULL</td></tr>
+
+<tr><td>TNORMA</td><td>TIPONORMA_ID</td><td>varchar</td><td>5</td><td>alter table TNORMA add TIPONORMA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TNORMA</td><td>EDICION_ID</td><td>varchar</td><td>5</td><td>alter table TNORMA add EDICION_ID varchar(5) NULL</td></tr>
+
+<tr><td>TNORMA</td><td>FECHA</td><td>datetime</td><td>8</td><td>alter table TNORMA add FECHA datetime  NULL</td></tr>
+
+<tr><td>TNORMA</td><td>NUMERONORMA</td><td>varchar</td><td>50</td><td>alter table TNORMA add NUMERONORMA varchar(50) NULL</td></tr>
+
+<tr><td>TNORMA</td><td>SUMILLA</td><td>text</td><td>16</td><td>alter table TNORMA add SUMILLA text  NULL</td></tr>
+
+<tr><td>TNORMA</td><td>PAGINAPERUANO</td><td>int</td><td>4</td><td>alter table TNORMA add PAGINAPERUANO int  NULL</td></tr>
+
+<tr><td>TNORMA</td><td>PAGINASPIJ</td><td>int</td><td>4</td><td>alter table TNORMA add PAGINASPIJ int  NULL</td></tr>
+
+<tr><td>TNORMA</td><td>FECHA_PUBLICACION</td><td>datetime</td><td>8</td><td>alter table TNORMA add FECHA_PUBLICACION datetime  NULL</td></tr>
+
+<tr><td>TNORMA</td><td>FECHA_REVISION</td><td>datetime</td><td>8</td><td>alter table TNORMA add FECHA_REVISION datetime  NULL</td></tr>
+
+<tr><td>TNORMA</td><td>FECHA_CORRECION</td><td>datetime</td><td>8</td><td>alter table TNORMA add FECHA_CORRECION datetime  NULL</td></tr>
+
+<tr><td>TNORMA</td><td>CORRECION_FLAG</td><td>char</td><td>1</td><td>alter table TNORMA add CORRECION_FLAG char(1) NULL</td></tr>
+
+<tr><td>TNORMA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TNORMA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>NORMA_ID</td><td>varchar</td><td>20</td><td>alter table TNORMA5 add NORMA_ID varchar(20) NOT NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>SECTOR_ID</td><td>varchar</td><td>5</td><td>alter table TNORMA5 add SECTOR_ID varchar(5) NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>TIPONORMA_ID</td><td>varchar</td><td>5</td><td>alter table TNORMA5 add TIPONORMA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>EDICION_ID</td><td>varchar</td><td>5</td><td>alter table TNORMA5 add EDICION_ID varchar(5) NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>FECHA</td><td>datetime</td><td>8</td><td>alter table TNORMA5 add FECHA datetime  NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>NUMERONORMA</td><td>varchar</td><td>50</td><td>alter table TNORMA5 add NUMERONORMA varchar(50) NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>SUMILLA</td><td>text</td><td>16</td><td>alter table TNORMA5 add SUMILLA text  NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>PAGINAPERUANO</td><td>int</td><td>4</td><td>alter table TNORMA5 add PAGINAPERUANO int  NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>PAGINASPIJ</td><td>int</td><td>4</td><td>alter table TNORMA5 add PAGINASPIJ int  NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>FECHA_PUBLICACION</td><td>datetime</td><td>8</td><td>alter table TNORMA5 add FECHA_PUBLICACION datetime  NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>FECHA_REVISION</td><td>datetime</td><td>8</td><td>alter table TNORMA5 add FECHA_REVISION datetime  NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>FECHA_CORRECION</td><td>datetime</td><td>8</td><td>alter table TNORMA5 add FECHA_CORRECION datetime  NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>CORRECION_FLAG</td><td>char</td><td>1</td><td>alter table TNORMA5 add CORRECION_FLAG char(1) NULL</td></tr>
+
+<tr><td>TNORMA5</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TNORMA5 add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TNORMATAREA</td><td>NORMATAREA_ID</td><td>varchar</td><td>5</td><td>alter table TNORMATAREA add NORMATAREA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TNORMATAREA</td><td>NORMA_ID</td><td>varchar</td><td>20</td><td>alter table TNORMATAREA add NORMA_ID varchar(20) NOT NULL</td></tr>
+
+<tr><td>TNORMATAREA</td><td>TAREA_ID</td><td>varchar</td><td>5</td><td>alter table TNORMATAREA add TAREA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TNORMATAREA</td><td>FECHAHORA</td><td>datetime</td><td>8</td><td>alter table TNORMATAREA add FECHAHORA datetime  NULL</td></tr>
+
+<tr><td>TNORMATAREA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TNORMATAREA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TPAIS</td><td>PAIS_ID</td><td>varchar</td><td>5</td><td>alter table TPAIS add PAIS_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TPAIS</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table TPAIS add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>TPARAMETRO</td><td>PARAMETRO_ID</td><td>varchar</td><td>5</td><td>alter table TPARAMETRO add PARAMETRO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TPARAMETRO</td><td>IMPORTE_UIT</td><td>float</td><td>8</td><td>alter table TPARAMETRO add IMPORTE_UIT float  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>PRODUCCION_ID</td><td>varchar</td><td>8</td><td>alter table TPRODUCCION add PRODUCCION_ID varchar(8) NOT NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>INFOBASE_ID</td><td>varchar</td><td>5</td><td>alter table TPRODUCCION add INFOBASE_ID varchar(5) NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>EDICION_ID</td><td>varchar</td><td>10</td><td>alter table TPRODUCCION add EDICION_ID varchar(10) NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>DIASEMANA</td><td>int</td><td>4</td><td>alter table TPRODUCCION add DIASEMANA int  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>NUMERONORMAS</td><td>int</td><td>4</td><td>alter table TPRODUCCION add NUMERONORMAS int  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>HORAINICIO</td><td>datetime</td><td>8</td><td>alter table TPRODUCCION add HORAINICIO datetime  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>HORAFIN</td><td>datetime</td><td>8</td><td>alter table TPRODUCCION add HORAFIN datetime  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>WEBFLAG</td><td>char</td><td>1</td><td>alter table TPRODUCCION add WEBFLAG char(1) NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>DISCOFLAG</td><td>char</td><td>1</td><td>alter table TPRODUCCION add DISCOFLAG char(1) NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>TAMANOBYTESDOC</td><td>float</td><td>8</td><td>alter table TPRODUCCION add TAMANOBYTESDOC float  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>TAMANOBYTESPDF</td><td>float</td><td>8</td><td>alter table TPRODUCCION add TAMANOBYTESPDF float  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>TAMANOBYTESNFO</td><td>float</td><td>8</td><td>alter table TPRODUCCION add TAMANOBYTESNFO float  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>HORAFINFOLIO</td><td>datetime</td><td>8</td><td>alter table TPRODUCCION add HORAFINFOLIO datetime  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>HORAFINWEB</td><td>datetime</td><td>8</td><td>alter table TPRODUCCION add HORAFINWEB datetime  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TPRODUCCION add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>FECHA</td><td>datetime</td><td>8</td><td>alter table TPRODUCCION add FECHA datetime  NULL</td></tr>
+
+<tr><td>TPRODUCCION</td><td>NO_EMITIDO</td><td>char</td><td>1</td><td>alter table TPRODUCCION add NO_EMITIDO char(1) NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>RESOLUCION_ID</td><td>varchar</td><td>5</td><td>alter table TRESOLUCIONXTRANSF add RESOLUCION_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table TRESOLUCIONXTRANSF add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>SALDO_ID</td><td>varchar</td><td>5</td><td>alter table TRESOLUCIONXTRANSF add SALDO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>TIPOTRANSFERENCIA_ID</td><td>varchar</td><td>5</td><td>alter table TRESOLUCIONXTRANSF add TIPOTRANSFERENCIA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>NRO_RESOLUCION</td><td>varchar</td><td>60</td><td>alter table TRESOLUCIONXTRANSF add NRO_RESOLUCION varchar(60) NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>TIPO_CAMBIO</td><td>numeric</td><td>6</td><td>alter table TRESOLUCIONXTRANSF add TIPO_CAMBIO numeric  NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>MONTO_TRANSF_SOLES</td><td>numeric</td><td>6</td><td>alter table TRESOLUCIONXTRANSF add MONTO_TRANSF_SOLES numeric  NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>MONTO_TRANSF_DOLARES</td><td>numeric</td><td>6</td><td>alter table TRESOLUCIONXTRANSF add MONTO_TRANSF_DOLARES numeric  NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>USUARIO_CREACION</td><td>varchar</td><td>15</td><td>alter table TRESOLUCIONXTRANSF add USUARIO_CREACION varchar(15) NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>USUARIO_MODIFICACION</td><td>varchar</td><td>15</td><td>alter table TRESOLUCIONXTRANSF add USUARIO_MODIFICACION varchar(15) NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>FECHA_CREACION</td><td>datetime</td><td>8</td><td>alter table TRESOLUCIONXTRANSF add FECHA_CREACION datetime  NULL</td></tr>
+
+<tr><td>TRESOLUCIONXTRANSF</td><td>FECHA_MODIFICACION</td><td>datetime</td><td>8</td><td>alter table TRESOLUCIONXTRANSF add FECHA_MODIFICACION datetime  NULL</td></tr>
+
+<tr><td>TSALDO</td><td>SALDO_ID</td><td>varchar</td><td>5</td><td>alter table TSALDO add SALDO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TSALDO</td><td>ANHO</td><td>char</td><td>4</td><td>alter table TSALDO add ANHO char(4) NULL</td></tr>
+
+<tr><td>TSALDO</td><td>MES</td><td>char</td><td>2</td><td>alter table TSALDO add MES char(2) NULL</td></tr>
+
+<tr><td>TSALDO</td><td>MONTO</td><td>numeric</td><td>6</td><td>alter table TSALDO add MONTO numeric  NULL</td></tr>
+
+<tr><td>TSALDO</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table TSALDO add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>TSALDO</td><td>SALDO_MES</td><td>numeric</td><td>6</td><td>alter table TSALDO add SALDO_MES numeric  NULL</td></tr>
+
+<tr><td>TSALDO</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TSALDO add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TSALDOXANHO</td><td>ANHO</td><td>char</td><td>4</td><td>alter table TSALDOXANHO add ANHO char(4) NOT NULL</td></tr>
+
+<tr><td>TSALDOXANHO</td><td>MONTO_BRUTO</td><td>numeric</td><td>6</td><td>alter table TSALDOXANHO add MONTO_BRUTO numeric  NULL</td></tr>
+
+<tr><td>TSALDOXANHO</td><td>MONTO_NETO</td><td>numeric</td><td>6</td><td>alter table TSALDOXANHO add MONTO_NETO numeric  NULL</td></tr>
+
+<tr><td>TSALDOXANHO</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table TSALDOXANHO add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>TSALDOXANHO</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TSALDOXANHO add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TSUBLINEA</td><td>SUBLINEA_ID</td><td>varchar</td><td>5</td><td>alter table TSUBLINEA add SUBLINEA_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TSUBLINEA</td><td>LINEA_ID</td><td>varchar</td><td>5</td><td>alter table TSUBLINEA add LINEA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TSUBLINEA</td><td>DESCRIPCION</td><td>varchar</td><td>200</td><td>alter table TSUBLINEA add DESCRIPCION varchar(200) NULL</td></tr>
+
+<tr><td>TSUBLINEA</td><td>SIGLA</td><td>varchar</td><td>5</td><td>alter table TSUBLINEA add SIGLA varchar(5) NULL</td></tr>
+
+<tr><td>TSUBLINEA</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TSUBLINEA add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>DETALLE_ID</td><td>varchar</td><td>10</td><td>alter table TSUSCRIPCIONDETALLE add DETALLE_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>SUSCRIPCION_ID</td><td>varchar</td><td>10</td><td>alter table TSUSCRIPCIONDETALLE add SUSCRIPCION_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>CONCEPTO_ID</td><td>varchar</td><td>5</td><td>alter table TSUSCRIPCIONDETALLE add CONCEPTO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>TIPODOCUMENTO_ID</td><td>varchar</td><td>5</td><td>alter table TSUSCRIPCIONDETALLE add TIPODOCUMENTO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>NUMERODOCUMENTO</td><td>varchar</td><td>20</td><td>alter table TSUSCRIPCIONDETALLE add NUMERODOCUMENTO varchar(20) NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>FECHADETALLE</td><td>datetime</td><td>8</td><td>alter table TSUSCRIPCIONDETALLE add FECHADETALLE datetime  NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>CANTIDAD</td><td>int</td><td>4</td><td>alter table TSUSCRIPCIONDETALLE add CANTIDAD int  NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>PRECIOUNITARIO</td><td>float</td><td>8</td><td>alter table TSUSCRIPCIONDETALLE add PRECIOUNITARIO float  NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>IMPORTE</td><td>float</td><td>8</td><td>alter table TSUSCRIPCIONDETALLE add IMPORTE float  NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>CANTIDADLOTES</td><td>int</td><td>4</td><td>alter table TSUSCRIPCIONDETALLE add CANTIDADLOTES int  NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>CANTIDADUSUARIOS</td><td>int</td><td>4</td><td>alter table TSUSCRIPCIONDETALLE add CANTIDADUSUARIOS int  NULL</td></tr>
+
+<tr><td>TSUSCRIPCIONDETALLE</td><td>suscripcionconcepto_id</td><td>int</td><td>4</td><td>alter table TSUSCRIPCIONDETALLE add suscripcionconcepto_id int  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>TAREAPERSONAL_ID</td><td>varchar</td><td>8</td><td>alter table TTAREAPERSONAL add TAREAPERSONAL_ID varchar(8) NOT NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>TIPOTAREA_ID</td><td>varchar</td><td>5</td><td>alter table TTAREAPERSONAL add TIPOTAREA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>PERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table TTAREAPERSONAL add PERSONAL_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>PAGINAINICIO</td><td>int</td><td>4</td><td>alter table TTAREAPERSONAL add PAGINAINICIO int  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>PAGINAFIN</td><td>int</td><td>4</td><td>alter table TTAREAPERSONAL add PAGINAFIN int  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>HORAINICIO</td><td>datetime</td><td>8</td><td>alter table TTAREAPERSONAL add HORAINICIO datetime  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>HORAFIN</td><td>datetime</td><td>8</td><td>alter table TTAREAPERSONAL add HORAFIN datetime  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>OBSERVACION</td><td>text</td><td>16</td><td>alter table TTAREAPERSONAL add OBSERVACION text  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table TTAREAPERSONAL add ESTADO char(1) NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>ERRORES</td><td>int</td><td>4</td><td>alter table TTAREAPERSONAL add ERRORES int  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>PAGINASSCANEADAS</td><td>int</td><td>4</td><td>alter table TTAREAPERSONAL add PAGINASSCANEADAS int  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>FECHA_ASIGNA</td><td>datetime</td><td>8</td><td>alter table TTAREAPERSONAL add FECHA_ASIGNA datetime  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>NUM_ACTUALIZACIONES</td><td>int</td><td>4</td><td>alter table TTAREAPERSONAL add NUM_ACTUALIZACIONES int  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>CONPAGINA_INICIO</td><td>int</td><td>4</td><td>alter table TTAREAPERSONAL add CONPAGINA_INICIO int  NULL</td></tr>
+
+<tr><td>TTAREAPERSONAL</td><td>CONPAGINA_FIN</td><td>int</td><td>4</td><td>alter table TTAREAPERSONAL add CONPAGINA_FIN int  NULL</td></tr>
+
+<tr><td>TTAREAPERSONALXTDIA</td><td>TAREAPERSONAL_ID</td><td>varchar</td><td>8</td><td>alter table TTAREAPERSONALXTDIA add TAREAPERSONAL_ID varchar(8) NOT NULL</td></tr>
+
+<tr><td>TTAREAPERSONALXTDIA</td><td>PRODUCCION_ID</td><td>varchar</td><td>8</td><td>alter table TTAREAPERSONALXTDIA add PRODUCCION_ID varchar(8) NOT NULL</td></tr>
+
+<tr><td>TTIPOEGRESO</td><td>TIPOEGRESO_ID</td><td>varchar</td><td>5</td><td>alter table TTIPOEGRESO add TIPOEGRESO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TTIPOEGRESO</td><td>SIGLA</td><td>varchar</td><td>5</td><td>alter table TTIPOEGRESO add SIGLA varchar(5) NOT NULL</td></tr>
+
+<tr><td>TTIPOEGRESO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table TTIPOEGRESO add DESCRIPCION varchar(250) NOT NULL</td></tr>
+
+<tr><td>TUBIGEO</td><td>UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table TUBIGEO add UBIGEO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>TUBIGEO</td><td>TUB_UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table TUBIGEO add TUB_UBIGEO_ID varchar(5) NULL</td></tr>
+
+<tr><td>TUBIGEO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table TUBIGEO add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>TUBIGEO</td><td>CAPITAL</td><td>varchar</td><td>250</td><td>alter table TUBIGEO add CAPITAL varchar(250) NULL</td></tr>
+
+<tr><td>TUBIGEO</td><td>ubicacion</td><td>char</td><td>1</td><td>alter table TUBIGEO add ubicacion char(1) NULL</td></tr>
+
+<tr><td>TUBIGEO</td><td>UBIGEO_DPTO</td><td>char</td><td>5</td><td>alter table TUBIGEO add UBIGEO_DPTO char(5) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>USUARIOINTERNET_ID</td><td>varchar</td><td>10</td><td>alter table TUSUARIOINTERNET add USUARIOINTERNET_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>CLIENTE_ID</td><td>varchar</td><td>10</td><td>alter table TUSUARIOINTERNET add CLIENTE_ID varchar(10) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>PREGUNTARECORDATORIA_ID</td><td>varchar</td><td>5</td><td>alter table TUSUARIOINTERNET add PREGUNTARECORDATORIA_ID varchar(5) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>USUARIO</td><td>varchar</td><td>15</td><td>alter table TUSUARIOINTERNET add USUARIO varchar(15) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>CLAVE</td><td>varchar</td><td>15</td><td>alter table TUSUARIOINTERNET add CLAVE varchar(15) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>NOMBRES</td><td>varchar</td><td>100</td><td>alter table TUSUARIOINTERNET add NOMBRES varchar(100) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>APELLIDOPATERNO</td><td>varchar</td><td>100</td><td>alter table TUSUARIOINTERNET add APELLIDOPATERNO varchar(100) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>APELLIDOMATERNO</td><td>varchar</td><td>100</td><td>alter table TUSUARIOINTERNET add APELLIDOMATERNO varchar(100) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>EMAIL</td><td>varchar</td><td>100</td><td>alter table TUSUARIOINTERNET add EMAIL varchar(100) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>FECHAINICIO</td><td>datetime</td><td>8</td><td>alter table TUSUARIOINTERNET add FECHAINICIO datetime  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>FECHATERMINO</td><td>datetime</td><td>8</td><td>alter table TUSUARIOINTERNET add FECHATERMINO datetime  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>RESPUESTA</td><td>varchar</td><td>100</td><td>alter table TUSUARIOINTERNET add RESPUESTA varchar(100) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>ESTADOUSUARIO</td><td>char</td><td>1</td><td>alter table TUSUARIOINTERNET add ESTADOUSUARIO char(1) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>SUSCRIPCION_ID</td><td>varchar</td><td>10</td><td>alter table TUSUARIOINTERNET add SUSCRIPCION_ID varchar(10) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>UID</td><td>char</td><td>20</td><td>alter table TUSUARIOINTERNET add UID char(20) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>TimeStmp</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add TimeStmp int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>SITE</td><td>char</td><td>1</td><td>alter table TUSUARIOINTERNET add SITE char(1) NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_JURISP</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_JURISP int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_LEGADMPUB</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_LEGADMPUB int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_LEGCARGEN</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_LEGCARGEN int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_LEGCARPAR</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_LEGCARPAR int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_LEGCOMP</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_LEGCOMP int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_LEGGOBLOC</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_LEGGOBLOC int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_LEGGOBREG</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_LEGGOBREG int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_TUPA</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_TUPA int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INF_COMPODJUD</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INF_COMPODJUD int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>INFOBASESACTIVAS</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add INFOBASESACTIVAS int  NULL</td></tr>
+
+<tr><td>TUSUARIOINTERNET</td><td>usuariointernet_id_int</td><td>int</td><td>4</td><td>alter table TUSUARIOINTERNET add usuariointernet_id_int int  NULL</td></tr>
+
+<tr><td>XXX_MHISTORICOINTERNET</td><td>HISTORICOINTERNET_ID</td><td>varchar</td><td>10</td><td>alter table XXX_MHISTORICOINTERNET add HISTORICOINTERNET_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>XXX_MHISTORICOINTERNET</td><td>USUARIOINTERNET_ID</td><td>varchar</td><td>10</td><td>alter table XXX_MHISTORICOINTERNET add USUARIOINTERNET_ID varchar(10) NOT NULL</td></tr>
+
+<tr><td>XXX_MHISTORICOINTERNET</td><td>FECHA_INGRESO</td><td>datetime</td><td>8</td><td>alter table XXX_MHISTORICOINTERNET add FECHA_INGRESO datetime  NOT NULL</td></tr>
+
+<tr><td>XXX_MHISTORICOINTERNET</td><td>FECHA_SALIDA</td><td>datetime</td><td>8</td><td>alter table XXX_MHISTORICOINTERNET add FECHA_SALIDA datetime  NOT NULL</td></tr>
+
+<tr><td>XXX_MHISTORICOINTERNET</td><td>ESTADO</td><td>char</td><td>1</td><td>alter table XXX_MHISTORICOINTERNET add ESTADO char(1) NOT NULL</td></tr>
+
+<tr><td>XXX_MHISTORICOINTERNET</td><td>IP</td><td>varchar</td><td>15</td><td>alter table XXX_MHISTORICOINTERNET add IP varchar(15) NOT NULL</td></tr>
+
+<tr><td>XXX_MHISTORICOINTERNET</td><td>SITE</td><td>char</td><td>1</td><td>alter table XXX_MHISTORICOINTERNET add SITE char(1) NOT NULL</td></tr>
+
+<tr><td>_TUBIGEO</td><td>UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table _TUBIGEO add UBIGEO_ID varchar(5) NOT NULL</td></tr>
+
+<tr><td>_TUBIGEO</td><td>TUB_UBIGEO_ID</td><td>varchar</td><td>5</td><td>alter table _TUBIGEO add TUB_UBIGEO_ID varchar(5) NULL</td></tr>
+
+<tr><td>_TUBIGEO</td><td>DESCRIPCION</td><td>varchar</td><td>250</td><td>alter table _TUBIGEO add DESCRIPCION varchar(250) NULL</td></tr>
+
+<tr><td>_TUBIGEO</td><td>CAPITAL</td><td>varchar</td><td>250</td><td>alter table _TUBIGEO add CAPITAL varchar(250) NULL</td></tr>
+
+<tr><td>_TUBIGEO</td><td>coddpto</td><td>char</td><td>2</td><td>alter table _TUBIGEO add coddpto char(2) NULL</td></tr>
+
+<tr><td>_TUBIGEO</td><td>codprov</td><td>char</td><td>2</td><td>alter table _TUBIGEO add codprov char(2) NULL</td></tr>
+
+<tr><td>_TUBIGEO</td><td>coddist</td><td>char</td><td>2</td><td>alter table _TUBIGEO add coddist char(2) NULL</td></tr>
+
+<tr><td>_TUBIGEO</td><td>nivel</td><td>int</td><td>4</td><td>alter table _TUBIGEO add nivel int  NULL</td></tr>
+
+<tr><td>actividad</td><td>actividad_id</td><td>int</td><td>4</td><td>alter table actividad add actividad_id int  NOT NULL</td></tr>
+
+<tr><td>actividad</td><td>produccion_id</td><td>int</td><td>4</td><td>alter table actividad add produccion_id int  NOT NULL</td></tr>
+
+<tr><td>actividad</td><td>tipoactividad_id</td><td>int</td><td>4</td><td>alter table actividad add tipoactividad_id int  NOT NULL</td></tr>
+
+<tr><td>actividad</td><td>estado</td><td>char</td><td>2</td><td>alter table actividad add estado char(2) NULL</td></tr>
+
+<tr><td>actividad</td><td>nota</td><td>varchar</td><td>200</td><td>alter table actividad add nota varchar(200) NULL</td></tr>
+
+<tr><td>actividad</td><td>responsable_id</td><td>int</td><td>4</td><td>alter table actividad add responsable_id int  NULL</td></tr>
+
+<tr><td>actividad</td><td>orden</td><td>int</td><td>4</td><td>alter table actividad add orden int  NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>alertanorma_id</td><td>int</td><td>4</td><td>alter table alerta_norma add alertanorma_id int  NOT NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>norma_activa</td><td>varchar</td><td>500</td><td>alter table alerta_norma add norma_activa varchar(500) NOT NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>norma_pasiva</td><td>varchar</td><td>500</td><td>alter table alerta_norma add norma_pasiva varchar(500) NOT NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>fecha_vigencia</td><td>datetime</td><td>8</td><td>alter table alerta_norma add fecha_vigencia datetime  NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>articulo</td><td>varchar</td><td>200</td><td>alter table alerta_norma add articulo varchar(200) NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>inciso</td><td>varchar</td><td>200</td><td>alter table alerta_norma add inciso varchar(200) NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>usuario_creacion</td><td>varchar</td><td>100</td><td>alter table alerta_norma add usuario_creacion varchar(100) NOT NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>fecha_creacion</td><td>datetime</td><td>8</td><td>alter table alerta_norma add fecha_creacion datetime  NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>usuario_modif</td><td>varchar</td><td>100</td><td>alter table alerta_norma add usuario_modif varchar(100) NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>fecha_modif</td><td>datetime</td><td>8</td><td>alter table alerta_norma add fecha_modif datetime  NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>estado</td><td>char</td><td>1</td><td>alter table alerta_norma add estado char(1) NOT NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>flag_todos</td><td>char</td><td>1</td><td>alter table alerta_norma add flag_todos char(1) NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>observacion</td><td>varchar</td><td>500</td><td>alter table alerta_norma add observacion varchar(500) NULL</td></tr>
+
+<tr><td>alerta_norma</td><td>tipo_accion</td><td>char</td><td>1</td><td>alter table alerta_norma add tipo_accion char(1) NULL</td></tr>
+
+<tr><td>asistente</td><td>asistente_id</td><td>int</td><td>4</td><td>alter table asistente add asistente_id int  NOT NULL</td></tr>
+
+<tr><td>asistente</td><td>visitantetemp_id</td><td>varchar</td><td>30</td><td>alter table asistente add visitantetemp_id varchar(30) NOT NULL</td></tr>
+
+<tr><td>asistente</td><td>evento_id</td><td>int</td><td>4</td><td>alter table asistente add evento_id int  NOT NULL</td></tr>
+
+<tr><td>asistente</td><td>asistencia</td><td>int</td><td>4</td><td>alter table asistente add asistencia int  NOT NULL</td></tr>
+
+<tr><td>asistente</td><td>estado</td><td>int</td><td>4</td><td>alter table asistente add estado int  NOT NULL</td></tr>
+
+<tr><td>cliente</td><td>cliente_id</td><td>int</td><td>4</td><td>alter table cliente add cliente_id int  NOT NULL</td></tr>
+
+<tr><td>cliente</td><td>tipo</td><td>char</td><td>3</td><td>alter table cliente add tipo char(3) NOT NULL</td></tr>
+
+<tr><td>cliente</td><td>clase</td><td>char</td><td>2</td><td>alter table cliente add clase char(2) NOT NULL</td></tr>
+
+<tr><td>cliente</td><td>pais_id</td><td>char</td><td>4</td><td>alter table cliente add pais_id char(4) NOT NULL</td></tr>
+
+<tr><td>cliente</td><td>coddpto</td><td>char</td><td>2</td><td>alter table cliente add coddpto char(2) NULL</td></tr>
+
+<tr><td>cliente</td><td>codprov</td><td>char</td><td>2</td><td>alter table cliente add codprov char(2) NULL</td></tr>
+
+<tr><td>cliente</td><td>coddist</td><td>char</td><td>2</td><td>alter table cliente add coddist char(2) NULL</td></tr>
+
+<tr><td>cliente</td><td>ruc</td><td>varchar</td><td>11</td><td>alter table cliente add ruc varchar(11) NULL</td></tr>
+
+<tr><td>cliente</td><td>nombre</td><td>varchar</td><td>100</td><td>alter table cliente add nombre varchar(100) NOT NULL</td></tr>
+
+<tr><td>cliente</td><td>direccion</td><td>varchar</td><td>100</td><td>alter table cliente add direccion varchar(100) NULL</td></tr>
+
+<tr><td>cliente</td><td>referencia</td><td>varchar</td><td>250</td><td>alter table cliente add referencia varchar(250) NULL</td></tr>
+
+<tr><td>cliente</td><td>contacto</td><td>varchar</td><td>250</td><td>alter table cliente add contacto varchar(250) NULL</td></tr>
+
+<tr><td>cliente</td><td>telefono</td><td>varchar</td><td>50</td><td>alter table cliente add telefono varchar(50) NULL</td></tr>
+
+<tr><td>cliente</td><td>fax</td><td>varchar</td><td>50</td><td>alter table cliente add fax varchar(50) NULL</td></tr>
+
+<tr><td>cliente</td><td>email</td><td>varchar</td><td>50</td><td>alter table cliente add email varchar(50) NULL</td></tr>
+
+<tr><td>cliente</td><td>observacion</td><td>varchar</td><td>250</td><td>alter table cliente add observacion varchar(250) NULL</td></tr>
+
+<tr><td>cliente</td><td>fecha_registro</td><td>date</td><td>4</td><td>alter table cliente add fecha_registro date  NULL</td></tr>
+
+<tr><td>cliente</td><td>hora_registro</td><td>time</td><td>4</td><td>alter table cliente add hora_registro time  NULL</td></tr>
+
+<tr><td>cliente</td><td>raiz_usuario</td><td>char</td><td>6</td><td>alter table cliente add raiz_usuario char(6) NULL</td></tr>
+
+<tr><td>cliente</td><td>estado</td><td>char</td><td>2</td><td>alter table cliente add estado char(2) NULL</td></tr>
+
+<tr><td>cliente</td><td>tipocliente_id</td><td>int</td><td>4</td><td>alter table cliente add tipocliente_id int  NULL</td></tr>
+
+<tr><td>cliente</td><td>tipogobierno_id</td><td>int</td><td>4</td><td>alter table cliente add tipogobierno_id int  NULL</td></tr>
+
+<tr><td>cliente</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table cliente add audit_usuario_creacion varchar(25) NULL</td></tr>
+
+<tr><td>cliente</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table cliente add audit_usuario_modificacion varchar(25) NULL</td></tr>
+
+<tr><td>cliente</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table cliente add audit_fecha_creacion datetime  NULL</td></tr>
+
+<tr><td>cliente</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table cliente add audit_fecha_modificacion datetime  NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>encuesta_id</td><td>int</td><td>4</td><td>alter table cliente_encuesta add encuesta_id int  NOT NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>cliente_id</td><td>int</td><td>4</td><td>alter table cliente_encuesta add cliente_id int  NOT NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>area</td><td>varchar</td><td>100</td><td>alter table cliente_encuesta add area varchar(100) NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>coddpto</td><td>char</td><td>2</td><td>alter table cliente_encuesta add coddpto char(2) NOT NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>codprov</td><td>char</td><td>2</td><td>alter table cliente_encuesta add codprov char(2) NOT NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>nombres</td><td>varchar</td><td>80</td><td>alter table cliente_encuesta add nombres varchar(80) NOT NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>apellidos</td><td>varchar</td><td>50</td><td>alter table cliente_encuesta add apellidos varchar(50) NOT NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>email</td><td>varchar</td><td>100</td><td>alter table cliente_encuesta add email varchar(100) NOT NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>desktop</td><td>char</td><td>1</td><td>alter table cliente_encuesta add desktop char(1) NOT NULL</td></tr>
+
+<tr><td>cliente_encuesta</td><td>internet</td><td>char</td><td>1</td><td>alter table cliente_encuesta add internet char(1) NOT NULL</td></tr>
+
+<tr><td>contacto</td><td>contacto_id</td><td>int</td><td>4</td><td>alter table contacto add contacto_id int  NOT NULL</td></tr>
+
+<tr><td>contacto</td><td>cliente_id</td><td>int</td><td>4</td><td>alter table contacto add cliente_id int  NOT NULL</td></tr>
+
+<tr><td>contacto</td><td>tratamiento</td><td>varchar</td><td>15</td><td>alter table contacto add tratamiento varchar(15) NULL</td></tr>
+
+<tr><td>contacto</td><td>nombres</td><td>varchar</td><td>100</td><td>alter table contacto add nombres varchar(100) NULL</td></tr>
+
+<tr><td>contacto</td><td>email</td><td>varchar</td><td>50</td><td>alter table contacto add email varchar(50) NULL</td></tr>
+
+<tr><td>contacto</td><td>telefono</td><td>varchar</td><td>50</td><td>alter table contacto add telefono varchar(50) NULL</td></tr>
+
+<tr><td>contacto</td><td>fecha_nacimiento</td><td>date</td><td>4</td><td>alter table contacto add fecha_nacimiento date  NULL</td></tr>
+
+<tr><td>contacto</td><td>recibe_sumilla</td><td>char</td><td>1</td><td>alter table contacto add recibe_sumilla char(1) NOT NULL</td></tr>
+
+<tr><td>contacto</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table contacto add audit_usuario_creacion varchar(25) NULL</td></tr>
+
+<tr><td>contacto</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table contacto add audit_usuario_modificacion varchar(25) NULL</td></tr>
+
+<tr><td>contacto</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table contacto add audit_fecha_creacion datetime  NULL</td></tr>
+
+<tr><td>contacto</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table contacto add audit_fecha_modificacion datetime  NULL</td></tr>
+
+<tr><td>cuenta</td><td>ano</td><td>char</td><td>4</td><td>alter table cuenta add ano char(4) NOT NULL</td></tr>
+
+<tr><td>cuenta</td><td>mes</td><td>char</td><td>2</td><td>alter table cuenta add mes char(2) NOT NULL</td></tr>
+
+<tr><td>cuenta</td><td>tipo</td><td>char</td><td>4</td><td>alter table cuenta add tipo char(4) NOT NULL</td></tr>
+
+<tr><td>cuenta</td><td>ingreso_suscripcion</td><td>numeric</td><td>6</td><td>alter table cuenta add ingreso_suscripcion numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>ingreso_transferencia</td><td>numeric</td><td>6</td><td>alter table cuenta add ingreso_transferencia numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>gasto_transferencia</td><td>numeric</td><td>6</td><td>alter table cuenta add gasto_transferencia numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>gasto_hhpp</td><td>numeric</td><td>6</td><td>alter table cuenta add gasto_hhpp numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>gasto_bbss</td><td>numeric</td><td>6</td><td>alter table cuenta add gasto_bbss numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>gasto_ppvv</td><td>numeric</td><td>6</td><td>alter table cuenta add gasto_ppvv numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>ingreso_total</td><td>numeric</td><td>6</td><td>alter table cuenta add ingreso_total numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>gasto_total</td><td>numeric</td><td>6</td><td>alter table cuenta add gasto_total numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>saldo_mes_ant</td><td>numeric</td><td>6</td><td>alter table cuenta add saldo_mes_ant numeric  NULL</td></tr>
+
+<tr><td>cuenta</td><td>cuenta_id</td><td>int</td><td>4</td><td>alter table cuenta add cuenta_id int  NOT NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>cuentadetalle_id</td><td>int</td><td>4</td><td>alter table cuentadetalle add cuentadetalle_id int  NOT NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>ano</td><td>char</td><td>4</td><td>alter table cuentadetalle add ano char(4) NOT NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>mes</td><td>char</td><td>2</td><td>alter table cuentadetalle add mes char(2) NOT NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>tipo</td><td>char</td><td>4</td><td>alter table cuentadetalle add tipo char(4) NOT NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>categoria</td><td>char</td><td>4</td><td>alter table cuentadetalle add categoria char(4) NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>fec_pago</td><td>date</td><td>4</td><td>alter table cuentadetalle add fec_pago date  NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>doc_pago</td><td>varchar</td><td>50</td><td>alter table cuentadetalle add doc_pago varchar(50) NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>num_doc</td><td>varchar</td><td>15</td><td>alter table cuentadetalle add num_doc varchar(15) NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>ruc</td><td>varchar</td><td>15</td><td>alter table cuentadetalle add ruc varchar(15) NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>razon_social</td><td>varchar</td><td>100</td><td>alter table cuentadetalle add razon_social varchar(100) NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>concepto</td><td>varchar</td><td>100</td><td>alter table cuentadetalle add concepto varchar(100) NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>importe</td><td>numeric</td><td>6</td><td>alter table cuentadetalle add importe numeric  NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>codigo_recaudacion</td><td>char</td><td>6</td><td>alter table cuentadetalle add codigo_recaudacion char(6) NULL</td></tr>
+
+<tr><td>cuentadetalle</td><td>recaudacion_id</td><td>int</td><td>4</td><td>alter table cuentadetalle add recaudacion_id int  NULL</td></tr>
+
+<tr><td>edicion</td><td>edicion_id</td><td>int</td><td>4</td><td>alter table edicion add edicion_id int  NOT NULL</td></tr>
+
+<tr><td>edicion</td><td>tipoedicion_id</td><td>int</td><td>4</td><td>alter table edicion add tipoedicion_id int  NULL</td></tr>
+
+<tr><td>edicion</td><td>descripcion</td><td>varchar</td><td>250</td><td>alter table edicion add descripcion varchar(250) NULL</td></tr>
+
+<tr><td>edicion</td><td>fecha_edicion</td><td>datetime</td><td>8</td><td>alter table edicion add fecha_edicion datetime  NULL</td></tr>
+
+<tr><td>edicion</td><td>cantidadpaginas</td><td>int</td><td>4</td><td>alter table edicion add cantidadpaginas int  NULL</td></tr>
+
+<tr><td>edicion</td><td>estado</td><td>char</td><td>1</td><td>alter table edicion add estado char(1) NULL</td></tr>
+
+<tr><td>edicion</td><td>pag_electronicas</td><td>int</td><td>4</td><td>alter table edicion add pag_electronicas int  NULL</td></tr>
+
+<tr><td>edicion</td><td>pag_sumillas</td><td>int</td><td>4</td><td>alter table edicion add pag_sumillas int  NULL</td></tr>
+
+<tr><td>est_accesos_spij_web</td><td>ano</td><td>char</td><td>4</td><td>alter table est_accesos_spij_web add ano char(4) NOT NULL</td></tr>
+
+<tr><td>est_accesos_spij_web</td><td>mes</td><td>char</td><td>2</td><td>alter table est_accesos_spij_web add mes char(2) NOT NULL</td></tr>
+
+<tr><td>est_accesos_spij_web</td><td>pagina_id</td><td>char</td><td>5</td><td>alter table est_accesos_spij_web add pagina_id char(5) NOT NULL</td></tr>
+
+<tr><td>est_accesos_spij_web</td><td>sem1</td><td>numeric</td><td>4</td><td>alter table est_accesos_spij_web add sem1 numeric  NOT NULL</td></tr>
+
+<tr><td>est_accesos_spij_web</td><td>sem2</td><td>numeric</td><td>4</td><td>alter table est_accesos_spij_web add sem2 numeric  NULL</td></tr>
+
+<tr><td>est_accesos_spij_web</td><td>sem3</td><td>numeric</td><td>4</td><td>alter table est_accesos_spij_web add sem3 numeric  NULL</td></tr>
+
+<tr><td>est_accesos_spij_web</td><td>sem4</td><td>numeric</td><td>4</td><td>alter table est_accesos_spij_web add sem4 numeric  NULL</td></tr>
+
+<tr><td>est_accesos_spij_web</td><td>sem5</td><td>numeric</td><td>4</td><td>alter table est_accesos_spij_web add sem5 numeric  NULL</td></tr>
+
+<tr><td>est_ingresos_spij_linea</td><td>ano</td><td>char</td><td>4</td><td>alter table est_ingresos_spij_linea add ano char(4) NOT NULL</td></tr>
+
+<tr><td>est_ingresos_spij_linea</td><td>mes</td><td>char</td><td>2</td><td>alter table est_ingresos_spij_linea add mes char(2) NOT NULL</td></tr>
+
+<tr><td>est_ingresos_spij_linea</td><td>site</td><td>char</td><td>1</td><td>alter table est_ingresos_spij_linea add site char(1) NOT NULL</td></tr>
+
+<tr><td>est_ingresos_spij_linea</td><td>cantidad</td><td>numeric</td><td>4</td><td>alter table est_ingresos_spij_linea add cantidad numeric  NOT NULL</td></tr>
+
+<tr><td>evento</td><td>evento_id</td><td>int</td><td>4</td><td>alter table evento add evento_id int  NOT NULL</td></tr>
+
+<tr><td>evento</td><td>nombre</td><td>varchar</td><td>150</td><td>alter table evento add nombre varchar(150) NOT NULL</td></tr>
+
+<tr><td>evento</td><td>tipoevento_id</td><td>int</td><td>4</td><td>alter table evento add tipoevento_id int  NULL</td></tr>
+
+<tr><td>evento</td><td>lugar</td><td>varchar</td><td>150</td><td>alter table evento add lugar varchar(150) NOT NULL</td></tr>
+
+<tr><td>evento</td><td>fecha</td><td>datetime</td><td>8</td><td>alter table evento add fecha datetime  NOT NULL</td></tr>
+
+<tr><td>evento</td><td>estado</td><td>char</td><td>1</td><td>alter table evento add estado char(1) NOT NULL</td></tr>
+
+<tr><td>historicointernet</td><td>historicointernet_id</td><td>int</td><td>4</td><td>alter table historicointernet add historicointernet_id int  NOT NULL</td></tr>
+
+<tr><td>historicointernet</td><td>suscripcioninternet_id</td><td>int</td><td>4</td><td>alter table historicointernet add suscripcioninternet_id int  NOT NULL</td></tr>
+
+<tr><td>historicointernet</td><td>fecha_ingreso</td><td>datetime</td><td>8</td><td>alter table historicointernet add fecha_ingreso datetime  NOT NULL</td></tr>
+
+<tr><td>historicointernet</td><td>fecha_salida</td><td>datetime</td><td>8</td><td>alter table historicointernet add fecha_salida datetime  NOT NULL</td></tr>
+
+<tr><td>historicointernet</td><td>estado</td><td>char</td><td>1</td><td>alter table historicointernet add estado char(1) NOT NULL</td></tr>
+
+<tr><td>historicointernet</td><td>ip</td><td>varchar</td><td>15</td><td>alter table historicointernet add ip varchar(15) NOT NULL</td></tr>
+
+<tr><td>historicointernet</td><td>site</td><td>char</td><td>1</td><td>alter table historicointernet add site char(1) NOT NULL</td></tr>
+
+<tr><td>historicointernet_hist</td><td>historicointernet_id</td><td>int</td><td>4</td><td>alter table historicointernet_hist add historicointernet_id int  NOT NULL</td></tr>
+
+<tr><td>historicointernet_hist</td><td>suscripcioninternet_id</td><td>int</td><td>4</td><td>alter table historicointernet_hist add suscripcioninternet_id int  NULL</td></tr>
+
+<tr><td>historicointernet_hist</td><td>fecha_ingreso</td><td>datetime</td><td>8</td><td>alter table historicointernet_hist add fecha_ingreso datetime  NOT NULL</td></tr>
+
+<tr><td>historicointernet_hist</td><td>fecha_salida</td><td>datetime</td><td>8</td><td>alter table historicointernet_hist add fecha_salida datetime  NOT NULL</td></tr>
+
+<tr><td>historicointernet_hist</td><td>estado</td><td>char</td><td>1</td><td>alter table historicointernet_hist add estado char(1) NOT NULL</td></tr>
+
+<tr><td>historicointernet_hist</td><td>ip</td><td>varchar</td><td>15</td><td>alter table historicointernet_hist add ip varchar(15) NOT NULL</td></tr>
+
+<tr><td>historicointernet_hist</td><td>site</td><td>char</td><td>1</td><td>alter table historicointernet_hist add site char(1) NOT NULL</td></tr>
+
+<tr><td>historicointernet_mes</td><td>ano</td><td>char</td><td>4</td><td>alter table historicointernet_mes add ano char(4) NOT NULL</td></tr>
+
+<tr><td>historicointernet_mes</td><td>mes</td><td>char</td><td>2</td><td>alter table historicointernet_mes add mes char(2) NOT NULL</td></tr>
+
+<tr><td>historicointernet_mes</td><td>site</td><td>char</td><td>1</td><td>alter table historicointernet_mes add site char(1) NOT NULL</td></tr>
+
+<tr><td>historicointernet_mes</td><td>cantidad</td><td>int</td><td>4</td><td>alter table historicointernet_mes add cantidad int  NOT NULL</td></tr>
+
+<tr><td>historicointernet_usu</td><td>ano</td><td>char</td><td>4</td><td>alter table historicointernet_usu add ano char(4) NOT NULL</td></tr>
+
+<tr><td>historicointernet_usu</td><td>mes</td><td>char</td><td>2</td><td>alter table historicointernet_usu add mes char(2) NOT NULL</td></tr>
+
+<tr><td>historicointernet_usu</td><td>suscripcioninternet_id</td><td>int</td><td>4</td><td>alter table historicointernet_usu add suscripcioninternet_id int  NOT NULL</td></tr>
+
+<tr><td>historicointernet_usu</td><td>cantidad</td><td>int</td><td>4</td><td>alter table historicointernet_usu add cantidad int  NOT NULL</td></tr>
+
+<tr><td>kardex</td><td>kardex_id</td><td>int</td><td>4</td><td>alter table kardex add kardex_id int  NOT NULL</td></tr>
+
+<tr><td>kardex</td><td>producto_id</td><td>int</td><td>4</td><td>alter table kardex add producto_id int  NOT NULL</td></tr>
+
+<tr><td>kardex</td><td>suscripcion_id</td><td>char</td><td>8</td><td>alter table kardex add suscripcion_id char(8) NULL</td></tr>
+
+<tr><td>kardex</td><td>suscripcionentrega_id</td><td>int</td><td>4</td><td>alter table kardex add suscripcionentrega_id int  NULL</td></tr>
+
+<tr><td>kardex</td><td>tipo_movimiento</td><td>char</td><td>3</td><td>alter table kardex add tipo_movimiento char(3) NOT NULL</td></tr>
+
+<tr><td>kardex</td><td>fecha</td><td>date</td><td>4</td><td>alter table kardex add fecha date  NULL</td></tr>
+
+<tr><td>kardex</td><td>cantidad_entrada</td><td>int</td><td>4</td><td>alter table kardex add cantidad_entrada int  NOT NULL</td></tr>
+
+<tr><td>kardex</td><td>cantidad_salida</td><td>int</td><td>4</td><td>alter table kardex add cantidad_salida int  NOT NULL</td></tr>
+
+<tr><td>kardex</td><td>nota</td><td>varchar</td><td>250</td><td>alter table kardex add nota varchar(250) NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>logseguridad_id</td><td>int</td><td>4</td><td>alter table log_seguridad add logseguridad_id int  NOT NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>fecha_registro</td><td>date</td><td>4</td><td>alter table log_seguridad add fecha_registro date  NOT NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>hora_registro</td><td>varchar</td><td>20</td><td>alter table log_seguridad add hora_registro varchar(20) NOT NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>accion</td><td>varchar</td><td>20</td><td>alter table log_seguridad add accion varchar(20) NOT NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>usuario</td><td>varchar</td><td>20</td><td>alter table log_seguridad add usuario varchar(20) NOT NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>tabla</td><td>varchar</td><td>20</td><td>alter table log_seguridad add tabla varchar(20) NOT NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>tabla_id</td><td>varchar</td><td>20</td><td>alter table log_seguridad add tabla_id varchar(20) NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>dato</td><td>text</td><td>16</td><td>alter table log_seguridad add dato text  NOT NULL</td></tr>
+
+<tr><td>log_seguridad</td><td>dato_anterior</td><td>text</td><td>16</td><td>alter table log_seguridad add dato_anterior text  NOT NULL</td></tr>
+
+<tr><td>material</td><td>material_id</td><td>int</td><td>4</td><td>alter table material add material_id int  NOT NULL</td></tr>
+
+<tr><td>material</td><td>nombre</td><td>varchar</td><td>30</td><td>alter table material add nombre varchar(30) NOT NULL</td></tr>
+
+<tr><td>material</td><td>descripcion</td><td>varchar</td><td>150</td><td>alter table material add descripcion varchar(150) NOT NULL</td></tr>
+
+<tr><td>material_asistente</td><td>materialasistente_id</td><td>int</td><td>4</td><td>alter table material_asistente add materialasistente_id int  NOT NULL</td></tr>
+
+<tr><td>material_asistente</td><td>asistente_id</td><td>int</td><td>4</td><td>alter table material_asistente add asistente_id int  NOT NULL</td></tr>
+
+<tr><td>material_asistente</td><td>material_id</td><td>int</td><td>4</td><td>alter table material_asistente add material_id int  NOT NULL</td></tr>
+
+<tr><td>material_asistente</td><td>estado</td><td>int</td><td>4</td><td>alter table material_asistente add estado int  NOT NULL</td></tr>
+
+<tr><td>material_asistente</td><td>cantidad</td><td>int</td><td>4</td><td>alter table material_asistente add cantidad int  NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>producto_id</td><td>int</td><td>4</td><td>alter table movimiento_disco add producto_id int  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>movimientodisco_id</td><td>int</td><td>4</td><td>alter table movimiento_disco add movimientodisco_id int  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>tipomovimientodisco_id</td><td>int</td><td>4</td><td>alter table movimiento_disco add tipomovimientodisco_id int  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>flag_proveedor</td><td>bit</td><td>1</td><td>alter table movimiento_disco add flag_proveedor bit  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>flag_ejecutado</td><td>bit</td><td>1</td><td>alter table movimiento_disco add flag_ejecutado bit  NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>recibido_por</td><td>varchar</td><td>25</td><td>alter table movimiento_disco add recibido_por varchar(25) NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>entregado_por</td><td>varchar</td><td>25</td><td>alter table movimiento_disco add entregado_por varchar(25) NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>fecha_operacion</td><td>datetime</td><td>8</td><td>alter table movimiento_disco add fecha_operacion datetime  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>lote_esperado</td><td>int</td><td>4</td><td>alter table movimiento_disco add lote_esperado int  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>lote_real</td><td>int</td><td>4</td><td>alter table movimiento_disco add lote_real int  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>suscripcion_id_recibido</td><td>varchar</td><td>8</td><td>alter table movimiento_disco add suscripcion_id_recibido varchar(8) NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>suscripcion_id_entregado</td><td>varchar</td><td>8</td><td>alter table movimiento_disco add suscripcion_id_entregado varchar(8) NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>tipomovimientorazon_id</td><td>int</td><td>4</td><td>alter table movimiento_disco add tipomovimientorazon_id int  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>observacion</td><td>varchar</td><td>250</td><td>alter table movimiento_disco add observacion varchar(250) NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>audit_activo</td><td>bit</td><td>1</td><td>alter table movimiento_disco add audit_activo bit  NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table movimiento_disco add audit_usuario_creacion varchar(25) NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table movimiento_disco add audit_usuario_modificacion varchar(25) NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table movimiento_disco add audit_fecha_creacion datetime  NOT NULL</td></tr>
+
+<tr><td>movimiento_disco</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table movimiento_disco add audit_fecha_modificacion datetime  NOT NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>noticia_id</td><td>numeric</td><td>6</td><td>alter table noticia_movil add noticia_id numeric  NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>titulo</td><td>varchar</td><td>255</td><td>alter table noticia_movil add titulo varchar(255) NOT NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>descripcion</td><td>text</td><td>16</td><td>alter table noticia_movil add descripcion text  NOT NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>fechaNoticia</td><td>varchar</td><td>255</td><td>alter table noticia_movil add fechaNoticia varchar(255) NOT NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>estado</td><td>tinyint</td><td>1</td><td>alter table noticia_movil add estado tinyint  NOT NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>fechaRegistro</td><td>datetime</td><td>8</td><td>alter table noticia_movil add fechaRegistro datetime  NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>fechaActualizacion</td><td>datetime</td><td>8</td><td>alter table noticia_movil add fechaActualizacion datetime  NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>usuarioRegistro</td><td>numeric</td><td>6</td><td>alter table noticia_movil add usuarioRegistro numeric  NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>usuarioActualizacion</td><td>numeric</td><td>6</td><td>alter table noticia_movil add usuarioActualizacion numeric  NULL</td></tr>
+
+<tr><td>noticia_movil</td><td>fechaPublicacion</td><td>datetime</td><td>8</td><td>alter table noticia_movil add fechaPublicacion datetime  NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>notificacion_id</td><td>numeric</td><td>6</td><td>alter table notificacion_movil add notificacion_id numeric  NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>titulo</td><td>nvarchar</td><td>255</td><td>alter table notificacion_movil add titulo nvarchar  NOT NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>descripcion</td><td>text</td><td>16</td><td>alter table notificacion_movil add descripcion text  NOT NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>fechaNotificacion</td><td>nvarchar</td><td>255</td><td>alter table notificacion_movil add fechaNotificacion nvarchar  NOT NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>estado</td><td>tinyint</td><td>1</td><td>alter table notificacion_movil add estado tinyint  NOT NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>fechaRegistro</td><td>datetime</td><td>8</td><td>alter table notificacion_movil add fechaRegistro datetime  NOT NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>fechaActualizacion</td><td>datetime</td><td>8</td><td>alter table notificacion_movil add fechaActualizacion datetime  NOT NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>usuarioRegistro</td><td>numeric</td><td>6</td><td>alter table notificacion_movil add usuarioRegistro numeric  NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>usuarioActualizacion</td><td>numeric</td><td>6</td><td>alter table notificacion_movil add usuarioActualizacion numeric  NULL</td></tr>
+
+<tr><td>notificacion_movil</td><td>fechaPublicacion</td><td>datetime</td><td>8</td><td>alter table notificacion_movil add fechaPublicacion datetime  NULL</td></tr>
+
+<tr><td>ocupacion</td><td>ocupacion_id</td><td>int</td><td>4</td><td>alter table ocupacion add ocupacion_id int  NOT NULL</td></tr>
+
+<tr><td>ocupacion</td><td>str_id</td><td>varchar</td><td>3</td><td>alter table ocupacion add str_id varchar(3) NOT NULL</td></tr>
+
+<tr><td>ocupacion</td><td>nombre</td><td>varchar</td><td>150</td><td>alter table ocupacion add nombre varchar(150) NOT NULL</td></tr>
+
+<tr><td>ocupacion</td><td>estado</td><td>int</td><td>4</td><td>alter table ocupacion add estado int  NOT NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_tnam</td><td>char</td><td>30</td><td>alter table pbcatcol add pbc_tnam char(30) NOT NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_tid</td><td>int</td><td>4</td><td>alter table pbcatcol add pbc_tid int  NOT NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_ownr</td><td>char</td><td>30</td><td>alter table pbcatcol add pbc_ownr char(30) NOT NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_cnam</td><td>char</td><td>30</td><td>alter table pbcatcol add pbc_cnam char(30) NOT NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_cid</td><td>smallint</td><td>2</td><td>alter table pbcatcol add pbc_cid smallint  NOT NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_labl</td><td>varchar</td><td>254</td><td>alter table pbcatcol add pbc_labl varchar(254) NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_lpos</td><td>smallint</td><td>2</td><td>alter table pbcatcol add pbc_lpos smallint  NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_hdr</td><td>varchar</td><td>254</td><td>alter table pbcatcol add pbc_hdr varchar(254) NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_hpos</td><td>smallint</td><td>2</td><td>alter table pbcatcol add pbc_hpos smallint  NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_jtfy</td><td>smallint</td><td>2</td><td>alter table pbcatcol add pbc_jtfy smallint  NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_mask</td><td>varchar</td><td>31</td><td>alter table pbcatcol add pbc_mask varchar(31) NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_case</td><td>smallint</td><td>2</td><td>alter table pbcatcol add pbc_case smallint  NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_hght</td><td>smallint</td><td>2</td><td>alter table pbcatcol add pbc_hght smallint  NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_wdth</td><td>smallint</td><td>2</td><td>alter table pbcatcol add pbc_wdth smallint  NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_ptrn</td><td>varchar</td><td>31</td><td>alter table pbcatcol add pbc_ptrn varchar(31) NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_bmap</td><td>char</td><td>1</td><td>alter table pbcatcol add pbc_bmap char(1) NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_init</td><td>varchar</td><td>254</td><td>alter table pbcatcol add pbc_init varchar(254) NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_cmnt</td><td>varchar</td><td>254</td><td>alter table pbcatcol add pbc_cmnt varchar(254) NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_edit</td><td>varchar</td><td>31</td><td>alter table pbcatcol add pbc_edit varchar(31) NULL</td></tr>
+
+<tr><td>pbcatcol</td><td>pbc_tag</td><td>varchar</td><td>254</td><td>alter table pbcatcol add pbc_tag varchar(254) NULL</td></tr>
+
+<tr><td>pbcatedt</td><td>pbe_name</td><td>varchar</td><td>30</td><td>alter table pbcatedt add pbe_name varchar(30) NOT NULL</td></tr>
+
+<tr><td>pbcatedt</td><td>pbe_edit</td><td>varchar</td><td>254</td><td>alter table pbcatedt add pbe_edit varchar(254) NOT NULL</td></tr>
+
+<tr><td>pbcatedt</td><td>pbe_type</td><td>smallint</td><td>2</td><td>alter table pbcatedt add pbe_type smallint  NOT NULL</td></tr>
+
+<tr><td>pbcatedt</td><td>pbe_cntr</td><td>int</td><td>4</td><td>alter table pbcatedt add pbe_cntr int  NULL</td></tr>
+
+<tr><td>pbcatedt</td><td>pbe_seqn</td><td>smallint</td><td>2</td><td>alter table pbcatedt add pbe_seqn smallint  NOT NULL</td></tr>
+
+<tr><td>pbcatedt</td><td>pbe_flag</td><td>int</td><td>4</td><td>alter table pbcatedt add pbe_flag int  NULL</td></tr>
+
+<tr><td>pbcatedt</td><td>pbe_work</td><td>char</td><td>32</td><td>alter table pbcatedt add pbe_work char(32) NULL</td></tr>
+
+<tr><td>pbcatfmt</td><td>pbf_name</td><td>varchar</td><td>30</td><td>alter table pbcatfmt add pbf_name varchar(30) NOT NULL</td></tr>
+
+<tr><td>pbcatfmt</td><td>pbf_frmt</td><td>varchar</td><td>254</td><td>alter table pbcatfmt add pbf_frmt varchar(254) NOT NULL</td></tr>
+
+<tr><td>pbcatfmt</td><td>pbf_type</td><td>smallint</td><td>2</td><td>alter table pbcatfmt add pbf_type smallint  NOT NULL</td></tr>
+
+<tr><td>pbcatfmt</td><td>pbf_cntr</td><td>int</td><td>4</td><td>alter table pbcatfmt add pbf_cntr int  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbt_tnam</td><td>char</td><td>30</td><td>alter table pbcattbl add pbt_tnam char(30) NOT NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbt_tid</td><td>int</td><td>4</td><td>alter table pbcattbl add pbt_tid int  NOT NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbt_ownr</td><td>char</td><td>30</td><td>alter table pbcattbl add pbt_ownr char(30) NOT NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbd_fhgt</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbd_fhgt smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbd_fwgt</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbd_fwgt smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbd_fitl</td><td>char</td><td>1</td><td>alter table pbcattbl add pbd_fitl char(1) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbd_funl</td><td>char</td><td>1</td><td>alter table pbcattbl add pbd_funl char(1) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbd_fchr</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbd_fchr smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbd_fptc</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbd_fptc smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbd_ffce</td><td>char</td><td>32</td><td>alter table pbcattbl add pbd_ffce char(32) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbh_fhgt</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbh_fhgt smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbh_fwgt</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbh_fwgt smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbh_fitl</td><td>char</td><td>1</td><td>alter table pbcattbl add pbh_fitl char(1) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbh_funl</td><td>char</td><td>1</td><td>alter table pbcattbl add pbh_funl char(1) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbh_fchr</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbh_fchr smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbh_fptc</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbh_fptc smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbh_ffce</td><td>char</td><td>32</td><td>alter table pbcattbl add pbh_ffce char(32) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbl_fhgt</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbl_fhgt smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbl_fwgt</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbl_fwgt smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbl_fitl</td><td>char</td><td>1</td><td>alter table pbcattbl add pbl_fitl char(1) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbl_funl</td><td>char</td><td>1</td><td>alter table pbcattbl add pbl_funl char(1) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbl_fchr</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbl_fchr smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbl_fptc</td><td>smallint</td><td>2</td><td>alter table pbcattbl add pbl_fptc smallint  NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbl_ffce</td><td>char</td><td>32</td><td>alter table pbcattbl add pbl_ffce char(32) NULL</td></tr>
+
+<tr><td>pbcattbl</td><td>pbt_cmnt</td><td>varchar</td><td>254</td><td>alter table pbcattbl add pbt_cmnt varchar(254) NULL</td></tr>
+
+<tr><td>pbcatvld</td><td>pbv_name</td><td>varchar</td><td>30</td><td>alter table pbcatvld add pbv_name varchar(30) NOT NULL</td></tr>
+
+<tr><td>pbcatvld</td><td>pbv_vald</td><td>varchar</td><td>254</td><td>alter table pbcatvld add pbv_vald varchar(254) NOT NULL</td></tr>
+
+<tr><td>pbcatvld</td><td>pbv_type</td><td>smallint</td><td>2</td><td>alter table pbcatvld add pbv_type smallint  NOT NULL</td></tr>
+
+<tr><td>pbcatvld</td><td>pbv_cntr</td><td>int</td><td>4</td><td>alter table pbcatvld add pbv_cntr int  NULL</td></tr>
+
+<tr><td>pbcatvld</td><td>pbv_msg</td><td>varchar</td><td>254</td><td>alter table pbcatvld add pbv_msg varchar(254) NULL</td></tr>
+
+<tr><td>proceso</td><td>proceso_id</td><td>int</td><td>4</td><td>alter table proceso add proceso_id int  NOT NULL</td></tr>
+
+<tr><td>proceso</td><td>infobase_id</td><td>varchar</td><td>5</td><td>alter table proceso add infobase_id varchar(5) NULL</td></tr>
+
+<tr><td>proceso</td><td>edicion_id</td><td>varchar</td><td>10</td><td>alter table proceso add edicion_id varchar(10) NULL</td></tr>
+
+<tr><td>proceso</td><td>diasemana</td><td>int</td><td>4</td><td>alter table proceso add diasemana int  NULL</td></tr>
+
+<tr><td>proceso</td><td>numeronormas</td><td>int</td><td>4</td><td>alter table proceso add numeronormas int  NULL</td></tr>
+
+<tr><td>proceso</td><td>horainicio</td><td>datetime</td><td>8</td><td>alter table proceso add horainicio datetime  NULL</td></tr>
+
+<tr><td>proceso</td><td>horafin</td><td>datetime</td><td>8</td><td>alter table proceso add horafin datetime  NULL</td></tr>
+
+<tr><td>proceso</td><td>webflag</td><td>char</td><td>1</td><td>alter table proceso add webflag char(1) NULL</td></tr>
+
+<tr><td>proceso</td><td>discoflag</td><td>char</td><td>1</td><td>alter table proceso add discoflag char(1) NULL</td></tr>
+
+<tr><td>proceso</td><td>tamanobytesdoc</td><td>float</td><td>8</td><td>alter table proceso add tamanobytesdoc float  NULL</td></tr>
+
+<tr><td>proceso</td><td>tamanobytespdf</td><td>float</td><td>8</td><td>alter table proceso add tamanobytespdf float  NULL</td></tr>
+
+<tr><td>proceso</td><td>tamanobytesnfo</td><td>float</td><td>8</td><td>alter table proceso add tamanobytesnfo float  NULL</td></tr>
+
+<tr><td>proceso</td><td>horafinfolio</td><td>datetime</td><td>8</td><td>alter table proceso add horafinfolio datetime  NULL</td></tr>
+
+<tr><td>proceso</td><td>horafinweb</td><td>datetime</td><td>8</td><td>alter table proceso add horafinweb datetime  NULL</td></tr>
+
+<tr><td>proceso</td><td>estado</td><td>char</td><td>1</td><td>alter table proceso add estado char(1) NULL</td></tr>
+
+<tr><td>proceso</td><td>fecha</td><td>datetime</td><td>8</td><td>alter table proceso add fecha datetime  NULL</td></tr>
+
+<tr><td>proceso</td><td>no_emitido</td><td>char</td><td>1</td><td>alter table proceso add no_emitido char(1) NULL</td></tr>
+
+<tr><td>produccion</td><td>produccion_id</td><td>int</td><td>4</td><td>alter table produccion add produccion_id int  NOT NULL</td></tr>
+
+<tr><td>produccion</td><td>fecha</td><td>date</td><td>4</td><td>alter table produccion add fecha date  NULL</td></tr>
+
+<tr><td>produccion</td><td>estado</td><td>char</td><td>2</td><td>alter table produccion add estado char(2) NULL</td></tr>
+
+<tr><td>producto</td><td>producto_id</td><td>int</td><td>4</td><td>alter table producto add producto_id int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>tipoproducto_id</td><td>int</td><td>4</td><td>alter table producto add tipoproducto_id int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>fecha</td><td>date</td><td>4</td><td>alter table producto add fecha date  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>descripcion</td><td>varchar</td><td>50</td><td>alter table producto add descripcion varchar(50) NOT NULL</td></tr>
+
+<tr><td>producto</td><td>lote_producido</td><td>int</td><td>4</td><td>alter table producto add lote_producido int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>lote_entregado</td><td>int</td><td>4</td><td>alter table producto add lote_entregado int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>lote_devuelto</td><td>int</td><td>4</td><td>alter table producto add lote_devuelto int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>unidades_x_lote</td><td>int</td><td>4</td><td>alter table producto add unidades_x_lote int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>unidad_producida</td><td>int</td><td>4</td><td>alter table producto add unidad_producida int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>unidad_entregada</td><td>int</td><td>4</td><td>alter table producto add unidad_entregada int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>unidad_devuelta</td><td>int</td><td>4</td><td>alter table producto add unidad_devuelta int  NOT NULL</td></tr>
+
+<tr><td>producto</td><td>activo</td><td>char</td><td>1</td><td>alter table producto add activo char(1) NOT NULL</td></tr>
+
+<tr><td>producto</td><td>version_mes</td><td>char</td><td>2</td><td>alter table producto add version_mes char(2) NULL</td></tr>
+
+<tr><td>producto</td><td>version_ano</td><td>char</td><td>4</td><td>alter table producto add version_ano char(4) NULL</td></tr>
+
+<tr><td>producto</td><td>lote_fallido</td><td>int</td><td>4</td><td>alter table producto add lote_fallido int  NULL</td></tr>
+
+<tr><td>producto</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table producto add audit_usuario_creacion varchar(25) NULL</td></tr>
+
+<tr><td>producto</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table producto add audit_usuario_modificacion varchar(25) NULL</td></tr>
+
+<tr><td>producto</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table producto add audit_fecha_creacion datetime  NULL</td></tr>
+
+<tr><td>producto</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table producto add audit_fecha_modificacion datetime  NULL</td></tr>
+
+<tr><td>producto</td><td>audit_activo</td><td>bit</td><td>1</td><td>alter table producto add audit_activo bit  NOT NULL</td></tr>
+
+<tr><td>sede_movil</td><td>sede_id</td><td>numeric</td><td>6</td><td>alter table sede_movil add sede_id numeric  NULL</td></tr>
+
+<tr><td>sede_movil</td><td>titulo</td><td>varchar</td><td>4000</td><td>alter table sede_movil add titulo varchar(4000) NOT NULL</td></tr>
+
+<tr><td>sede_movil</td><td>descripcion</td><td>text</td><td>16</td><td>alter table sede_movil add descripcion text  NOT NULL</td></tr>
+
+<tr><td>sede_movil</td><td>direccion</td><td>varchar</td><td>200</td><td>alter table sede_movil add direccion varchar(200) NOT NULL</td></tr>
+
+<tr><td>sede_movil</td><td>latitud</td><td>varchar</td><td>50</td><td>alter table sede_movil add latitud varchar(50) NOT NULL</td></tr>
+
+<tr><td>sede_movil</td><td>longitud</td><td>varchar</td><td>50</td><td>alter table sede_movil add longitud varchar(50) NOT NULL</td></tr>
+
+<tr><td>sede_movil</td><td>tipo</td><td>char</td><td>1</td><td>alter table sede_movil add tipo char(1) NOT NULL</td></tr>
+
+<tr><td>sede_movil</td><td>usuario_creacion</td><td>numeric</td><td>6</td><td>alter table sede_movil add usuario_creacion numeric  NULL</td></tr>
+
+<tr><td>sede_movil</td><td>fecha_registro</td><td>datetime</td><td>8</td><td>alter table sede_movil add fecha_registro datetime  NULL</td></tr>
+
+<tr><td>sede_movil</td><td>ultimo_usuario</td><td>numeric</td><td>6</td><td>alter table sede_movil add ultimo_usuario numeric  NULL</td></tr>
+
+<tr><td>sede_movil</td><td>ultima_actualizacion</td><td>datetime</td><td>8</td><td>alter table sede_movil add ultima_actualizacion datetime  NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>usuariow_id</td><td>numeric</td><td>6</td><td>alter table seguridad_movil add usuariow_id numeric  NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>nombres</td><td>varchar</td><td>100</td><td>alter table seguridad_movil add nombres varchar(100) NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>apellidos</td><td>varchar</td><td>100</td><td>alter table seguridad_movil add apellidos varchar(100) NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>correo</td><td>varchar</td><td>100</td><td>alter table seguridad_movil add correo varchar(100) NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>telefono</td><td>varchar</td><td>50</td><td>alter table seguridad_movil add telefono varchar(50) NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>usuario</td><td>varchar</td><td>100</td><td>alter table seguridad_movil add usuario varchar(100) NOT NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>contrasenia</td><td>varchar</td><td>200</td><td>alter table seguridad_movil add contrasenia varchar(200) NOT NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>fecharegistro</td><td>datetime</td><td>8</td><td>alter table seguridad_movil add fecharegistro datetime  NOT NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>estado</td><td>tinyint</td><td>1</td><td>alter table seguridad_movil add estado tinyint  NOT NULL</td></tr>
+
+<tr><td>seguridad_movil</td><td>ultimaActualizacion</td><td>datetime</td><td>8</td><td>alter table seguridad_movil add ultimaActualizacion datetime  NULL</td></tr>
+
+<tr><td>suscripcion</td><td>suscripcion_id</td><td>char</td><td>8</td><td>alter table suscripcion add suscripcion_id char(8) NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>cliente_id</td><td>int</td><td>4</td><td>alter table suscripcion add cliente_id int  NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>resumen</td><td>varchar</td><td>250</td><td>alter table suscripcion add resumen varchar(250) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>fecha_inicio</td><td>date</td><td>4</td><td>alter table suscripcion add fecha_inicio date  NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>fecha_termino</td><td>date</td><td>4</td><td>alter table suscripcion add fecha_termino date  NULL</td></tr>
+
+<tr><td>suscripcion</td><td>importe_total</td><td>decimal</td><td>6</td><td>alter table suscripcion add importe_total decimal  NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>cantidad_usuarios</td><td>int</td><td>4</td><td>alter table suscripcion add cantidad_usuarios int  NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>tiposuscripcion_id</td><td>int</td><td>4</td><td>alter table suscripcion add tiposuscripcion_id int  NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>estado</td><td>char</td><td>2</td><td>alter table suscripcion add estado char(2) NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>clase</td><td>char</td><td>2</td><td>alter table suscripcion add clase char(2) NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>estado_pago</td><td>char</td><td>2</td><td>alter table suscripcion add estado_pago char(2) NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>entrega_inicio_ano</td><td>char</td><td>4</td><td>alter table suscripcion add entrega_inicio_ano char(4) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>entrega_inicio_mes</td><td>char</td><td>2</td><td>alter table suscripcion add entrega_inicio_mes char(2) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>entrega_fin_ano</td><td>char</td><td>4</td><td>alter table suscripcion add entrega_fin_ano char(4) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>entrega_fin_mes</td><td>char</td><td>2</td><td>alter table suscripcion add entrega_fin_mes char(2) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>cantidad_entregas</td><td>int</td><td>4</td><td>alter table suscripcion add cantidad_entregas int  NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>cantidad_lotes</td><td>int</td><td>4</td><td>alter table suscripcion add cantidad_lotes int  NOT NULL</td></tr>
+
+<tr><td>suscripcion</td><td>observacion</td><td>varchar</td><td>250</td><td>alter table suscripcion add observacion varchar(250) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>raiz_usuario</td><td>char</td><td>6</td><td>alter table suscripcion add raiz_usuario char(6) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>usuarios_internet</td><td>char</td><td>1</td><td>alter table suscripcion add usuarios_internet char(1) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>tipoconvenio_id</td><td>int</td><td>4</td><td>alter table suscripcion add tipoconvenio_id int  NULL</td></tr>
+
+<tr><td>suscripcion</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table suscripcion add audit_usuario_creacion varchar(25) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table suscripcion add audit_usuario_modificacion varchar(25) NULL</td></tr>
+
+<tr><td>suscripcion</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table suscripcion add audit_fecha_creacion datetime  NULL</td></tr>
+
+<tr><td>suscripcion</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table suscripcion add audit_fecha_modificacion datetime  NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>suscripcionatencion_id</td><td>int</td><td>4</td><td>alter table suscripcion_atencion add suscripcionatencion_id int  NOT NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>suscripcion_id</td><td>char</td><td>8</td><td>alter table suscripcion_atencion add suscripcion_id char(8) NOT NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>tipoatencion_id</td><td>int</td><td>4</td><td>alter table suscripcion_atencion add tipoatencion_id int  NOT NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>contacto</td><td>varchar</td><td>100</td><td>alter table suscripcion_atencion add contacto varchar(100) NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>usuario_id</td><td>int</td><td>4</td><td>alter table suscripcion_atencion add usuario_id int  NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>fecha_atencion</td><td>date</td><td>4</td><td>alter table suscripcion_atencion add fecha_atencion date  NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>hora_atencion</td><td>char</td><td>5</td><td>alter table suscripcion_atencion add hora_atencion char(5) NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>estado</td><td>char</td><td>2</td><td>alter table suscripcion_atencion add estado char(2) NOT NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>observacion</td><td>varchar</td><td>250</td><td>alter table suscripcion_atencion add observacion varchar(250) NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>dependencia</td><td>varchar</td><td>250</td><td>alter table suscripcion_atencion add dependencia varchar(250) NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>producto_id</td><td>int</td><td>4</td><td>alter table suscripcion_atencion add producto_id int  NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>duracion</td><td>decimal</td><td>3</td><td>alter table suscripcion_atencion add duracion decimal  NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>cargo</td><td>varchar</td><td>300</td><td>alter table suscripcion_atencion add cargo varchar(300) NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>correo</td><td>varchar</td><td>300</td><td>alter table suscripcion_atencion add correo varchar(300) NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>licencia</td><td>varchar</td><td>50</td><td>alter table suscripcion_atencion add licencia varchar(50) NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>licencia_act</td><td>varchar</td><td>50</td><td>alter table suscripcion_atencion add licencia_act varchar(50) NULL</td></tr>
+
+<tr><td>suscripcion_atencion</td><td>fecha_registro</td><td>datetime</td><td>8</td><td>alter table suscripcion_atencion add fecha_registro datetime  NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>suscripcionconcepto_id</td><td>int</td><td>4</td><td>alter table suscripcion_concepto add suscripcionconcepto_id int  NOT NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>suscripcion_id</td><td>char</td><td>8</td><td>alter table suscripcion_concepto add suscripcion_id char(8) NOT NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>tipoconcepto_id</td><td>int</td><td>4</td><td>alter table suscripcion_concepto add tipoconcepto_id int  NOT NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>cantidad_lotes</td><td>int</td><td>4</td><td>alter table suscripcion_concepto add cantidad_lotes int  NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>cantidad_usuarios</td><td>int</td><td>4</td><td>alter table suscripcion_concepto add cantidad_usuarios int  NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>cantidad</td><td>int</td><td>4</td><td>alter table suscripcion_concepto add cantidad int  NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>precio_venta</td><td>decimal</td><td>6</td><td>alter table suscripcion_concepto add precio_venta decimal  NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>importe</td><td>decimal</td><td>6</td><td>alter table suscripcion_concepto add importe decimal  NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>documento_pago</td><td>char</td><td>2</td><td>alter table suscripcion_concepto add documento_pago char(2) NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>documento_numero</td><td>varchar</td><td>20</td><td>alter table suscripcion_concepto add documento_numero varchar(20) NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>fecha_pago</td><td>date</td><td>4</td><td>alter table suscripcion_concepto add fecha_pago date  NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>grupo</td><td>int</td><td>4</td><td>alter table suscripcion_concepto add grupo int  NULL</td></tr>
+
+<tr><td>suscripcion_concepto</td><td>grupo_item</td><td>int</td><td>4</td><td>alter table suscripcion_concepto add grupo_item int  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>suscripcion_id</td><td>char</td><td>8</td><td>alter table suscripcion_entrega add suscripcion_id char(8) NOT NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>suscripcionentrega_id</td><td>int</td><td>4</td><td>alter table suscripcion_entrega add suscripcionentrega_id int  NOT NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>producto_id</td><td>int</td><td>4</td><td>alter table suscripcion_entrega add producto_id int  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>fecha_envio</td><td>date</td><td>4</td><td>alter table suscripcion_entrega add fecha_envio date  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>fecha_recepcion</td><td>date</td><td>4</td><td>alter table suscripcion_entrega add fecha_recepcion date  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>estado</td><td>char</td><td>2</td><td>alter table suscripcion_entrega add estado char(2) NOT NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>lote_entregado</td><td>int</td><td>4</td><td>alter table suscripcion_entrega add lote_entregado int  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>lote_devuelto</td><td>int</td><td>4</td><td>alter table suscripcion_entrega add lote_devuelto int  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>unidades_x_lote</td><td>int</td><td>4</td><td>alter table suscripcion_entrega add unidades_x_lote int  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>unidad_entregada</td><td>int</td><td>4</td><td>alter table suscripcion_entrega add unidad_entregada int  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>unidad_devuelta</td><td>int</td><td>4</td><td>alter table suscripcion_entrega add unidad_devuelta int  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>lote_fallido</td><td>int</td><td>4</td><td>alter table suscripcion_entrega add lote_fallido int  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table suscripcion_entrega add audit_usuario_creacion varchar(25) NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table suscripcion_entrega add audit_usuario_modificacion varchar(25) NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table suscripcion_entrega add audit_fecha_creacion datetime  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table suscripcion_entrega add audit_fecha_modificacion datetime  NULL</td></tr>
+
+<tr><td>suscripcion_entrega</td><td>audit_activo</td><td>bit</td><td>1</td><td>alter table suscripcion_entrega add audit_activo bit  NOT NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>suscripcioninternet_id</td><td>int</td><td>4</td><td>alter table suscripcion_internet add suscripcioninternet_id int  NOT NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>suscripcion_id</td><td>char</td><td>8</td><td>alter table suscripcion_internet add suscripcion_id char(8) NOT NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>usuario</td><td>varchar</td><td>15</td><td>alter table suscripcion_internet add usuario varchar(15) NOT NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>clave</td><td>varchar</td><td>15</td><td>alter table suscripcion_internet add clave varchar(15) NOT NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>fecha_inicio</td><td>date</td><td>4</td><td>alter table suscripcion_internet add fecha_inicio date  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>fecha_termino</td><td>date</td><td>4</td><td>alter table suscripcion_internet add fecha_termino date  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>activo</td><td>char</td><td>1</td><td>alter table suscripcion_internet add activo char(1) NOT NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>PREGUNTARECORDATORIA_ID</td><td>varchar</td><td>5</td><td>alter table suscripcion_internet add PREGUNTARECORDATORIA_ID varchar(5) NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>RESPUESTA</td><td>varchar</td><td>100</td><td>alter table suscripcion_internet add RESPUESTA varchar(100) NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>ESTADOUSUARIO</td><td>char</td><td>1</td><td>alter table suscripcion_internet add ESTADOUSUARIO char(1) NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>UID</td><td>char</td><td>20</td><td>alter table suscripcion_internet add UID char(20) NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>TimeStmp</td><td>int</td><td>4</td><td>alter table suscripcion_internet add TimeStmp int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>SITE</td><td>char</td><td>1</td><td>alter table suscripcion_internet add SITE char(1) NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_JURISP</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_JURISP int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_LEGADMPUB</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_LEGADMPUB int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_LEGCARGEN</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_LEGCARGEN int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_LEGCARPAR</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_LEGCARPAR int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_LEGCOMP</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_LEGCOMP int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_LEGGOBLOC</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_LEGGOBLOC int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_LEGGOBREG</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_LEGGOBREG int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_TUPA</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_TUPA int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_COMPODJUD</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_COMPODJUD int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INFOBASESACTIVAS</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INFOBASESACTIVAS int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>INF_TESTEO</td><td>int</td><td>4</td><td>alter table suscripcion_internet add INF_TESTEO int  NULL</td></tr>
+
+<tr><td>suscripcion_internet</td><td>nombres</td><td>varchar</td><td>100</td><td>alter table suscripcion_internet add nombres varchar(100) NULL</td></tr>
+
+<tr><td>suscripcion_renovacion</td><td>ano</td><td>int</td><td>4</td><td>alter table suscripcion_renovacion add ano int  NOT NULL</td></tr>
+
+<tr><td>suscripcion_renovacion</td><td>numero</td><td>int</td><td>4</td><td>alter table suscripcion_renovacion add numero int  NOT NULL</td></tr>
+
+<tr><td>suscripcion_renovacion</td><td>envio_fecha</td><td>date</td><td>4</td><td>alter table suscripcion_renovacion add envio_fecha date  NOT NULL</td></tr>
+
+<tr><td>suscripcion_renovacion</td><td>suscripcion_id</td><td>varchar</td><td>8</td><td>alter table suscripcion_renovacion add suscripcion_id varchar(8) NOT NULL</td></tr>
+
+<tr><td>suscripcion_renovacion</td><td>producto_id</td><td>int</td><td>4</td><td>alter table suscripcion_renovacion add producto_id int  NULL</td></tr>
+
+<tr><td>suscripcion_renovacion</td><td>envio_auto</td><td>bit</td><td>1</td><td>alter table suscripcion_renovacion add envio_auto bit  NOT NULL</td></tr>
+
+<tr><td>tarea</td><td>tarea_id</td><td>int</td><td>4</td><td>alter table tarea add tarea_id int  NOT NULL</td></tr>
+
+<tr><td>tarea</td><td>tipotarea_id</td><td>int</td><td>4</td><td>alter table tarea add tipotarea_id int  NOT NULL</td></tr>
+
+<tr><td>tarea</td><td>usuario_id</td><td>int</td><td>4</td><td>alter table tarea add usuario_id int  NOT NULL</td></tr>
+
+<tr><td>tarea</td><td>actividad_id</td><td>int</td><td>4</td><td>alter table tarea add actividad_id int  NOT NULL</td></tr>
+
+<tr><td>tarea</td><td>nota</td><td>varchar</td><td>200</td><td>alter table tarea add nota varchar(200) NULL</td></tr>
+
+<tr><td>tarea</td><td>fecha_asignacion</td><td>datetime</td><td>8</td><td>alter table tarea add fecha_asignacion datetime  NULL</td></tr>
+
+<tr><td>tarea</td><td>fecha_inicio</td><td>datetime</td><td>8</td><td>alter table tarea add fecha_inicio datetime  NULL</td></tr>
+
+<tr><td>tarea</td><td>fecha_termino</td><td>datetime</td><td>8</td><td>alter table tarea add fecha_termino datetime  NULL</td></tr>
+
+<tr><td>tarea</td><td>estado</td><td>char</td><td>2</td><td>alter table tarea add estado char(2) NOT NULL</td></tr>
+
+<tr><td>tarea</td><td>orden</td><td>int</td><td>4</td><td>alter table tarea add orden int  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>tareaasignada_id</td><td>int</td><td>4</td><td>alter table tarea_asignada add tareaasignada_id int  NOT NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>nombre</td><td>varchar</td><td>50</td><td>alter table tarea_asignada add nombre varchar(50) NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>descripcion</td><td>text</td><td>16</td><td>alter table tarea_asignada add descripcion text  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>observacion</td><td>text</td><td>16</td><td>alter table tarea_asignada add observacion text  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>fecha_entrega</td><td>datetime</td><td>8</td><td>alter table tarea_asignada add fecha_entrega datetime  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>fecha_final</td><td>datetime</td><td>8</td><td>alter table tarea_asignada add fecha_final datetime  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>fecha_atencion</td><td>datetime</td><td>8</td><td>alter table tarea_asignada add fecha_atencion datetime  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>estado_tarea_id</td><td>varchar</td><td>3</td><td>alter table tarea_asignada add estado_tarea_id varchar(3) NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>estado_tiempo_id</td><td>varchar</td><td>3</td><td>alter table tarea_asignada add estado_tiempo_id varchar(3) NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>responsable</td><td>varchar</td><td>25</td><td>alter table tarea_asignada add responsable varchar(25) NOT NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>audit_registro_usuario</td><td>varchar</td><td>25</td><td>alter table tarea_asignada add audit_registro_usuario varchar(25) NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>audit_registro_fecha</td><td>datetime</td><td>8</td><td>alter table tarea_asignada add audit_registro_fecha datetime  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>audit_registro_ip</td><td>varchar</td><td>40</td><td>alter table tarea_asignada add audit_registro_ip varchar(40) NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>audit_sistema_usuario</td><td>varchar</td><td>25</td><td>alter table tarea_asignada add audit_sistema_usuario varchar(25) NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>audit_sistema_fecha</td><td>datetime</td><td>8</td><td>alter table tarea_asignada add audit_sistema_fecha datetime  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>audit_sistema_ip</td><td>varchar</td><td>40</td><td>alter table tarea_asignada add audit_sistema_ip varchar(40) NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>fecha_termino</td><td>datetime</td><td>8</td><td>alter table tarea_asignada add fecha_termino datetime  NULL</td></tr>
+
+<tr><td>tarea_asignada</td><td>tiempo_evaluacion</td><td>int</td><td>4</td><td>alter table tarea_asignada add tiempo_evaluacion int  NULL</td></tr>
+
+<tr><td>tarea_asignada_archivos</td><td>tareaasignada_id</td><td>int</td><td>4</td><td>alter table tarea_asignada_archivos add tareaasignada_id int  NOT NULL</td></tr>
+
+<tr><td>tarea_asignada_archivos</td><td>archivo_item</td><td>int</td><td>4</td><td>alter table tarea_asignada_archivos add archivo_item int  NOT NULL</td></tr>
+
+<tr><td>tarea_asignada_archivos</td><td>nombre</td><td>varchar</td><td>20</td><td>alter table tarea_asignada_archivos add nombre varchar(20) NULL</td></tr>
+
+<tr><td>tarea_asignada_archivos</td><td>ruta</td><td>varchar</td><td>250</td><td>alter table tarea_asignada_archivos add ruta varchar(250) NULL</td></tr>
+
+<tr><td>tarea_asignada_archivos</td><td>enviado</td><td>bit</td><td>1</td><td>alter table tarea_asignada_archivos add enviado bit  NOT NULL</td></tr>
+
+<tr><td>tarea_asignada_archivos</td><td>audit_registro_usuario</td><td>varchar</td><td>25</td><td>alter table tarea_asignada_archivos add audit_registro_usuario varchar(25) NULL</td></tr>
+
+<tr><td>tarea_asignada_archivos</td><td>audit_registro_fecha</td><td>datetime</td><td>8</td><td>alter table tarea_asignada_archivos add audit_registro_fecha datetime  NULL</td></tr>
+
+<tr><td>tarea_asignada_archivos</td><td>audit_registro_ip</td><td>varchar</td><td>40</td><td>alter table tarea_asignada_archivos add audit_registro_ip varchar(40) NULL</td></tr>
+
+<tr><td>tarea_estado</td><td>estado_id</td><td>varchar</td><td>3</td><td>alter table tarea_estado add estado_id varchar(3) NOT NULL</td></tr>
+
+<tr><td>tarea_estado</td><td>nombre</td><td>varchar</td><td>30</td><td>alter table tarea_estado add nombre varchar(30) NULL</td></tr>
+
+<tr><td>tarea_estado</td><td>sigla</td><td>varchar</td><td>5</td><td>alter table tarea_estado add sigla varchar(5) NULL</td></tr>
+
+<tr><td>tarea_estado</td><td>tipo</td><td>varchar</td><td>2</td><td>alter table tarea_estado add tipo varchar(2) NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>tareapersonal_id</td><td>int</td><td>4</td><td>alter table tareapersonal add tareapersonal_id int  NOT NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>tipotarea_id</td><td>varchar</td><td>5</td><td>alter table tareapersonal add tipotarea_id varchar(5) NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>personal_id</td><td>varchar</td><td>5</td><td>alter table tareapersonal add personal_id varchar(5) NOT NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>paginainicio</td><td>int</td><td>4</td><td>alter table tareapersonal add paginainicio int  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>paginafin</td><td>int</td><td>4</td><td>alter table tareapersonal add paginafin int  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>horainicio</td><td>datetime</td><td>8</td><td>alter table tareapersonal add horainicio datetime  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>horafin</td><td>datetime</td><td>8</td><td>alter table tareapersonal add horafin datetime  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>observacion</td><td>text</td><td>16</td><td>alter table tareapersonal add observacion text  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>estado</td><td>char</td><td>1</td><td>alter table tareapersonal add estado char(1) NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>errores</td><td>int</td><td>4</td><td>alter table tareapersonal add errores int  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>paginasscaneadas</td><td>int</td><td>4</td><td>alter table tareapersonal add paginasscaneadas int  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>fecha_asigna</td><td>datetime</td><td>8</td><td>alter table tareapersonal add fecha_asigna datetime  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>num_actualizaciones</td><td>int</td><td>4</td><td>alter table tareapersonal add num_actualizaciones int  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>conpagina_inicio</td><td>int</td><td>4</td><td>alter table tareapersonal add conpagina_inicio int  NULL</td></tr>
+
+<tr><td>tareapersonal</td><td>conpagina_fin</td><td>int</td><td>4</td><td>alter table tareapersonal add conpagina_fin int  NULL</td></tr>
+
+<tr><td>tipo_actividad</td><td>tipoactividad_id</td><td>int</td><td>4</td><td>alter table tipo_actividad add tipoactividad_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_actividad</td><td>nombre</td><td>varchar</td><td>80</td><td>alter table tipo_actividad add nombre varchar(80) NOT NULL</td></tr>
+
+<tr><td>tipo_actividad</td><td>es_edicion</td><td>char</td><td>1</td><td>alter table tipo_actividad add es_edicion char(1) NULL</td></tr>
+
+<tr><td>tipo_actividad</td><td>periodicidad</td><td>char</td><td>2</td><td>alter table tipo_actividad add periodicidad char(2) NULL</td></tr>
+
+<tr><td>tipo_actividad</td><td>automatico</td><td>char</td><td>1</td><td>alter table tipo_actividad add automatico char(1) NULL</td></tr>
+
+<tr><td>tipo_actividad</td><td>tipousuario_id</td><td>int</td><td>4</td><td>alter table tipo_actividad add tipousuario_id int  NULL</td></tr>
+
+<tr><td>tipo_atencion</td><td>tipoatencion_id</td><td>int</td><td>4</td><td>alter table tipo_atencion add tipoatencion_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_atencion</td><td>nombre</td><td>varchar</td><td>50</td><td>alter table tipo_atencion add nombre varchar(50) NOT NULL</td></tr>
+
+<tr><td>tipo_cliente</td><td>tipocliente_id</td><td>int</td><td>4</td><td>alter table tipo_cliente add tipocliente_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_cliente</td><td>nombre</td><td>varchar</td><td>30</td><td>alter table tipo_cliente add nombre varchar(30) NOT NULL</td></tr>
+
+<tr><td>tipo_concepto</td><td>tipoconcepto_id</td><td>int</td><td>4</td><td>alter table tipo_concepto add tipoconcepto_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_concepto</td><td>tipoproducto_id</td><td>int</td><td>4</td><td>alter table tipo_concepto add tipoproducto_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_concepto</td><td>nombre</td><td>varchar</td><td>100</td><td>alter table tipo_concepto add nombre varchar(100) NOT NULL</td></tr>
+
+<tr><td>tipo_concepto</td><td>abreviatura</td><td>varchar</td><td>15</td><td>alter table tipo_concepto add abreviatura varchar(15) NOT NULL</td></tr>
+
+<tr><td>tipo_concepto</td><td>precio_venta</td><td>decimal</td><td>6</td><td>alter table tipo_concepto add precio_venta decimal  NULL</td></tr>
+
+<tr><td>tipo_concepto</td><td>cantidad_lotes</td><td>decimal</td><td>4</td><td>alter table tipo_concepto add cantidad_lotes decimal  NULL</td></tr>
+
+<tr><td>tipo_concepto</td><td>cantidad_usuarios</td><td>decimal</td><td>4</td><td>alter table tipo_concepto add cantidad_usuarios decimal  NULL</td></tr>
+
+<tr><td>tipo_concepto</td><td>activo</td><td>char</td><td>1</td><td>alter table tipo_concepto add activo char(1) NOT NULL</td></tr>
+
+<tr><td>tipo_convenio</td><td>tipoconvenio_id</td><td>int</td><td>4</td><td>alter table tipo_convenio add tipoconvenio_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_convenio</td><td>nombre</td><td>varchar</td><td>50</td><td>alter table tipo_convenio add nombre varchar(50) NOT NULL</td></tr>
+
+<tr><td>tipo_edicion</td><td>tipoedicion_id</td><td>int</td><td>4</td><td>alter table tipo_edicion add tipoedicion_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_edicion</td><td>descripcion</td><td>varchar</td><td>200</td><td>alter table tipo_edicion add descripcion varchar(200) NULL</td></tr>
+
+<tr><td>tipo_evento</td><td>tipoevento_id</td><td>int</td><td>4</td><td>alter table tipo_evento add tipoevento_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_evento</td><td>nombre</td><td>varchar</td><td>150</td><td>alter table tipo_evento add nombre varchar(150) NOT NULL</td></tr>
+
+<tr><td>tipo_evento</td><td>estado</td><td>int</td><td>4</td><td>alter table tipo_evento add estado int  NOT NULL</td></tr>
+
+<tr><td>tipo_gobierno</td><td>tipogobierno_id</td><td>int</td><td>4</td><td>alter table tipo_gobierno add tipogobierno_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_gobierno</td><td>nombre</td><td>varchar</td><td>80</td><td>alter table tipo_gobierno add nombre varchar(80) NULL</td></tr>
+
+<tr><td>tipo_gobierno</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table tipo_gobierno add audit_usuario_creacion varchar(25) NULL</td></tr>
+
+<tr><td>tipo_gobierno</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table tipo_gobierno add audit_usuario_modificacion varchar(25) NULL</td></tr>
+
+<tr><td>tipo_gobierno</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table tipo_gobierno add audit_fecha_creacion datetime  NULL</td></tr>
+
+<tr><td>tipo_gobierno</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table tipo_gobierno add audit_fecha_modificacion datetime  NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>tipomovimientodisco_id</td><td>int</td><td>4</td><td>alter table tipo_movimiento_disco add tipomovimientodisco_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>nombre</td><td>varchar</td><td>50</td><td>alter table tipo_movimiento_disco add nombre varchar(50) NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>flag_entrada</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_disco add flag_entrada bit  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>flag_falla</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_disco add flag_falla bit  NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>activo</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_disco add activo bit  NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>audit_activo</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_disco add audit_activo bit  NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table tipo_movimiento_disco add audit_usuario_creacion varchar(25) NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table tipo_movimiento_disco add audit_usuario_modificacion varchar(25) NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table tipo_movimiento_disco add audit_fecha_creacion datetime  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_disco</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table tipo_movimiento_disco add audit_fecha_modificacion datetime  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>tipomovimientorazon_id</td><td>int</td><td>4</td><td>alter table tipo_movimiento_razon add tipomovimientorazon_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>tipomovimientodisco_id</td><td>int</td><td>4</td><td>alter table tipo_movimiento_razon add tipomovimientodisco_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>nombre</td><td>varchar</td><td>80</td><td>alter table tipo_movimiento_razon add nombre varchar(80) NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>activo</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_razon add activo bit  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>audit_activo</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_razon add audit_activo bit  NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>audit_usuario_creacion</td><td>varchar</td><td>25</td><td>alter table tipo_movimiento_razon add audit_usuario_creacion varchar(25) NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>audit_usuario_modificacion</td><td>varchar</td><td>25</td><td>alter table tipo_movimiento_razon add audit_usuario_modificacion varchar(25) NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>audit_fecha_creacion</td><td>datetime</td><td>8</td><td>alter table tipo_movimiento_razon add audit_fecha_creacion datetime  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>audit_fecha_modificacion</td><td>datetime</td><td>8</td><td>alter table tipo_movimiento_razon add audit_fecha_modificacion datetime  NOT NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>flag_entrada</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_razon add flag_entrada bit  NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>flag_salida</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_razon add flag_salida bit  NULL</td></tr>
+
+<tr><td>tipo_movimiento_razon</td><td>flag_falla</td><td>bit</td><td>1</td><td>alter table tipo_movimiento_razon add flag_falla bit  NULL</td></tr>
+
+<tr><td>tipo_producto</td><td>tipoproducto_id</td><td>int</td><td>4</td><td>alter table tipo_producto add tipoproducto_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_producto</td><td>nombre</td><td>varchar</td><td>50</td><td>alter table tipo_producto add nombre varchar(50) NOT NULL</td></tr>
+
+<tr><td>tipo_suscripcion</td><td>tiposuscripcion_id</td><td>int</td><td>4</td><td>alter table tipo_suscripcion add tiposuscripcion_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_suscripcion</td><td>nombre</td><td>varchar</td><td>50</td><td>alter table tipo_suscripcion add nombre varchar(50) NOT NULL</td></tr>
+
+<tr><td>tipo_tarea</td><td>tipotarea_id</td><td>int</td><td>4</td><td>alter table tipo_tarea add tipotarea_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_tarea</td><td>tipousuario_id</td><td>int</td><td>4</td><td>alter table tipo_tarea add tipousuario_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_tarea</td><td>nombre</td><td>varchar</td><td>50</td><td>alter table tipo_tarea add nombre varchar(50) NOT NULL</td></tr>
+
+<tr><td>tipo_usuario</td><td>tipousuario_id</td><td>int</td><td>4</td><td>alter table tipo_usuario add tipousuario_id int  NOT NULL</td></tr>
+
+<tr><td>tipo_usuario</td><td>nombre</td><td>varchar</td><td>40</td><td>alter table tipo_usuario add nombre varchar(40) NOT NULL</td></tr>
+
+<tr><td>tmp_results</td><td>Nombre</td><td>sysname</td><td>30</td><td>alter table tmp_results add Nombre sysname  NOT NULL</td></tr>
+
+<tr><td>tmp_results</td><td>Filas</td><td>char</td><td>11</td><td>alter table tmp_results add Filas char(11) NOT NULL</td></tr>
+
+<tr><td>tmp_results</td><td>Reservado</td><td>varchar</td><td>18</td><td>alter table tmp_results add Reservado varchar(18) NOT NULL</td></tr>
+
+<tr><td>tmp_results</td><td>Datos</td><td>varchar</td><td>18</td><td>alter table tmp_results add Datos varchar(18) NOT NULL</td></tr>
+
+<tr><td>tmp_results</td><td>Tamano_Indice</td><td>varchar</td><td>18</td><td>alter table tmp_results add Tamano_Indice varchar(18) NOT NULL</td></tr>
+
+<tr><td>tmp_results</td><td>Libre</td><td>varchar</td><td>18</td><td>alter table tmp_results add Libre varchar(18) NOT NULL</td></tr>
+
+<tr><td>usuario</td><td>usuario_id</td><td>int</td><td>4</td><td>alter table usuario add usuario_id int  NOT NULL</td></tr>
+
+<tr><td>usuario</td><td>tipousuario_id</td><td>int</td><td>4</td><td>alter table usuario add tipousuario_id int  NOT NULL</td></tr>
+
+<tr><td>usuario</td><td>nombre</td><td>varchar</td><td>80</td><td>alter table usuario add nombre varchar(80) NOT NULL</td></tr>
+
+<tr><td>usuario</td><td>login</td><td>varchar</td><td>51</td><td>alter table usuario add login varchar(51) NULL</td></tr>
+
+<tr><td>usuario</td><td>activo</td><td>char</td><td>1</td><td>alter table usuario add activo char(1) NOT NULL</td></tr>
+
+<tr><td>usuario</td><td>es_responsable</td><td>char</td><td>1</td><td>alter table usuario add es_responsable char(1) NULL</td></tr>
+
+<tr><td>usuario</td><td>PERSONAL_ID</td><td>varchar</td><td>5</td><td>alter table usuario add PERSONAL_ID varchar(5) NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>usuariom_id</td><td>numeric</td><td>6</td><td>alter table usuario_movil add usuariom_id numeric  NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>nombres</td><td>varchar</td><td>100</td><td>alter table usuario_movil add nombres varchar(100) NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>apellidos</td><td>varchar</td><td>100</td><td>alter table usuario_movil add apellidos varchar(100) NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>correo</td><td>varchar</td><td>100</td><td>alter table usuario_movil add correo varchar(100) NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>telefono</td><td>varchar</td><td>50</td><td>alter table usuario_movil add telefono varchar(50) NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>usuario</td><td>varchar</td><td>100</td><td>alter table usuario_movil add usuario varchar(100) NOT NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>contrasenia</td><td>varchar</td><td>200</td><td>alter table usuario_movil add contrasenia varchar(200) NOT NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>fecharegistro</td><td>datetime</td><td>8</td><td>alter table usuario_movil add fecharegistro datetime  NOT NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>estado</td><td>tinyint</td><td>1</td><td>alter table usuario_movil add estado tinyint  NOT NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>ultimaActualizacion</td><td>datetime</td><td>8</td><td>alter table usuario_movil add ultimaActualizacion datetime  NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>tipoDispositivo</td><td>char</td><td>1</td><td>alter table usuario_movil add tipoDispositivo char(1) NULL</td></tr>
+
+<tr><td>usuario_movil</td><td>registration_id</td><td>nvarchar</td><td>255</td><td>alter table usuario_movil add registration_id nvarchar  NULL</td></tr>
+
+</table>
+</body>
+</html>

@@ -14,4 +14,5 @@ public class ConsultaEventoTemarioRequest implements Serializable {
 	private Integer idSede;
 	private String idTipoEvento;
 	private Integer idMes;
+	private Integer idTemario;
 }

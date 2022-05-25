@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import pe.gob.minjus.indicadores.bean.ResponseBeanGeneric;
 import pe.gob.minjus.indicadores.service.MaestrosService;
+import pe.gob.minjus.indicadores.util.JwtTokenUtility;
 
 @RestController
 @RequestMapping("/servicios/v1.0")
@@ -20,8 +22,6 @@ import pe.gob.minjus.indicadores.service.MaestrosService;
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST })
 public class MaestrosController {
 
-	
-	
 	@Autowired
 	private MaestrosService maestrosService;
 
@@ -71,6 +71,24 @@ public class MaestrosController {
 	public ResponseBeanGeneric getListaTemario(@RequestParam("anio") Integer anio,HttpServletRequest request)
 			throws Exception {
 		return maestrosService.listaTemario(anio);
+	}
+	
+	@GetMapping(value = "/listaRango", produces = "application/json;charset=UTF-8")
+	public ResponseBeanGeneric getListaRango(HttpServletRequest request)
+			throws Exception {
+		return maestrosService.listaRango();
+	}
+	
+	@GetMapping(value = "/listaRangoEdadDiario", produces = "application/json;charset=UTF-8")
+	public ResponseBeanGeneric getListaRangoEdadDiario(HttpServletRequest request)
+			throws Exception {
+		return maestrosService.getListaRangoEdadDiario();
+	}
+	
+	@GetMapping(value = "/listaRangoEdadCerrado", produces = "application/json;charset=UTF-8")
+	public ResponseBeanGeneric getListaRangoEdadCerrado(HttpServletRequest request)
+			throws Exception {
+		return maestrosService.getListaRangoEdadCerrado();
 	}
 
 }

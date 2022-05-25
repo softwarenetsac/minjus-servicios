@@ -4,7 +4,6 @@ import java.sql.Types;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
@@ -15,16 +14,12 @@ import pe.gob.minjus.indicadores.bean.ConsultaJudicialRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaMesRequest;
 import pe.gob.minjus.indicadores.bean.RequestBeanGeneric;
 import pe.gob.minjus.indicadores.bean.ResponseBeanGeneric;
-import pe.gob.minjus.indicadores.config.PropertiesBean;
 import pe.gob.minjus.indicadores.dao.ExportarConsultaDao;
 import pe.gob.minjus.indicadores.util.Mensaje;
 
 @Component
 public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 
-	@Autowired
-	private PropertiesBean bean;
-	
 	JdbcTemplate jdbcTemplate;
 
 	public ExportarConsultaDaoImpl(JdbcTemplate jdbcTemplate) {
@@ -35,7 +30,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_consulta_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -59,7 +54,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_consulta_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -83,7 +78,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getDiligenciaLibreCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_diligencia_libre_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -107,7 +102,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getDiligenciaLibreDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_diligencia_libre_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -131,7 +126,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getEventoCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_evento_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -155,7 +150,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getEventoDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_evento_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -179,7 +174,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getPatrocinioCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -203,7 +198,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getPatrocinioDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -227,7 +222,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getPatrocinioDelitoCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_delito_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -251,7 +246,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getPatrocinioDelitoDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_delito_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)

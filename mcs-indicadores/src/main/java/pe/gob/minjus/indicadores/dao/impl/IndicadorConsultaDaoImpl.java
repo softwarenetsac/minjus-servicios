@@ -4,7 +4,6 @@ import java.sql.Types;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.SqlOutParameter;
 import org.springframework.jdbc.core.SqlParameter;
@@ -25,16 +24,12 @@ import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioMesRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioRangoEdadRequest;
 import pe.gob.minjus.indicadores.bean.RequestBeanGeneric;
 import pe.gob.minjus.indicadores.bean.ResponseBeanGeneric;
-import pe.gob.minjus.indicadores.config.PropertiesBean;
 import pe.gob.minjus.indicadores.dao.IndicadorConsultaDao;
 import pe.gob.minjus.indicadores.util.Mensaje;
 
 @Component
 public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 
-	@Autowired
-	private PropertiesBean bean;
-	
 	JdbcTemplate jdbcTemplate;
 
 	public IndicadorConsultaDaoImpl(JdbcTemplate jdbcTemplate) {
@@ -45,7 +40,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	public ResponseBeanGeneric getMesCerrado(ConsultaMesRequest req) {
 		ResponseBeanGeneric response = null;
 //		ObjectMapper mapper = new ObjectMapper();
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_consulta_mes_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER), new SqlParameter("p_sede_id", Types.INTEGER),
@@ -73,7 +68,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	public ResponseBeanGeneric getMesdiario(ConsultaMesRequest req) {
 		ResponseBeanGeneric response = null;
 //		ObjectMapper mapper = new ObjectMapper();
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_consulta_mes_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER), new SqlParameter("p_sede_id", Types.INTEGER),
@@ -98,7 +93,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getAnualCerrado(ConsultaAnualRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_consulta_anual_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER), new SqlParameter("p_sede_id", Types.INTEGER)
@@ -121,7 +116,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getAnualDiario(ConsultaAnualRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_consulta_anual_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER), new SqlParameter("p_sede_id", Types.INTEGER)
@@ -144,7 +139,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getDistritoJudicialCerrado(ConsultaJudicialRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_consulta_distritojudicial_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_consulta_materia_id", Types.INTEGER)
@@ -166,7 +161,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getDistritoJudicialDiario(ConsultaJudicialRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_consulta_distritojudicial_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_consulta_materia_id", Types.INTEGER)
@@ -188,14 +183,16 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoDistritoCerrado(ConsultaPatrocinioDistritoRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_distrito_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
-						new SqlParameter("p_grupo_servicio_id", Types.INTEGER)
+						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
+						new SqlParameter("p_mes_id", Types.INTEGER)	
 				);
 		Map<String, Object> parameters = new HashMap<>();
 		parameters.put("p_anio", req.getAnio());
 		parameters.put("p_grupo_servicio_id", req.getIdGrupoServicio());
+		parameters.put("p_mes_id", req.getMes());
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
 
 		if (resultado.size() > 0) {
@@ -210,14 +207,16 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoDistritoDiario(ConsultaPatrocinioDistritoRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_distrito_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
-						new SqlParameter("p_grupo_servicio_id", Types.INTEGER)
+						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
+						new SqlParameter("p_mes_id", Types.INTEGER)	
 				);
 		Map<String, Object> parameters = new HashMap<>();
 		parameters.put("p_anio", req.getAnio());
 		parameters.put("p_grupo_servicio_id", req.getIdGrupoServicio());
+		parameters.put("p_mes_id", req.getMes());
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
 
 		if (resultado.size() > 0) {
@@ -232,18 +231,20 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoGeneroCerrado(ConsultaPatrocinioGeneroRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_genero_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER),
-						new SqlParameter("p_sede_id", Types.INTEGER)
+						new SqlParameter("p_sede_id", Types.INTEGER),
+						new SqlParameter("p_mes_id", Types.INTEGER)	
 				);
 		Map<String, Object> parameters = new HashMap<>();
 		parameters.put("p_anio", req.getAnio());
 		parameters.put("p_grupo_servicio_id", req.getIdGrupoServicio());
 		parameters.put("p_distrito_id", req.getIdDistrito());
 		parameters.put("p_sede_id", req.getIdSede());
+		parameters.put("p_mes_id", req.getMes());
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
 
 		if (resultado.size() > 0) {
@@ -258,18 +259,20 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoGeneroDiario(ConsultaPatrocinioGeneroRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_genero_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER),
-						new SqlParameter("p_sede_id", Types.INTEGER)						
+						new SqlParameter("p_sede_id", Types.INTEGER),
+						new SqlParameter("p_mes_id", Types.INTEGER)						
 				);
 		Map<String, Object> parameters = new HashMap<>();
 		parameters.put("p_anio", req.getAnio());
 		parameters.put("p_grupo_servicio_id", req.getIdGrupoServicio());
 		parameters.put("p_distrito_id", req.getIdDistrito());
 		parameters.put("p_sede_id", req.getIdSede());
+		parameters.put("p_mes_id", req.getMes());
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
 
 		if (resultado.size() > 0) {
@@ -284,7 +287,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoMesCerrado(ConsultaPatrocinioMesRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_mes_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
@@ -313,7 +316,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoMesDiario(ConsultaPatrocinioMesRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_mes_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
@@ -342,15 +345,19 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoAnioCerrado(ConsultaPatrocinioAnioRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_anio_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(
+						new SqlParameter("p_anio", Types.VARCHAR),
+						new SqlParameter("p_mes_id", Types.INTEGER),
 						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER),
 						new SqlParameter("p_sede_id", Types.INTEGER),
 						new SqlOutParameter("@p_total", Types.INTEGER)
 				);
 		Map<String, Object> parameters = new HashMap<>();
+		parameters.put("p_anio", req.getAnio());
+		parameters.put("p_mes_id", req.getMes());
 		parameters.put("p_grupo_servicio_id", req.getIdGrupoServicio());
 		parameters.put("p_distrito_id", req.getIdDistrito());
 		parameters.put("p_sede_id", req.getIdSede());
@@ -370,15 +377,19 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoAnioDiario(ConsultaPatrocinioAnioRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_anio_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(
+						new SqlParameter("p_anio", Types.VARCHAR),
+						new SqlParameter("p_mes_id", Types.INTEGER),
 						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER),
 						new SqlParameter("p_sede_id", Types.INTEGER),
 						new SqlOutParameter("@p_total", Types.INTEGER)
 				);
 		Map<String, Object> parameters = new HashMap<>();
+		parameters.put("p_anio", req.getAnio());
+		parameters.put("p_mes_id", req.getMes());
 		parameters.put("p_grupo_servicio_id", req.getIdGrupoServicio());
 		parameters.put("p_distrito_id", req.getIdDistrito());
 		parameters.put("p_sede_id", req.getIdSede());
@@ -398,11 +409,11 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoRangoEdadCerrado(ConsultaPatrocinioRangoEdadRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_rango_edad_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(
-						new SqlParameter("p_edad_desde", Types.INTEGER),
-						new SqlParameter("p_edad_hasta", Types.INTEGER),
+						new SqlParameter("p_id_rango", Types.VARCHAR),
+						new SqlParameter("p_mes_id", Types.INTEGER),
 						new SqlParameter("p_anio", Types.VARCHAR),
 						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER),
@@ -410,9 +421,9 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 						new SqlOutParameter("@p_total", Types.INTEGER)
 				);
 		Map<String, Object> parameters = new HashMap<>();
-		parameters.put("p_edad_desde", req.getEdadDesde());
-		parameters.put("p_edad_hasta", req.getEdadHasta());
-		parameters.put("p_anio", req.getAnio());
+		parameters.put("p_id_rango", req.getRangoEdad());
+		parameters.put("p_mes_id", req.getMes());
+		parameters.put("p_anio", req.getAnio());		
 		parameters.put("p_grupo_servicio_id", req.getIdGrupoServicio());
 		parameters.put("p_distrito_id", req.getIdDistrito());
 		parameters.put("p_sede_id", req.getIdSede());
@@ -432,11 +443,11 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getPatrocinioNuevoRangoEdadDiario(ConsultaPatrocinioRangoEdadRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_patrocinio_nuevo_rango_edad_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(
-						new SqlParameter("p_edad_desde", Types.INTEGER),
-						new SqlParameter("p_edad_hasta", Types.INTEGER),
+						new SqlParameter("p_id_rango", Types.VARCHAR),
+						new SqlParameter("p_mes_id", Types.INTEGER),
 						new SqlParameter("p_anio", Types.VARCHAR),
 						new SqlParameter("p_grupo_servicio_id", Types.INTEGER),
 						new SqlParameter("p_distrito_id", Types.INTEGER),
@@ -444,8 +455,8 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 						new SqlOutParameter("@p_total", Types.INTEGER)
 				);
 		Map<String, Object> parameters = new HashMap<>();
-		parameters.put("p_edad_desde", req.getEdadDesde());
-		parameters.put("p_edad_hasta", req.getEdadHasta());
+		parameters.put("p_id_rango", req.getRangoEdad());
+		parameters.put("p_mes_id", req.getMes());
 		parameters.put("p_anio", req.getAnio());
 		parameters.put("p_grupo_servicio_id", req.getIdGrupoServicio());
 		parameters.put("p_distrito_id", req.getIdDistrito());
@@ -466,7 +477,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getEventoDistritoCerrado(ConsultaEventoDistritoRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_evento_distrito_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 								   new SqlParameter("p_sede_id", Types.INTEGER),
@@ -494,7 +505,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getEventoDistritoDiario(ConsultaEventoDistritoRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_evento_distrito_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 								   new SqlParameter("p_sede_id", Types.INTEGER),
@@ -522,7 +533,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getEventoTemarioCerrado(ConsultaEventoTemarioRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_evento_temario_cerrado").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 								   new SqlParameter("p_distrito_id", Types.INTEGER),
@@ -550,13 +561,14 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 	@Override
 	public ResponseBeanGeneric getEventoTemarioDiario(ConsultaEventoTemarioRequest req) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(bean.getNameDb())
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
 				.withProcedureName("usp_evento_temario_diario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER),
 								   new SqlParameter("p_distrito_id", Types.INTEGER),
 								   new SqlParameter("p_sede_id", Types.INTEGER),
 								   new SqlParameter("p_tipo_evento_id", Types.VARCHAR),								   
-								   new SqlParameter("p_mes_id", Types.INTEGER)
+								   new SqlParameter("p_mes_id", Types.INTEGER),
+								   new SqlParameter("p_temario_id", Types.INTEGER)
 				);
 		Map<String, Object> parameters = new HashMap<>();
 		parameters.put("p_anio", req.getAnio());
@@ -564,6 +576,7 @@ public class IndicadorConsultaDaoImpl implements IndicadorConsultaDao {
 		parameters.put("p_sede_id", req.getIdSede());
 		parameters.put("p_tipo_evento_id", req.getIdTipoEvento());
 		parameters.put("p_mes_id", req.getIdMes());
+		parameters.put("p_temario_id", req.getIdTemario());
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
 
 		if (resultado.size() > 0) {

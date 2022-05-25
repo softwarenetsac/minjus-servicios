@@ -9,11 +9,11 @@ public class ConsultaPatrocinioRangoEdadRequest implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Integer edadDesde;
-	private Integer edadHasta;
-	private String anio;
+	private String rangoEdad;
+	private Integer mes;
+	private String anio;	
 	private Integer idGrupoServicio;
 	private Integer idDistrito;
 	private Integer idSede;
-	
+
 }

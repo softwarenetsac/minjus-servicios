@@ -12,5 +12,7 @@ public interface MaestrosDao {
 	public ResponseBeanGeneric listaGrupoServicio();
 	public ResponseBeanGeneric listaEvento();
 	public ResponseBeanGeneric listaTemario(Integer anio);
-
+	public ResponseBeanGeneric listaRango();
+	public ResponseBeanGeneric getListaRangoEdadDiario();
+	public ResponseBeanGeneric getListaRangoEdadCerrado();
 }

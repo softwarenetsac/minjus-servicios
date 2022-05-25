@@ -53,4 +53,19 @@ public class MaestrosServiceImpl implements MaestrosService {
 		return maestroDao.listaTemario(anio);
 	}
 
+	@Override
+	public ResponseBeanGeneric listaRango() {
+		return maestroDao.listaRango();
+	}
+
+	@Override
+	public ResponseBeanGeneric getListaRangoEdadDiario() {
+		return maestroDao.getListaRangoEdadDiario();
+	}
+
+	@Override
+	public ResponseBeanGeneric getListaRangoEdadCerrado() {
+		return maestroDao.getListaRangoEdadCerrado();
+	}
+
 }

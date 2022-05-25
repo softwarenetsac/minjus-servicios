@@ -11,4 +11,5 @@ public class ConsultaPatrocinioDistritoRequest implements Serializable {
 
 	private Integer anio;
 	private Integer idGrupoServicio;
+	private Integer mes;
 }
