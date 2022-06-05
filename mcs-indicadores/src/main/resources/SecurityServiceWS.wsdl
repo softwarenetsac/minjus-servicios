@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.ws.security.sgsi.minjus.gob.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="SecurityServiceWS" targetNamespace="http://service.ws.security.sgsi.minjus.gob.pe/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.ws.security.sgsi.minjus.gob.pe/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.ws.security.sgsi.minjus.gob.pe/">
+  <xs:element name="autenticar" type="tns:autenticar"/>
+  <xs:element name="autenticarResponse" type="tns:autenticarResponse"/>
+  <xs:element name="changePassword" type="tns:changePassword"/>
+  <xs:element name="changePasswordResponse" type="tns:changePasswordResponse"/>
+  <xs:element name="cuentasPorAplicacion" type="tns:cuentasPorAplicacion"/>
+  <xs:element name="cuentasPorAplicacionResponse" type="tns:cuentasPorAplicacionResponse"/>
+  <xs:element name="cuentasPorRolId" type="tns:cuentasPorRolId"/>
+  <xs:element name="cuentasPorRolIdResponse" type="tns:cuentasPorRolIdResponse"/>
+  <xs:element name="cuentasPorRolNombre" type="tns:cuentasPorRolNombre"/>
+  <xs:element name="cuentasPorRolNombreResponse" type="tns:cuentasPorRolNombreResponse"/>
+  <xs:element name="ipClient" type="tns:ipClient"/>
+  <xs:element name="ipClientResponse" type="tns:ipClientResponse"/>
+  <xs:element name="login" type="tns:login"/>
+  <xs:element name="loginResponse" type="tns:loginResponse"/>
+  <xs:element name="menusPorAplicacion" type="tns:menusPorAplicacion"/>
+  <xs:element name="menusPorAplicacionResponse" type="tns:menusPorAplicacionResponse"/>
+  <xs:element name="permisosPorMenu" type="tns:permisosPorMenu"/>
+  <xs:element name="permisosPorMenuResponse" type="tns:permisosPorMenuResponse"/>
+  <xs:element name="recoveryPassword" type="tns:recoveryPassword"/>
+  <xs:element name="recoveryPasswordResponse" type="tns:recoveryPasswordResponse"/>
+  <xs:element name="registrarAccesosPorCuenta" type="tns:registrarAccesosPorCuenta"/>
+  <xs:element name="registrarAccesosPorCuentaResponse" type="tns:registrarAccesosPorCuentaResponse"/>
+  <xs:element name="registrarAccesosPorUsuario" type="tns:registrarAccesosPorUsuario"/>
+  <xs:element name="registrarAccesosPorUsuarioResponse" type="tns:registrarAccesosPorUsuarioResponse"/>
+  <xs:element name="rolesPorAplicacion" type="tns:rolesPorAplicacion"/>
+  <xs:element name="rolesPorAplicacionResponse" type="tns:rolesPorAplicacionResponse"/>
+  <xs:element name="rolesPorCuenta" type="tns:rolesPorCuenta"/>
+  <xs:element name="rolesPorCuentaResponse" type="tns:rolesPorCuentaResponse"/>
+  <xs:element name="rolesPorUsuario" type="tns:rolesPorUsuario"/>
+  <xs:element name="rolesPorUsuarioResponse" type="tns:rolesPorUsuarioResponse"/>
+  <xs:element name="validateIp" type="tns:validateIp"/>
+  <xs:element name="validateIpByService" type="tns:validateIpByService"/>
+  <xs:element name="validateIpByServiceResponse" type="tns:validateIpByServiceResponse"/>
+  <xs:element name="validateIpResponse" type="tns:validateIpResponse"/>
+  <xs:complexType name="registrarAccesosPorCuenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="rolId" type="xs:int"/>
+      <xs:element minOccurs="0" name="cuentaId" type="xs:int"/>
+      <xs:element minOccurs="0" name="ip" type="xs:string"/>
+      <xs:element minOccurs="0" name="mac" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarAccesosPorCuentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rolesPorAplicacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rolesPorAplicacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuentasPorRolId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="rolId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuentasPorRolIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rolesPorCuenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="cuentaId" type="xs:int"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rolesPorCuentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="token" type="xs:string"/>
+      <xs:element minOccurs="0" name="newPasssword" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="menusPorAplicacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="rolId" type="xs:int"/>
+      <xs:element minOccurs="0" name="flagOnlyMenu" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="menusPorAplicacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="user" type="xs:string"/>
+      <xs:element minOccurs="0" name="pass" type="xs:string"/>
+      <xs:element minOccurs="0" name="ip" type="xs:string"/>
+      <xs:element minOccurs="0" name="mac" type="xs:string"/>
+      <xs:element minOccurs="0" name="flagRegistrarAcceso" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateIpByService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="servicioId" type="xs:int"/>
+      <xs:element minOccurs="0" name="user" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateIpByServiceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="autenticar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user" type="xs:string"/>
+      <xs:element minOccurs="0" name="pass" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="autenticarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rolesPorUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuario" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rolesPorUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="permisosPorMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="rolId" type="xs:int"/>
+      <xs:element minOccurs="0" name="objetoPadreId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="permisosPorMenuResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuentasPorAplicacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuentasPorAplicacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ipClient">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="ipClientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarAccesosPorUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="rolId" type="xs:int"/>
+      <xs:element minOccurs="0" name="user" type="xs:string"/>
+      <xs:element minOccurs="0" name="ip" type="xs:string"/>
+      <xs:element minOccurs="0" name="mac" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarAccesosPorUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuentasPorRolNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="aplicacionId" type="xs:int"/>
+      <xs:element minOccurs="0" name="rolNombre" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuentasPorRolNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateIp">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="validateIpResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recoveryPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user" type="xs:string"/>
+      <xs:element minOccurs="0" name="urlRecovery" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recoveryPasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="changePasswordResponse">
+    <wsdl:part element="tns:changePasswordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rolesPorCuenta">
+    <wsdl:part element="tns:rolesPorCuenta" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cuentasPorRolIdResponse">
+    <wsdl:part element="tns:cuentasPorRolIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="login">
+    <wsdl:part element="tns:login" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registrarAccesosPorUsuarioResponse">
+    <wsdl:part element="tns:registrarAccesosPorUsuarioResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rolesPorUsuarioResponse">
+    <wsdl:part element="tns:rolesPorUsuarioResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rolesPorUsuario">
+    <wsdl:part element="tns:rolesPorUsuario" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="permisosPorMenu">
+    <wsdl:part element="tns:permisosPorMenu" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cuentasPorAplicacionResponse">
+    <wsdl:part element="tns:cuentasPorAplicacionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rolesPorCuentaResponse">
+    <wsdl:part element="tns:rolesPorCuentaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ipClient">
+    <wsdl:part element="tns:ipClient" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registrarAccesosPorUsuario">
+    <wsdl:part element="tns:registrarAccesosPorUsuario" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rolesPorAplicacionResponse">
+    <wsdl:part element="tns:rolesPorAplicacionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateIpByServiceResponse">
+    <wsdl:part element="tns:validateIpByServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registrarAccesosPorCuenta">
+    <wsdl:part element="tns:registrarAccesosPorCuenta" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rolesPorAplicacion">
+    <wsdl:part element="tns:rolesPorAplicacion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateIpResponse">
+    <wsdl:part element="tns:validateIpResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recoveryPasswordResponse">
+    <wsdl:part element="tns:recoveryPasswordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part element="tns:loginResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cuentasPorRolId">
+    <wsdl:part element="tns:cuentasPorRolId" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="tns:Exception" name="Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="changePassword">
+    <wsdl:part element="tns:changePassword" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="menusPorAplicacion">
+    <wsdl:part element="tns:menusPorAplicacion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cuentasPorRolNombreResponse">
+    <wsdl:part element="tns:cuentasPorRolNombreResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="permisosPorMenuResponse">
+    <wsdl:part element="tns:permisosPorMenuResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ipClientResponse">
+    <wsdl:part element="tns:ipClientResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registrarAccesosPorCuentaResponse">
+    <wsdl:part element="tns:registrarAccesosPorCuentaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateIpByService">
+    <wsdl:part element="tns:validateIpByService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticar">
+    <wsdl:part element="tns:autenticar" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cuentasPorAplicacion">
+    <wsdl:part element="tns:cuentasPorAplicacion" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticarResponse">
+    <wsdl:part element="tns:autenticarResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cuentasPorRolNombre">
+    <wsdl:part element="tns:cuentasPorRolNombre" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateIp">
+    <wsdl:part element="tns:validateIp" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="menusPorAplicacionResponse">
+    <wsdl:part element="tns:menusPorAplicacionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recoveryPassword">
+    <wsdl:part element="tns:recoveryPassword" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SecurityServiceWS">
+    <wsdl:operation name="registrarAccesosPorCuenta">
+      <wsdl:input message="tns:registrarAccesosPorCuenta" name="registrarAccesosPorCuenta">
+    </wsdl:input>
+      <wsdl:output message="tns:registrarAccesosPorCuentaResponse" name="registrarAccesosPorCuentaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolesPorAplicacion">
+      <wsdl:input message="tns:rolesPorAplicacion" name="rolesPorAplicacion">
+    </wsdl:input>
+      <wsdl:output message="tns:rolesPorAplicacionResponse" name="rolesPorAplicacionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuentasPorRolId">
+      <wsdl:input message="tns:cuentasPorRolId" name="cuentasPorRolId">
+    </wsdl:input>
+      <wsdl:output message="tns:cuentasPorRolIdResponse" name="cuentasPorRolIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolesPorCuenta">
+      <wsdl:input message="tns:rolesPorCuenta" name="rolesPorCuenta">
+    </wsdl:input>
+      <wsdl:output message="tns:rolesPorCuentaResponse" name="rolesPorCuentaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input message="tns:changePassword" name="changePassword">
+    </wsdl:input>
+      <wsdl:output message="tns:changePasswordResponse" name="changePasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="menusPorAplicacion">
+      <wsdl:input message="tns:menusPorAplicacion" name="menusPorAplicacion">
+    </wsdl:input>
+      <wsdl:output message="tns:menusPorAplicacionResponse" name="menusPorAplicacionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:login" name="login">
+    </wsdl:input>
+      <wsdl:output message="tns:loginResponse" name="loginResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateIpByService">
+      <wsdl:input message="tns:validateIpByService" name="validateIpByService">
+    </wsdl:input>
+      <wsdl:output message="tns:validateIpByServiceResponse" name="validateIpByServiceResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="autenticar">
+      <wsdl:input message="tns:autenticar" name="autenticar">
+    </wsdl:input>
+      <wsdl:output message="tns:autenticarResponse" name="autenticarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolesPorUsuario">
+      <wsdl:input message="tns:rolesPorUsuario" name="rolesPorUsuario">
+    </wsdl:input>
+      <wsdl:output message="tns:rolesPorUsuarioResponse" name="rolesPorUsuarioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="permisosPorMenu">
+      <wsdl:input message="tns:permisosPorMenu" name="permisosPorMenu">
+    </wsdl:input>
+      <wsdl:output message="tns:permisosPorMenuResponse" name="permisosPorMenuResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuentasPorAplicacion">
+      <wsdl:input message="tns:cuentasPorAplicacion" name="cuentasPorAplicacion">
+    </wsdl:input>
+      <wsdl:output message="tns:cuentasPorAplicacionResponse" name="cuentasPorAplicacionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ipClient">
+      <wsdl:input message="tns:ipClient" name="ipClient">
+    </wsdl:input>
+      <wsdl:output message="tns:ipClientResponse" name="ipClientResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarAccesosPorUsuario">
+      <wsdl:input message="tns:registrarAccesosPorUsuario" name="registrarAccesosPorUsuario">
+    </wsdl:input>
+      <wsdl:output message="tns:registrarAccesosPorUsuarioResponse" name="registrarAccesosPorUsuarioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuentasPorRolNombre">
+      <wsdl:input message="tns:cuentasPorRolNombre" name="cuentasPorRolNombre">
+    </wsdl:input>
+      <wsdl:output message="tns:cuentasPorRolNombreResponse" name="cuentasPorRolNombreResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateIp">
+      <wsdl:input message="tns:validateIp" name="validateIp">
+    </wsdl:input>
+      <wsdl:output message="tns:validateIpResponse" name="validateIpResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recoveryPassword">
+      <wsdl:input message="tns:recoveryPassword" name="recoveryPassword">
+    </wsdl:input>
+      <wsdl:output message="tns:recoveryPasswordResponse" name="recoveryPasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SecurityServiceWSSoapBinding" type="tns:SecurityServiceWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="registrarAccesosPorCuenta">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registrarAccesosPorCuenta">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registrarAccesosPorCuentaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolesPorAplicacion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="rolesPorAplicacion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="rolesPorAplicacionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuentasPorRolId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cuentasPorRolId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cuentasPorRolIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolesPorCuenta">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="rolesPorCuenta">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="rolesPorCuentaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="changePassword">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="changePasswordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="menusPorAplicacion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="menusPorAplicacion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="menusPorAplicacionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="login">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateIpByService">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="validateIpByService">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateIpByServiceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="autenticar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="autenticar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="autenticarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rolesPorUsuario">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="rolesPorUsuario">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="rolesPorUsuarioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="permisosPorMenu">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="permisosPorMenu">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="permisosPorMenuResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuentasPorAplicacion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cuentasPorAplicacion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cuentasPorAplicacionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ipClient">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ipClient">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ipClientResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarAccesosPorUsuario">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registrarAccesosPorUsuario">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registrarAccesosPorUsuarioResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cuentasPorRolNombre">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cuentasPorRolNombre">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cuentasPorRolNombreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateIp">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="validateIp">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateIpResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recoveryPassword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="recoveryPassword">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="recoveryPasswordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecurityServiceWS">
+    <wsdl:port binding="tns:SecurityServiceWSSoapBinding" name="SecurityServiceWSPort">
+      <soap:address location="http://172.17.17.61:8180/sgsi-security-ws/SecurityServiceWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
