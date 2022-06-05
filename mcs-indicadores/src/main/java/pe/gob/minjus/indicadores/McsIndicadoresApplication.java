@@ -7,10 +7,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication
-public class McsIndicadoresApplication extends SpringBootServletInitializer{
+public class McsIndicadoresApplication extends SpringBootServletInitializer {
 
 	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {		
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		return builder.sources(McsIndicadoresApplication.class);
 	}
 
