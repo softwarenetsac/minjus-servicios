@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.10</version>
+		<version>1.5.21.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pe.gob.minjus.indicadores</groupId>
@@ -16,8 +16,8 @@
 	<name>mcs-indicadores</name>
 	<description>Servicios BackEnd Indicadores</description>
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+<!-- 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+<!-- 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> -->
 		<java.version>1.8</java.version>
 <!-- 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version> -->
 	</properties>
@@ -33,22 +33,14 @@
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-logging</artifactId>
-				</exclusion>
+				</exclusion>				
+				<exclusion>
+				   <groupId>ch.qos.logback</groupId>
+				   <artifactId>logback-classic</artifactId>
+				</exclusion>			
+				
 			</exclusions>
 		</dependency>
-
-
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.boot</groupId> -->
-		<!-- <artifactId>spring-boot-starter-web</artifactId> -->
-		<!-- <exclusions> -->
-		<!-- <exclusion> -->
-		<!-- <groupId>org.springframework.boot</groupId> -->
-		<!-- <artifactId>spring-boot-starter-logging</artifactId> -->
-		<!-- </exclusion> -->
-		<!-- </exclusions> -->
-		<!-- </dependency> -->
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -78,7 +70,8 @@
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
+			<artifactId>servlet-api</artifactId>
+		    <version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -149,13 +142,29 @@
 
 	</dependencies>
 
-<!-- 	<build> -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>				
+			</plugin>
+		</plugins>
 <!-- 		<plugins> -->
 <!-- 			<plugin> -->
 <!-- 				<groupId>org.springframework.boot</groupId> -->
 <!-- 				<artifactId>spring-boot-maven-plugin</artifactId> -->
 <!-- 			</plugin> -->
 <!-- 		</plugins> -->
-<!-- 	</build> -->
+	</build>
 
 </project>

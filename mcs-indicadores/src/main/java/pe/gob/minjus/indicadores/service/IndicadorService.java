@@ -6,9 +6,11 @@ import pe.gob.minjus.indicadores.bean.ConsultaEventoTemarioRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaJudicialRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaMesRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioAnioRequest;
+import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioNuevoTipoDelitoRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioDistritoRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioGeneroRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioMesRequest;
+import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioNuevoGrupoServicioRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioRangoEdadRequest;
 import pe.gob.minjus.indicadores.bean.ResponseBeanGeneric;
 
@@ -54,4 +56,13 @@ public interface IndicadorService {
 
 	public ResponseBeanGeneric getEventoTemarioDiario(ConsultaEventoTemarioRequest req);
 
+	public ResponseBeanGeneric getPatrocinioNuevoGrupoServicioCerrado(ConsultaPatrocinioNuevoGrupoServicioRequest req);
+
+	public ResponseBeanGeneric getPatrocinioNuevoGrupoServicioDiario(ConsultaPatrocinioNuevoGrupoServicioRequest req);
+	
+	public ResponseBeanGeneric getPatrocinioNuevoTipoDelitoCerrado(ConsultaPatrocinioNuevoTipoDelitoRequest req);
+
+	public ResponseBeanGeneric getPatrocinioNuevoTipoDelitoDiario(ConsultaPatrocinioNuevoTipoDelitoRequest req);
+
+	
 }

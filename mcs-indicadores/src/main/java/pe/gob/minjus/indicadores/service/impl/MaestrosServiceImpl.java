@@ -68,4 +68,9 @@ public class MaestrosServiceImpl implements MaestrosService {
 		return maestroDao.getListaRangoEdadCerrado();
 	}
 
+	@Override
+	public ResponseBeanGeneric listaDelito() {
+		return maestroDao.listaDelito();
+	}
+
 }

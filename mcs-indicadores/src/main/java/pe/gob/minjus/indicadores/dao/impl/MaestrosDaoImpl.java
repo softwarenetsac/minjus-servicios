@@ -4,12 +4,14 @@ import java.sql.Types;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Component;
 
 import pe.gob.minjus.indicadores.bean.ResponseBeanGeneric;
+import pe.gob.minjus.indicadores.config.PropertiesBean;
 import pe.gob.minjus.indicadores.dao.MaestrosDao;
 import pe.gob.minjus.indicadores.util.Mensaje;
 
@@ -22,11 +24,13 @@ public class MaestrosDaoImpl implements MaestrosDao {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
+	@Autowired
+	private PropertiesBean propertiesBean;
 	
 	@Override
 	public ResponseBeanGeneric listaMateria() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_consulta_materia").withoutProcedureColumnMetaDataAccess();
 //				.declareParameters();
 		Map<String, Object> parameters = new HashMap<>();
@@ -36,7 +40,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -44,7 +48,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric listaDistritoJudicial() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_distrito_judicial").withoutProcedureColumnMetaDataAccess();
 		Map<String, Object> parameters = new HashMap<>();
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
@@ -53,7 +57,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -61,7 +65,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric listaAnio() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_anio").withoutProcedureColumnMetaDataAccess();
 		Map<String, Object> parameters = new HashMap<>();
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
@@ -70,7 +74,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -78,7 +82,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric listaMes() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_mes").withoutProcedureColumnMetaDataAccess();
 		Map<String, Object> parameters = new HashMap<>();
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
@@ -87,7 +91,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -95,7 +99,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric listaSede(Integer idSede) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_sede").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_distrito_id", Types.INTEGER)
 				);
@@ -107,7 +111,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -115,7 +119,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric listaGrupoServicio() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_grupo_servicio").withoutProcedureColumnMetaDataAccess();
 		Map<String, Object> parameters = new HashMap<>();
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
@@ -124,7 +128,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -132,7 +136,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric listaEvento() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_tipo_evento").withoutProcedureColumnMetaDataAccess();
 		Map<String, Object> parameters = new HashMap<>();
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
@@ -141,7 +145,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -149,7 +153,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric listaTemario(Integer anio) {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_temario").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_anio", Types.INTEGER) );
 		Map<String, Object> parameters = new HashMap<>();
@@ -160,7 +164,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -168,7 +172,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric listaRango() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_grupo_servicio").withoutProcedureColumnMetaDataAccess();
 		Map<String, Object> parameters = new HashMap<>();
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
@@ -177,7 +181,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -186,7 +190,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric getListaRangoEdadDiario() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_rango_edad_diario").withoutProcedureColumnMetaDataAccess();
 		Map<String, Object> parameters = new HashMap<>();
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
@@ -195,7 +199,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -204,7 +208,7 @@ public class MaestrosDaoImpl implements MaestrosDao {
 	@Override
 	public ResponseBeanGeneric getListaRangoEdadCerrado() {
 		ResponseBeanGeneric response = null;
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_listar_rango_edad_cerrado").withoutProcedureColumnMetaDataAccess();
 		Map<String, Object> parameters = new HashMap<>();
 		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
@@ -213,9 +217,24 @@ public class MaestrosDaoImpl implements MaestrosDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
-	
+	@Override
+	public ResponseBeanGeneric listaDelito() {
+		ResponseBeanGeneric response = null;
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
+				.withProcedureName("usp_listar_tipo_delito").withoutProcedureColumnMetaDataAccess();
+		Map<String, Object> parameters = new HashMap<>();
+		Map<String, Object> resultado = simpleJdbcCall.execute(parameters);
+
+		if (resultado.size() > 0) {
+			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
+					resultado.get("#result-set-1"));
+		} else {
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
+		}
+		return response;
+	}
 }

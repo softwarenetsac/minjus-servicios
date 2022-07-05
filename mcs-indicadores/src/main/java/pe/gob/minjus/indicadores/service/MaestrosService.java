@@ -15,4 +15,5 @@ public interface MaestrosService {
 	public ResponseBeanGeneric listaRango();
 	public ResponseBeanGeneric getListaRangoEdadDiario();
 	public ResponseBeanGeneric getListaRangoEdadCerrado();
+	public ResponseBeanGeneric listaDelito();
 }

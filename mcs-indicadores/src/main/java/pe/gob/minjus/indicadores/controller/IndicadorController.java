@@ -17,9 +17,11 @@ import pe.gob.minjus.indicadores.bean.ConsultaEventoTemarioRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaJudicialRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaMesRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioAnioRequest;
+import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioNuevoTipoDelitoRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioDistritoRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioGeneroRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioMesRequest;
+import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioNuevoGrupoServicioRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioRangoEdadRequest;
 import pe.gob.minjus.indicadores.bean.RequestBeanGeneric;
 import pe.gob.minjus.indicadores.bean.ResponseBeanGeneric;
@@ -133,5 +135,25 @@ public class IndicadorController {
 	@PostMapping(value="/getEventoTemarioDiario", produces= "application/json;charset=UTF-8")
 	public ResponseBeanGeneric getEventoTemarioDiario(@RequestBody ConsultaEventoTemarioRequest consultaReq,HttpServletRequest request) throws Exception {
 		return indicadorService.getEventoTemarioDiario(consultaReq);
+	}	
+	
+	@PostMapping(value="/getPatrocinioNuevoGrupoServicioCerrado", produces= "application/json;charset=UTF-8")
+	public ResponseBeanGeneric getPatrocinioNuevoGrupoServicioCerrado(@RequestBody ConsultaPatrocinioNuevoGrupoServicioRequest consultaReq,HttpServletRequest request) throws Exception {
+		return indicadorService.getPatrocinioNuevoGrupoServicioCerrado(consultaReq);
+	}
+	
+	@PostMapping(value="/getPatrocinioNuevoGrupoServicioDiario", produces= "application/json;charset=UTF-8")
+	public ResponseBeanGeneric getPatrocinioNuevoGrupoServicioDiario(@RequestBody ConsultaPatrocinioNuevoGrupoServicioRequest consultaReq,HttpServletRequest request) throws Exception {
+		return indicadorService.getPatrocinioNuevoGrupoServicioDiario(consultaReq);
+	}	
+	
+	@PostMapping(value="/getPatrocinioNuevoTipoDelitoCerrado", produces= "application/json;charset=UTF-8")
+	public ResponseBeanGeneric getPatrocinioNuevoTipoDelitoCerrado(@RequestBody ConsultaPatrocinioNuevoTipoDelitoRequest consultaReq,HttpServletRequest request) throws Exception {
+		return indicadorService.getPatrocinioNuevoTipoDelitoCerrado(consultaReq);
+	}
+	
+	@PostMapping(value="/getPatrocinioNuevoTipoDelitoDiario", produces= "application/json;charset=UTF-8")
+	public ResponseBeanGeneric getPatrocinioNuevoTipoDelitoDiario(@RequestBody ConsultaPatrocinioNuevoTipoDelitoRequest consultaReq,HttpServletRequest request) throws Exception {
+		return indicadorService.getPatrocinioNuevoTipoDelitoDiario(consultaReq);
 	}	
 }

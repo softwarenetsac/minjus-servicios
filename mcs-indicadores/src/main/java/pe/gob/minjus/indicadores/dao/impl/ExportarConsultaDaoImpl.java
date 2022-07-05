@@ -4,16 +4,15 @@ import java.sql.Types;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Component;
 
-import pe.gob.minjus.indicadores.bean.ConsultaAnualRequest;
-import pe.gob.minjus.indicadores.bean.ConsultaJudicialRequest;
-import pe.gob.minjus.indicadores.bean.ConsultaMesRequest;
 import pe.gob.minjus.indicadores.bean.RequestBeanGeneric;
 import pe.gob.minjus.indicadores.bean.ResponseBeanGeneric;
+import pe.gob.minjus.indicadores.config.PropertiesBean;
 import pe.gob.minjus.indicadores.dao.ExportarConsultaDao;
 import pe.gob.minjus.indicadores.util.Mensaje;
 
@@ -22,6 +21,9 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 
 	JdbcTemplate jdbcTemplate;
 
+	@Autowired
+	private PropertiesBean propertiesBean;
+	
 	public ExportarConsultaDaoImpl(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
@@ -30,7 +32,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_consulta_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -45,7 +47,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -54,7 +56,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_consulta_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -69,7 +71,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -78,7 +80,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getDiligenciaLibreCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_diligencia_libre_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -93,7 +95,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -102,7 +104,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getDiligenciaLibreDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_diligencia_libre_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -117,7 +119,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -126,7 +128,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getEventoCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_evento_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -141,7 +143,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -150,7 +152,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getEventoDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_evento_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -165,7 +167,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -174,7 +176,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getPatrocinioCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_patrocinio_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -189,7 +191,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -198,7 +200,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getPatrocinioDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_patrocinio_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -213,7 +215,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -222,7 +224,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getPatrocinioDelitoCerradoExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_patrocinio_delito_cerrado_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -237,7 +239,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}
@@ -246,7 +248,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 	public ResponseBeanGeneric getPatrocinioDelitoDiarioExcel(RequestBeanGeneric req) {
 		ResponseBeanGeneric response = null;
 
-		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName("dgdpaj_indicador")
+		SimpleJdbcCall simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate).withCatalogName(propertiesBean.getNameDb())
 				.withProcedureName("usp_patrocinio_delito_diario_excel").withoutProcedureColumnMetaDataAccess()
 				.declareParameters(new SqlParameter("p_fecha_desde", Types.INTEGER),
 						new SqlParameter("p_fecha_hasta", Types.INTEGER)
@@ -261,7 +263,7 @@ public class ExportarConsultaDaoImpl implements ExportarConsultaDao {
 			response = new ResponseBeanGeneric("0000", Mensaje.CONSULTA_EXITOSA.getMensaje(),
 					resultado.get("#result-set-1"));
 		} else {
-			response = new ResponseBeanGeneric("0000", Mensaje.SIN_RESULTADO.getMensaje(), null);
+			response = new ResponseBeanGeneric("0001", Mensaje.SIN_RESULTADO.getMensaje(), null);
 		}
 		return response;
 	}

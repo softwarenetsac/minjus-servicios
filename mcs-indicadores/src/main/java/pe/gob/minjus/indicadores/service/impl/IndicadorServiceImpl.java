@@ -9,11 +9,12 @@ import pe.gob.minjus.indicadores.bean.ConsultaEventoTemarioRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaJudicialRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaMesRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioAnioRequest;
+import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioNuevoTipoDelitoRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioDistritoRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioGeneroRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioMesRequest;
+import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioNuevoGrupoServicioRequest;
 import pe.gob.minjus.indicadores.bean.ConsultaPatrocinioRangoEdadRequest;
-import pe.gob.minjus.indicadores.bean.RequestBeanGeneric;
 import pe.gob.minjus.indicadores.bean.ResponseBeanGeneric;
 import pe.gob.minjus.indicadores.dao.IndicadorConsultaDao;
 import pe.gob.minjus.indicadores.service.IndicadorService;
@@ -124,5 +125,26 @@ public class IndicadorServiceImpl implements IndicadorService{
 	public ResponseBeanGeneric getEventoTemarioDiario(ConsultaEventoTemarioRequest req) {
 		return indicadorDao.getEventoTemarioDiario(req);
 	}
+
+	@Override
+	public ResponseBeanGeneric getPatrocinioNuevoGrupoServicioCerrado(ConsultaPatrocinioNuevoGrupoServicioRequest req) {
+		return indicadorDao.getPatrocinioNuevoGrupoServicioCerrado(req);
+	}
+
+	@Override
+	public ResponseBeanGeneric getPatrocinioNuevoGrupoServicioDiario(ConsultaPatrocinioNuevoGrupoServicioRequest req) {
+		return indicadorDao.getPatrocinioNuevoGrupoServicioDiario(req);
+	}
+
+	@Override
+	public ResponseBeanGeneric getPatrocinioNuevoTipoDelitoCerrado(ConsultaPatrocinioNuevoTipoDelitoRequest req) {
+		return indicadorDao.getPatrocinioNuevoTipoDelitoCerrado(req);
+	}
+
+	@Override
+	public ResponseBeanGeneric getPatrocinioNuevoTipoDelitoDiario(ConsultaPatrocinioNuevoTipoDelitoRequest req) {
+		return indicadorDao.getPatrocinioNuevoTipoDelitoDiario(req);
+	}
+
 
 }

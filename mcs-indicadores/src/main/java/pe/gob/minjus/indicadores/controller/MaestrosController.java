@@ -28,6 +28,7 @@ public class MaestrosController {
 	@GetMapping(value = "/listaMateria", produces = "application/json;charset=UTF-8")
 	public ResponseBeanGeneric getListaMateria(HttpServletRequest request)
 			throws Exception {
+		System.out.println(">>>");
 		return maestrosService.listaMateria();
 	}
 
@@ -89,6 +90,12 @@ public class MaestrosController {
 	public ResponseBeanGeneric getListaRangoEdadCerrado(HttpServletRequest request)
 			throws Exception {
 		return maestrosService.getListaRangoEdadCerrado();
+	}
+	
+	@GetMapping(value = "/listaDelito", produces = "application/json;charset=UTF-8")
+	public ResponseBeanGeneric getListaDelito(HttpServletRequest request)
+			throws Exception {
+		return maestrosService.listaDelito();
 	}
 
 }

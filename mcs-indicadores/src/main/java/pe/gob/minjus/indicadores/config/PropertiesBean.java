@@ -22,4 +22,6 @@ public class PropertiesBean implements Serializable {
 	@Value("${id.app}")
 	private Integer idApp;
 
+	@Value("${name.db}")
+	private String nameDb;
 }
