@@ -7,5 +7,5 @@ spring:
     proxy-target-class: true
     
 logging:  
-  #config: /opt/Filesystem/dgdpaj/mcs-servicio/log/mcs-indicadores/config/log4j2-mcs-indicadores.xml
-  config: D:\opt\Filesystem\dgdpaj\mcs-servicio\log\mcs-indicadores\config\log4j2-mcs-indicadores.xml
+  config: /opt/Filesystem/dgdpaj/mcs-servicio/log/mcs-indicadores/config/log4j2-mcs-indicadores.xml
+  #config: D:\opt\Filesystem\dgdpaj\mcs-servicio\log\mcs-indicadores\config\log4j2-mcs-indicadores.xml
